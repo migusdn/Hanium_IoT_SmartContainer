@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+=======
+1a
+2a
+3a
+4a
+5a
+
+>>>>>>> 0c2b5afa4cfaada0ef250a3ec974bbe25993c90b
 1c
 2c
 3c
 4c
+<<<<<<< HEAD
 5c
 
 
@@ -11,3 +21,6 @@
 4b
 5b
 
+=======
+5c
+>>>>>>> 0c2b5afa4cfaada0ef250a3ec974bbe25993c90b
