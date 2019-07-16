@@ -4,22 +4,17 @@
 4a
 5a
 
-<<<<<<< HEAD
 1c
 2c
 3c
 4c
 5c
 
-=======
->>>>>>> 725887fbcaace71ec5f2d8d9deb7e94d8e4c082b
 1b
 2b
 3b
 4b
 5b
-<<<<<<< HEAD
-=======
+
 1d
 3d
->>>>>>> 725887fbcaace71ec5f2d8d9deb7e94d8e4c082b
