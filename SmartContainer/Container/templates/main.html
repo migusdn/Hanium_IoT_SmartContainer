@@ -1,0 +1,113 @@
+{% load static %}
+<script src="{% static 'js/ajax.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+해위이잉~~~
+<input type="button" id = 'btn-add-row' value="조회" onclick="pullajax()">
+
+
+        <br>ContainerID<br>
+        <input type="text" name="" id="ContainerID" >
+        <br>PortID<br>
+        <input type="text" name="" id="PortID" >
+        <br>PortName<br>
+        <input type="text" name="" id="PortName" >
+        <br>PortExportDate<br>
+        <input type="text" name="" id="PortExportDate" >
+ <!--       <br>PortEntryYear<br>
+        <input type="text" name="" id="PortEntryYear" >
+        <br>PortEntryCount<br>
+        <input type="text" name="" id="PortEntryCount" >
+        <br>PortEntryDate<br>
+        <input type="text" name="" id="PortEntryDate" >
+        <br>ShipKoName<br>
+        <input type="text" name="" id="ShipKoName" >
+        <br>ShipEngName<br>
+        <input type="text" name="" id="ShipEngName" >
+        <br>ShipTypeCode<br>
+        <input type="text" name="" id="ShipTypeCode" >
+        <br>ShipTypeName<br>
+        <input type="text" name="" id="ShipTypeName" >-->
+        <br>
+        <input type="button" name="" id="" value="저장" onclick="pushajax()">
+        <br>
+
+ <!--   <table id = "Contable" border="1">
+                    <thead>
+                        <tr>
+                            <th>ContainerID</th>
+                            <th>PortID</th>
+                            <th>PortName</th>
+                            <th>PortExportDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for upda in container_input %}
+                        <tr>
+                            <td>{{ upda.ContainerID }}</td>
+                            <td>{{ upda.PortID }}</td>
+                            <td>{{ upda.PortName }}</td>
+                            <td>{{ upda.PortExportDate }}</td>
+                        </tr>
+                      {% endfor %}
+                              </tbody>
+            </table>-->
+</body>
+</html>
+{% block js %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<script>
+        document.getElementById('Container_List').onclick= function(){
+        pullajax2();
+        }
+</script>
+
+<script>
+$('#btn-add-row').click(function() {
+    $.ajax({
+            url : "http://127.0.0.1:8000/api/Container/?format=json",
+            dataType: 'json',
+            success : function (data) {
+                var my_json = JSON.stringify(data)
+                var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: "Container1" });
+                document.write(filtered_json);
+                document.write("<br>");
+                var a = Object.getOwnPropertyNames(filtered_json[0]);
+                console.log(a);
+                console.log((a.length - 1))
+                document.write("<table id='contable' border='1'>")
+                document.write("<tr>");
+                for (var i = 1; i<=(a.length - 1); i++){
+                document.write("<th>");
+                document.write(a[i]);
+                document.write("</th>");
+                }
+                document.write("</tr>");
+                document.write("<tbody></tbody></table>")
+                document.write("<br>");
+                $('#contable > tbody:last').append('<tr><td>안녕ㅋ 친구들ㅋ </td><td>20190714</td></tr>');
+        }
+    });
+});
+</script>-->
