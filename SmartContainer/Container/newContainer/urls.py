@@ -17,7 +17,6 @@ from django.conf.urls import url
 from django.urls import path, include
 from django.contrib import admin
 from rest_framework import routers
-from rest_framework_swagger.views import get_swagger_view
 import main.api
 
 app_name='main'
@@ -29,7 +28,6 @@ urlpatterns = [
     path('main/', include('main.urls')),
     path('detail/', include('detail.urls')),
     url('api/', include((router.urls, 'main'), namespace='api')),
-    url(r'^api/doc', get_swagger_view(title='Rest API Document')),
     path('api/', include((router.urls, 'Container'), namespace='Container')),
 
 
