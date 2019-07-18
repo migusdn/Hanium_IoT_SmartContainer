@@ -1,0 +1,32 @@
+모든 환경은 venv안에 내장되어있음
+redis는 추가 설치가 필요함
+
+- 개발환경
+=================================================
+ubuntu 16.4 LTS
+python 3.x
+Django 2.x
+
+- redis 설치
+=================================================
+sudo pip install docker
+doucker pull redis
+
+- venv 사용법
+=================================================
+ctrl+alt+T로 터미널을 열고 django-channels 상위폴더 까지 이동
+source django-channels/.venv/bin/activate
+
+- 서버 실행 예시
+=================================================
+서버 실행시 redis를 켜주어야함
+docker run -p 6379:6379 redis:2.8
+python3 manage.py runserver
+
+- urls
+=================================================
+/status/ : 현재 기기들의 상태정보 확인(DB연동 필요)
+/status/{device_num} : nodemcu가 접속할 socket주소
+/device : 각 기기들의 제어(예정)
+
+

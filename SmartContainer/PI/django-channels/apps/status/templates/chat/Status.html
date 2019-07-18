@@ -1,0 +1,71 @@
+<!-- chat/templates/chat/room.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Room</title>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<table border="'1" id="">
+    <tr>
+        <td>고유번호</td>
+        <td>기능</td>
+    </tr>
+    <tr>
+        <td>test</td>
+    </tr>
+</table>
+<div id="add">
+
+</div>
+</body>
+<script>
+
+    var StatusSocket = new WebSocket(
+        'ws://' + window.location.host +
+        '/ws/status/');
+
+    StatusSocket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        var message = data['message'];
+        //document.querySelector('#chat-log').value += (message + '\n');
+        var device_num = data['device_num'];
+        console.log(e);
+        if(document.getElementById(device_num) == null){
+            str = '<table border="1" id="'+device_num+'">';
+            str += '<tr>';
+            str += '<td>디바이스번호</td>';
+            str += '<td>전원</td>';
+            str += '<td>관리하기</td>';
+            str += '<td>test message</td>'
+            str += '</tr>';
+            str += '<tr>';
+            str += '<td>'+device_num+'</td>';
+            str += '<td id="'+device_num+'_power">'+message+'</td>';
+            str += '<td><a href="http://'+window.location.host+'/device/'+ device_num +'">abc</a></td>';
+            str += '<td><button id="'+device_num+'_test" onclick=Send_data("'+ device_num+'")>test</button>';
+            str += '</tr>';
+            str += '</table>';
+            $('#add').append(str);
+        } else if(message == 'OFF'){
+            $('#'+device_num+'_power').html('OFF');
+        } else if(message == 'ON') {
+            $('#' + device_num + '_power').html('ON');
+        }
+
+    };
+
+    StatusSocket.onclose = function(e) {
+        console.error('Chat socket closed unexpectedly');
+    };
+    function Send_data(device_num){
+        StatusSocket.send(JSON.stringify({
+            'device_num': device_num,
+            'message': 'test'
+        }))
+        alert(device_num);
+    }
+</script>
+</html>

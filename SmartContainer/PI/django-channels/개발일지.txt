@@ -1,0 +1,14 @@
+1.1 
+node_mcu 부팅시 /status/{device_num} socket주소에 connect 되고,
+/status/에서 각 기기의 전원상태 및 test 메시지 전송 가능.
+이 메시지를 통해 각 기기를 제어할 예정
+
+각 기기들은 Channels_layer_group_name= status 로 통일한다.
+이유는 /status/에서 모든 기기들의 정보를 조회할 수 있어야하고, 각 기기들의 제어를 해야하기 때문.
+단점) /status에서 보내는 메시지들이 모든 기기에게 전송됨, 따라서 socket_client(nodemcu)는 자신의 기기 일련번호와 서버에서 보내온 Json_text의 device_num을 대조하여 자신에게 내린 요청인지 확인해야함.
+더 좋은 방법을 찾으면 개선 예정  
+Message Ex) 
+ON/OFF 전송시 nodemcu에 부착된 기기의 전원을 ON/OFF로 컨트롤 하고 nodemcu측에서는 이에 관련한 데이터를 socket_server 로 전송함
+Temperature 전송시 nodemcu에 부착된 온습도 센서의 정보를 PI server로 전송함
+
+
