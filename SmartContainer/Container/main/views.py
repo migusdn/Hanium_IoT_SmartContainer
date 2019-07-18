@@ -27,3 +27,7 @@ def container_input(request):
             upda.PortName = request.POST['PortName']
             upda.PortExportDate = request.POST['PortExportDate']
     return HttpResponse("success")
+
+def container_list(request):
+    cons = Container.objects.all()
+    return render(request, 'templates/detail.html',{'cons':cons})
