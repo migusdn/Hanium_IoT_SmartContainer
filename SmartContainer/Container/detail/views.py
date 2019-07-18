@@ -13,8 +13,9 @@ from django.views.decorators.csrf import csrf_exempt
 #    return render(request, template)
 @csrf_exempt
 def ContainerDetail(request):
-    Detail_data = Container.objects.get(ContainerID=request.POST['ContainerID'])
-    return render(request, 'templates/detail.html',{'Detail_data' : Detail_data})
+    Detail_data = Container.objects.all()
+    upupda = {'Detail_data': Detail_data}
+    return render(request, 'templates/detail.html', upupda)
 
 
 
