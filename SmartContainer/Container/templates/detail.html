@@ -13,7 +13,10 @@
 <body>
 자세한정보출력
 
-
+{{ cont.ContainerID }}
+{{ ContainerDetail}}
+{{Detail_data}}
+{{request}}
         <br><br>
         <input type="text" name="" id="ContainerID" placeholder="찾는 ContainerID 입력">
 
@@ -30,12 +33,13 @@
                     <tbody>
                         {% for cont in ContainerDetail %}
                         <tr>
+                            console.log({{ cont.ContainerID }})
                             <td>{{ cont.ContainerID }}</td>
                             <td>{{ cont.PortID }}</td>
                             <td>{{ cont.PortName }}</td>
                             <td>{{ cont.PortExportDate }}</td>
                         </tr>
-                      {% endfor %}
+                        {% endfor %}
                     </tbody>
             </table>
             <input type="button" name="" id="Container_List" value="자세한정보출력">

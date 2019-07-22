@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 #    Detail_data = Detail.objects.all()
 #
 #    return render(request, template)
+
 @csrf_exempt
 def ContainerDetail(request):
     Detail_data = Container.objects.all()
