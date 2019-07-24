@@ -18,6 +18,12 @@ def ContainerDetail(request):
     upupda = {'Detail_data': Detail_data}
     return render(request, 'templates/detail.html', upupda)
 
+@csrf_exempt
+def DetailTest(request):
+    Num = request.POST['ConID']
+    return render(request, 'wow.html', {'ConID': Num})
+
+
 
 
 #@csrf_exempt
