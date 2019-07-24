@@ -1,0 +1,13 @@
+{% block contents %}
+
+<div class="sign_box">
+  <h1>스마트 컨테이너</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  <a href="">회원가입</a> | <a href="">계정정보 찾기</a>
+</div>
+
+{% endblock %}

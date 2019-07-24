@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     'main', #main 앱
     'detail',#detail 앱
@@ -126,4 +127,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-
+LOGIN_REDIRECT_URL = 'auth'
+LOGOUT_REDIRECT_URL = 'auth'

@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.urls import path, include
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 from rest_framework import routers
+
 import main.api
 
 app_name='main'
@@ -24,10 +26,14 @@ router = routers.DefaultRouter()
 router.register('Container', main.api.ContainerViewSet)
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='auth.html'), name='auth'),
+
     path('admin/', admin.site.urls),
+    path('user/', include('django.contrib.auth.urls')),
+
     path('main/', include('main.urls')),
     path('detail/', include('detail.urls')),
-    url('api/', include((router.urls, 'main'), namespace='api')),
+
     path('api/', include((router.urls, 'Container'), namespace='Container')),
 
 

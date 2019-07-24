@@ -5,7 +5,7 @@ from .forms import containerForm
 from .models import Container
 
 def index(request):
-    return render(request, 'templates/main.html')
+    return render(request, 'templates/smain.html')
 
 
 @csrf_exempt
