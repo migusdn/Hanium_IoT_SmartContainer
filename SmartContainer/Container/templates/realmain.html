@@ -16,7 +16,7 @@
 <body>
 이게 진짜 메인이다
 
-<table id = "Container-table" border="1">
+<table id = "sourcetable" border="1">
                     <thead>
                         <tr>
                             <th>ContainerID</th>
@@ -25,8 +25,31 @@
                             <th>PortExportDate</th>
                         </tr>
                     </thead>
-
 </table>
+
+
+The field to fill in with second item of a row : <input type="text" id="fillname" value="" />
 
 </body>
 </html>
+
+<script>
+
+var pickedup;
+
+$(document).ready(function() {
+    $( "#sourcetable tbody tr" ).on( "click", function( event ) {
+
+          // get back to where it was before if it was selected :
+          if (pickedup != null) {
+              pickedup.css( "background-color", "#ffccff" );
+          }
+
+          $("#fillname").val($(this).find("td").eq(1).html());
+          $( this ).css( "background-color", "red" );
+
+          pickedup = $( this );
+    });
+});
+
+</script>

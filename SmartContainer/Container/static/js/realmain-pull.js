@@ -29,9 +29,23 @@ $(document).ready(function realmainpull(){
                         console.log("오우쒯")
                     }
                     var strn = strn + "</tbody>"
-                    $("#Container-table").append(strn);
+                    $("#sourcetable").append(strn);
                     console.log(strn);
                  }
       });
 
+});
+
+var pickedup;
+
+$(document).ready(function() {
+    $( "#sourcetable tbody tr" ).on( "click", function( event ) {
+
+          $("#fillname").val($(this).find("td").eq(1).html());
+
+          pickedup = $( this );
+
+
+          console.log(pickedup);
+    });
 });
