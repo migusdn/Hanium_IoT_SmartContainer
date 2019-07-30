@@ -13,13 +13,16 @@ var value = $('#ConID').val();
                         if (filtered_json.length==0){
                             document.write("상세정보가 없음")
                         }else{
-                            document.write(filtered_json)
-                            document.write("오브젝트 나오면 성공")
+                            console.log(filtered_json.Humid)
+                            $('#TemperY').val(filtered_json[0].Temper)
+                            $('#HumidY').val(filtered_json[0].Humid)
+                            $('#DoorY').val(filtered_json[0].Door)
                         }
                  }
       });
 
 });
+
 
 function find_in_object(my_object, my_criteria){
 

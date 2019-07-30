@@ -1,7 +1,7 @@
 {% load static %}
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/detail-pull.js' %}"></script>
-
+<script src="{% static 'js/control.js' %}"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,23 @@
 <body>
 
 <input type="hidden" value={{ConID}} id="ConID" class="ConID">
-
 {{ ConID}}
+
+<br>
+
+<label id=TemperX>Temper</label>
+<input type=text id=TemperY>
+<br>
+
+<label id=HumidX>Humid</label>
+<input type=text id=HumidY>
+<br>
+
+<label id=DoorX>Door</label>
+<input type=text id=DoorY>
+<br>
+
+<button onclick="control()">조작</button>
+
 </body>
 </html>

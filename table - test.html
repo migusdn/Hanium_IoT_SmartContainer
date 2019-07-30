@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+	<title></title>
+</head>
+<body>
+
+
+<table id="sourcetable" border="1">
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+
+
+
+</table>
+
+<h3>The field :</h3>
+ 
+The field to fill in with second item of a row : <input type="text" id="fillname" value="" />
+
+</body>
+</html>
+
+<script>
+
+
+var pickedup;
+ 
+$(document).ready(function() {
+    $( "#sourcetable tbody tr" ).on( "click", function( event ) {
+ 
+          // get back to where it was before if it was selected :
+          if (pickedup != null) {
+              pickedup.css( "background-color", "#ffccff" );
+          }
+ 
+          $("#fillname").val($(this).find("td").eq(1).html());
+          $( this ).css( "background-color", "red" );
+ 
+          pickedup = $( this );
+    });
+}); 
+
+
+</script>
