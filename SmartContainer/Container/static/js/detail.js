@@ -33,3 +33,21 @@ function find_in_object(my_object, my_criteria){
   });
 
 }
+
+function control(){
+
+    var value = $('#ConID').val();
+
+    var form = document.createElement('form');
+	form.setAttribute('method', 'post');
+	form.setAttribute('action', 'http://127.0.0.1:8000/control/test');
+	document.charset = "utf-8";
+	var hiddenField = document.createElement('input');
+	hiddenField.setAttribute('type', 'hidden');
+	hiddenField.setAttribute('name', 'ConID');
+	hiddenField.setAttribute('value', value);
+	form.appendChild(hiddenField);
+
+	document.body.appendChild(form);
+	form.submit();
+}
