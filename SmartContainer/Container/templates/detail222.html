@@ -1,0 +1,70 @@
+{% load static %}
+<script src="{% static 'js/ajax.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+자세한정보출력
+
+{{ cont.ContainerID }}
+111
+{{ ContainerDetail}}
+222
+{{Detail_data}}
+333
+{{request}}
+444
+        <br><br>
+        <input type="text" name="" id="ContainerID" placeholder="찾는 ContainerID 입력">
+
+        <br>
+            <table id = "Container-table" border="1">
+                    <thead>
+                        <tr>
+                            <th>ContainerID</th>
+                            <th>PortID</th>
+                            <th>PortName</th>
+                            <th>PortExportDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cont in ContainerDetail %}
+                        <tr>
+                            console.log({{ cont.ContainerID }})
+                            <td>{{ cont.ContainerID }}</td>
+                            <td>{{ cont.PortID }}</td>
+                            <td>{{ cont.PortName }}</td>
+                            <td>{{ cont.PortExportDate }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+            <input type="button" name="" id="Container_List" value="자세한정보출력">
+        <br>
+
+
+</body>
+</html>
+{% block js %}
+{% endblock %}
+
+<script>
+        document.getElementById('Container_List').onclick= function(){
+        pullajax2();
+        }
+</script>
+
+
+
+
+
+
+
+

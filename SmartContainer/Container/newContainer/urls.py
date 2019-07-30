@@ -20,10 +20,12 @@ from django.views.generic.base import TemplateView
 from rest_framework import routers
 
 import main.api
+import detail.api
 
 app_name='main'
 router = routers.DefaultRouter()
 router.register('Container', main.api.ContainerViewSet)
+router.register('Detail', detail.api.DetailViewSet)
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='auth.html'), name='auth'),
@@ -35,6 +37,6 @@ urlpatterns = [
     path('detail/', include('detail.urls')),
 
     path('api/', include((router.urls, 'Container'), namespace='Container')),
-
+    path('api/', include((router.urls, 'Detail'), namespace='Detail')),
 
 ]

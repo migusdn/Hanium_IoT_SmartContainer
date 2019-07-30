@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from .models import Container
+from main.models import Container
 from . import models
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
 # def ContainerDetail(request):
-#    template = 'detail.html'
+#    template = 'detail222.html'
 #    Detail_data = Detail.objects.all()
 #
 #    return render(request, template)
@@ -16,12 +16,12 @@ from django.views.decorators.csrf import csrf_exempt
 def ContainerDetail(request):
     Detail_data = Container.objects.all()
     upupda = {'Detail_data': Detail_data}
-    return render(request, 'templates/detail.html', upupda)
+    return render(request, 'templates/detail222.html', upupda)
 
 @csrf_exempt
 def DetailTest(request):
     Num = request.POST['ConID']
-    return render(request, 'wow.html', {'ConID': Num})
+    return render(request, 'Detail.html', {'ConID': Num})
 
 
 

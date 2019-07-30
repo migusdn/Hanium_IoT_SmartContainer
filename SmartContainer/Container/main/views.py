@@ -30,4 +30,4 @@ def container_input(request):
 
 def container_list(request):
     cons = Container.objects.all()
-    return render(request, 'templates/detail.html',{'cons':cons})
+    return render(request, 'templates/detail222.html',{'cons':cons})
