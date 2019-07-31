@@ -22,7 +22,10 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td>";
                         var strn = strn + data[i].PortExportDate;
                         var strn = strn + "</td>";
-                        var strn = strn + "</tr>"
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].PortCheck;
+                        var strn = strn + "</td>";
+                        var strn = strn + "</tr>";
                     }
                     var strn = strn + "</tbody>"
 

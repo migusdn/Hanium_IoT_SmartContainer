@@ -5,6 +5,7 @@ class Container(models.Model):
     PortID = models.CharField(max_length=100, null=True)
     PortName = models.CharField(max_length=100, null=True)
     PortExportDate = models.CharField(max_length=100, null=True)
+    PortCheck = models.CharField(max_length=10, null=True)
     # PortEntryYear = models.CharField(max_length=100, null=True)
     # PortEntryCount = models.CharField(max_length=100, null=True)
     # PortImportDate = models.CharField(max_length=100, null=True)
@@ -28,5 +29,5 @@ class Container(models.Model):
     # SecInfo = models.CharField(max_length=100, null=True)
 
     class Meta:
-        ordering = ['PortExportDate']       #PortExportDate 기준 내림차순 정렬
+        ordering = ['-PortCheck', '-PortExportDate']       #PortExportDate 기준 내림차순 정렬
 
