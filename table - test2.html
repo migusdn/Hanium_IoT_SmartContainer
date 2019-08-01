@@ -1,0 +1,119 @@
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+<style>
+    table#sourcetable tbody  tr {
+    cursor : pointer;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+이게 진짜 메인이다
+
+<table id = "sourcetable" border="1">
+                    <thead>
+                        <tr>
+                            <th>ContainerID</th>
+                            <th>PortID</th>
+                            <th>PortName</th>
+                            <th>PortExportDate</th>
+                            <th>PortCheck</th>
+                        </tr>
+                        <tr>
+                            <td>Container1</td>
+                            <td>Port1</td>
+                            <td>busanPort</td>
+                            <td id="val">2019-07-31</td>
+                            <td>N</td>
+                        </tr>
+                         <tr>
+                            <td>Container2</td>
+                            <td>Port2</td>
+                            <td>busanPort</td>
+                            <td id="val">2019-08-31</td>
+                            <td>N</td>
+                        </tr>
+                         <tr>
+                            <td>Container2</td>
+                            <td>Port2</td>
+                            <td>busanPort</td>
+                            <td id="val">2019-04-06</td>
+                            <td>N</td>
+                        </tr>
+                    </thead>
+</table>
+
+
+The field to fill in with second item of a row : <input type="text" id="fillname" value="" />
+<br><br><br><br>
+<span id= "result"></span>
+</body>
+</html>
+
+<script>
+
+
+
+
+$(document).ready(function() {
+    var exTable = document.getElementById("sourcetable");   //table 복사
+    var result = new Array();        //result 배열 생성
+   if (exTable){            //복사테이블 존재할시
+    for(var i=1; i<exTable.rows.length; i++ ){      //데이터행있는만큼 반복문
+        if(exTable.rows[i].cells[3]){               //행이있다면
+            console.log(exTable.rows[i].cells[3].innerText);    //연습으로콘솔
+            result[i] = exTable.rows[i].cells[3].innerText;
+            }   //result[1] 부터 배열 넣기
+        }
+    }
+
+    for( var i=1; i<result.length;i++){
+         console.log(result[i]);
+    }
+    
+    //document.getElementById("result").innerHTML = result;   //id=result에 출력
+
+    function dateDiff(_date1, _date2) { //날짜 계산해주는 함수
+    var diffDate_1 = _date1 instanceof Date ? _date1 : new Date(_date1);
+    var diffDate_2 = _date2 instanceof Date ? _date2 : new Date(_date2);
+ 
+     diffDate_1 = new Date(diffDate_1.getFullYear(), diffDate_1.getMonth()+1, diffDate_1.getDate());
+     diffDate_2 = new Date(diffDate_2.getFullYear(), diffDate_2.getMonth()+1, diffDate_2.getDate());
+ 
+    var diff = diffDate_1.getTime() - diffDate_2.getTime();//절대값원하면 Math.abs(diffDate_2.getTime() - diffDate_1.getTime()) 로바꿔야함
+      diff = Math.ceil(diff / (1000 * 3600 * 24));
+ 
+    return diff;
+    }
+
+    var result2= new Array();    //result배열과 오늘날짜차이 저장하기위한배열
+    for(var i=1; i<result.length;i++){
+        result2[i] = dateDiff(result[i],new Date());    //계산해서 배열저장
+        console.log(result2[i]);            
+        if(result2[i]>=7){                  //차이값이 얼마이상이면 
+            exTable.rows[i].cells[3].style.backgroundColor='#aabbcc';
+                                        //지정 배경색 칠하기
+        }
+    }
+
+
+
+
+
+
+
+
+
+});
+
+
+
+</script>
