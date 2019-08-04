@@ -1,0 +1,99 @@
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>정렬기능</title>
+</head>
+<body>
+
+
+항목별 정렬
+    <table id = "sourcetable" border="1">
+                    <thead>
+                        <tr>
+                            <th id="container_id">ContainerID</th>
+                            <th>PortID</th>
+                            <th>PortName</th>
+                            <th id="portexport_date">PortExportDate</th>
+                            <th>PortCheck</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Container1</td>
+                            <td>Port1</td>
+                            <td>busanPort</td>
+                            <td id="val">2019-07-31</td>
+                            <td>N</td>
+                        </tr>
+                         <tr>
+                            <td>Container3</td>
+                            <td>Port4</td>
+                            <td>UlsanPort</td>
+                            <td id="val">2019-08-31</td>
+                            <td>N</td>
+                        </tr>
+                         <tr>
+                            <td>Container2</td>
+                            <td>Port5</td>
+                            <td>PohangPort</td>
+                            <td id="val">2019-04-06</td>
+                            <td>N</td>
+                        </tr>
+                        </tbody>
+                    
+</table>
+
+
+<br><br><br><br>
+<span id= "result"></span>
+</body>
+</html>
+
+<script>
+
+
+//$.tablesorter.addParser({
+//    id: 'comma'
+//    is:function(s){return false;},
+//    format: function(s){return s.replace(/[\,\.]/g,'');},
+//    type: 'numeric'
+//   });
+//$(function(){
+
+// $("#sourcetable").tablesorter({
+//        header:{3:{sorter:'comma'}}
+//   });
+//});
+
+
+$(document).ready(function() {
+ 
+ $("#sourcetable").tablesorter({
+    widthFixed : true,
+    showProcessing: true,
+    headerTemplate : '{content} {icon}',
+    widgets: [ 'uitheme', 'zebra', 'filter', 'scroller' ],
+    widgetOptions : {
+      scroller_height : 300,
+      scroller_barWidth : 18,
+      scroller_upAfterSort: true,
+      scroller_jumpToHeader: true,
+      scroller_idPrefix : 's_'
+    }
+  });
+
+ 
+  
+});
+
+
+
+</script>
