@@ -1,24 +1,46 @@
-{% load static %} <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{% block title %}Default Title{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
-    {% block stylesheet %}{% endblock %}
-  </head>
-  <body>
-    <header>
-      ...
-    </header>
-    <main>
-      {% block content %}
-      {% endblock %}
-    </main>
-    <footer>
-      ...
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="{% static 'js/app.js' %}"></script>
-    {% block javascript %}{% endblock %}
-  </body>
+{% load static %}
+<link href="{% static 'css/base.css'%}" rel="stylesheet">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="topbar">
+
+
+
+</div>
+
+<div id="sidebar">
+       <a href="{% url 'auth' %}">YAHAIT 홈</a><br>
+       <a href="{% url 'map' %}">항만지도</a><br>
+       <a href="">2번</a><br>
+       <a href="">3번</a><br>
+       <a href="">4번</a><br>
+       <a href="">5번</a><br>
+</div>
+
+{% block content %}
+
+
+{% endblock %}
+
+</body>
 </html>
+
+<script>
+
+
+
+{% block js %}
+
+{% endblock %}
+
+
+
+</script>

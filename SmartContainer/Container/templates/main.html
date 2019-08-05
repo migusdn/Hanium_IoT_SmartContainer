@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+
+<div id="topbar">
+
+
+
+</div>
+
+<div id="sidebar">
+       <a href="">YAHAIT 홈</a><br>
+       <a href="">항만지도</a><br>
+       <a href="">2번</a><br>
+       <a href="">3번</a><br>
+       <a href="">4번</a><br>
+       <a href="">5번</a><br>
+</div>
+
+이게 진짜 메인이다
+<table id = "sourcetable" border="1">
+                    <thead>
+                        <tr>
+                            <th>ContainerID</th>
+                            <th>PortID</th>
+                            <th>PortName</th>
+                            <th>PortExportDate</th>
+                            <th>PortCheck</th>
+                        </tr>
+                    </thead>
+</table>
+
+{% endblock %}
+
+
+{% block js %}
+
+
+
+{% endblock %}

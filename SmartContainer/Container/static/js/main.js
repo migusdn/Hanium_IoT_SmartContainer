@@ -29,7 +29,6 @@ $(document).ready(function realmainpull(){
                     }
                     var strn = strn + "</tbody>"
 
-                    console.log(strn)
                     $("#sourcetable").append(strn);
                  }
       });
