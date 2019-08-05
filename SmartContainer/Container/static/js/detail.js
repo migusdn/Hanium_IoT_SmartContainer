@@ -16,7 +16,38 @@ var value = $('#ConID').val();
                             console.log(filtered_json.Humid)
                             $('#TemperY').val(filtered_json[0].Temper)
                             $('#HumidY').val(filtered_json[0].Humid)
-                            $('#DoorY').val(filtered_json[0].Door)
+                            $('#SetTemperY').val(filtered_json[0].SetTemper)
+                            $('#SetHumidY').val(filtered_json[0].SetHumid)
+
+                            if(filtered_json[0].Door==1){
+                            $('#DoorY').val("열림")
+                            }else{
+                            $('#DoorY').val("닫힘")
+                            }
+
+                            if(filtered_json[0].UpTemper==1){
+                            $('#UpTemperY').val("열림")
+                            }else{
+                            $('#UpTemperY').val("닫힘")
+                            }
+
+                            if(filtered_json[0].DoTemper==1){
+                            $('#DoTemperY').val("열림")
+                            }else{
+                            $('#DoTemperY').val("닫힘")
+                            }
+
+                            if(filtered_json[0].UpHumid==1){
+                            $('#UpHumidY').val("열림")
+                            }else{
+                            $('#UpHumidY').val("닫힘")
+                            }
+
+                            if(filtered_json[0].UpHumid==1){
+                            $('#DoHumidY').val("열림")
+                            }else{
+                            $('#DoHumidY').val("닫힘")
+                            }
                         }
                  }
       });
