@@ -41,11 +41,11 @@ $(document).ready(function() {
     $( "#sourcetable tbody tr" ).on( "click", function( event ) {
 
           $("#fillname").val($(this).find("td").eq(0).html());
-          var ConID = $("#fillname").val()
+          var ConID = $("#fillname").val();
           pickedup = $( this );
 
-    var ConID = $("#fillname").val()
-
+    var ConID = $("#fillname").val();
+    console.log(ConID);
     var form = document.createElement('form');
 	form.setAttribute('method', 'post');
 	form.setAttribute('action', 'http://127.0.0.1:8000/detail/test');

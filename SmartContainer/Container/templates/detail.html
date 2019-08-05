@@ -1,19 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 {% load static %}
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/detail.js' %}"></script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
 <input type="hidden" value={{ConID}} id="ConID" class="ConID">
 
 <label id="ContainerID"> 컨테이너 번호 : </label>{{ ConID}}
-ConID
 <br>
 
 <label id="TemperX">현재온도</label>
@@ -55,5 +51,11 @@ ConID
 <button onclick="control()">조작</button>
 <br>
 
-</body>
-</html>
+{% endblock %}
+
+
+{% block js %}
+
+
+
+{% endblock %}
