@@ -6,50 +6,79 @@
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/detail.js' %}"></script>
 
+<link href="{% static 'css/detail.css'%}" rel="stylesheet">
+
 
 <input type="hidden" value={{ConID}} id="ConID" class="ConID">
 
-<label id="ContainerID"> 컨테이너 번호 : </label>{{ ConID}}
-<br>
+<div id="maindiv">
+    <label id="ContainerID"> 컨테이너 번호 : </label>{{ ConID}}
+    <br>
 
-<label id="TemperX">현재온도</label>
-<input type=text id="TemperY">
-<br>
+    <div id="TemperSection" class="div">
 
-<label id="HumidX">현재습도</label>
-<input type=text id="HumidY">
-<br>
+        <div id="Temper">
+            <label id="TemperX">현재온도</label>
+            <input type=text id="TemperY">
+        </div>
 
-<label id="SetTemperX">설정온도</label>
-<input type=text id="SetTemperY">
-<br>
+        <div id="SetTemper">
+            <label id="SetTemperX">설정온도</label>
+            <input type=text id="SetTemperY">
+        </div>
 
-<label id="SetHumidX">설정습도</label>
-<input type=text id="SetHumidY">
-<br>
+        <div id="UpTemper" >
+            <label id="UpTemperX">온열기</label>
+            <input type=text id="UpTemperY">
+            <input type="button" value="온열기" onclick="heat()">
+        </div>
 
-<label id="DoorX">개폐장치</label>
-<input type=text id="DoorY">
-<br>
+        <div id="DoTemper">
+            <label id="DoTemperX">냉방기</label>
+            <input type=text id="DoTemperY">
+            <input type="button" value="냉방기" onclick="freeze()">
+        </div>
 
-<label id="UpTemperX">온열기</label>
-<input type=text id="UpTemperY">
-<br>
+    </div>
 
-<label id="DoTemperX">냉방기</label>
-<input type=text id="DoTemperY">
-<br>
 
-<label id="UpHumidX">가습기</label>
-<input type=text id="UpHumidY">
-<br>
+    <div id="HumidSection" class="div">
 
-<label id="DoHumidX">제습기</label>
-<input type=text id="DoHumidY">
-<br>
+        <div id="Humid">
+            <label id="HumidX">현재습도</label>
+            <input type=text id="HumidY">
+        </div>
 
-<button onclick="control()">조작</button>
-<br>
+        <div id="SetHumid">
+            <label id="SetHumidX">설정습도</label>
+            <input type=text id="SetHumidY">
+        </div>
+
+        <div id="UpHumid">
+            <label id="UpHumidX">가습기</label>
+            <input type=text id="UpHumidY">
+            <input type="button" value="가습기" onclick="humid()">
+        </div>
+
+        <div id="DoHumid" >
+            <label id="DoHumidX">제습기</label>
+            <input type=text id="DoHumidY">
+            <input type="button" value="제습기" onclick="dehum()">
+        </div>
+    </div>
+
+    <div id="DoorSection" class="div">
+        <div id="Door">
+            <label id="DoorX">개폐장치</label>
+            <input type=text id="DoorY">
+            <input type="button" value="개폐" onclick="door()">
+        </div>
+    </div>
+
+</div>
+
+<!--<button onclick="control()">조작</button>
+<br>-->
 
 {% endblock %}
 
