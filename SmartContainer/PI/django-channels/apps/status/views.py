@@ -1,6 +1,15 @@
 from django.shortcuts import render
 from django.utils.safestring import mark_safe
+from rest_framework import viewsets
+from .serializers import DeviceSerializer
+from .models import Device
 import json
+
+
+class DeviceViewSet(viewsets.ModelViewSet):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
 
 def index(request):
 
