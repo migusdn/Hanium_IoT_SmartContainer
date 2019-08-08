@@ -1,10 +1,8 @@
 table#sourcetable tbody  tr {
     cursor : pointer;
-
 }
 
 #sourcetable{
-	width:70%;
-	height:80%;
+
     padding: 3%;
 }
