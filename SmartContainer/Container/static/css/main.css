@@ -3,6 +3,42 @@ table#sourcetable tbody  tr {
 }
 
 #sourcetable{
+    width : 82%;
+    text-align : center;
+    margin-top : 6%;
+    margin-left : 15%;
+    border-collapse: collapse;
+    line-height: 3;
+    border-left: 1px solid white;
+    border-right: 1px solid #00ff0000; /* 세로선 투명 */
+    border-top : 1px solid #00ff0000; /* 세로선 투명 */
+    table-layout : fixed; /* 너비고정 */
+}
 
-    padding: 3%;
+thead { /* 표 상단 */
+    border-bottom : 2px solid rgb(27, 53, 85) ;
+    background-color : rgba(40, 66, 96, 0.07);
+}
+
+tbody { /* 표바닥 */
+    border-bottom : 2px solid rgb(27, 53, 85) ;
+}
+
+tr { /* 가로줄 */
+    border-bottom : 1px solid black;
+}
+
+tr:hover {
+    background-color : rgba(40, 66, 96, 0.07);
+}
+
+tr:nth-child(even) { /* 짝수 행 */
+    background-color : rgba(40, 66, 96, 0.07);
+}
+
+#bar {
+    background-color : rgb(230,230,230);
+    width : 100%;
+    height : 14%;
+    border-bottom : 0.5px solid rgb(112, 115, 117);
 }
