@@ -7,7 +7,7 @@ class containerForm(ModelForm):
 
     class Meta:
         model = Container
-        fields = ['ContainerID', 'PortID', 'PortName', 'PortExportDate']
+        fields = ['ContainerID', 'SizeType', 'TotalWeight', 'Section', 'MBLNum', 'Msn', 'GoodsClassfiy', 'Pol', 'LeavePlace', 'LeaveClassfiy', 'LoadID', 'GoodsName']
 
         #, 'PortEntryYear', 'PortEntryCount', 'PortImportDate', 'PortExportDate', 'ShipKoName', 'ShipEngName', 'ShipTypeCode', 'ShipTypeName', 'CheckInOut'
 
