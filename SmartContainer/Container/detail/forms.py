@@ -1,13 +1,13 @@
 from django.forms import ModelForm
-from Container.main.models import Container
+from detail.models import Detail
 from . import models
 
-class containerDetailForm(ModelForm):
+class DetailForm(ModelForm):
 
     class Meta:
-        model = Container
-        fields = ['ContainerID', 'SizeType', 'TotalWeight', 'Section', 'MBLNum', 'Msn', 'GoodsClassfiy', 'Pol',
-                  'LeavePlace', 'LeaveClassfiy', 'LoadID', 'GoodsName']
+        model = Detail
+        fields = ['ContainerID', 'Temper', 'Humid', 'SetTemper', 'SetHumid', 'Door', 'UpTemper', 'DoTemper',
+                  'UpHumid', 'DoHumid']
 
         #, 'PortEntryYear', 'PortEntryCount', 'PortImportDate', 'PortExportDate', 'ShipKoName', 'ShipEngName', 'ShipTypeCode', 'ShipTypeName', 'CheckInOut'
 

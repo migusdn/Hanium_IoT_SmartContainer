@@ -2,7 +2,9 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .forms import containerForm
+from detail.forms import DetailForm
 from .models import Container
+from detail.models import Detail
 import json
 
 def index(request):
@@ -39,9 +41,23 @@ def container_input(request):
 
 @csrf_exempt
 def sensor(request):
-    han = request.POST.dict()
+    form = request.GET
+    print(form.dict())
+    han = form.dict()
+    print(han.get('Humid'))
 
+    update_han = Detail.objects.get(ContainerID=han.get('ConId'))
+    update_han.Temper = han.get('Humid')
+    update_han.Humid = han.get('Humid')
+    update_han.SetTemper = han.get('SetTemper')
+    update_han.SetHumid = han.get('SetHumid')
+    update_han.Door = han.get('Door')
+    update_han.UpTemper = han.get('UpTemper')
+    update_han.DoTemper = han.get('DoTemper')
+    update_han.UpHumid = han.get('UpHumid')
+    update_han.DoHumid = han.get('DoHumid')
 
+    update_han.save()
     return HttpResponse("success")
 
 

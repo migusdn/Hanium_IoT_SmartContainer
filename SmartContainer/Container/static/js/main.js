@@ -29,7 +29,7 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].Msn;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].GoodsClassfiy;
+                        var strn = strn + data[i].GoodsClassify;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
                         var strn = strn + data[i].Pol;
@@ -38,7 +38,7 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].LeavePlace;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].LeaveClassfiy;
+                        var strn = strn + data[i].LeaveClassify;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
                         var strn = strn + data[i].LoadID;

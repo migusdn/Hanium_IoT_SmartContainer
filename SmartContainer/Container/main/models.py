@@ -7,10 +7,10 @@ class Container(models.Model):
     Msn = models.CharField(max_length=100, null=True)
     Section = models.CharField(max_length=100, null=True)
     MBLNum = models.CharField(max_length=10, null=True)
-    GoodsClassfiy = models.CharField(max_length=100, null=True)
+    GoodsClassify = models.CharField(max_length=100, null=True)
     Pol = models.CharField(max_length=100, null=True)
     LeavePlace = models.CharField(max_length=100, null=True)
-    LeaveClassfiy = models.CharField(max_length=100, null=True)
+    LeaveClassify = models.CharField(max_length=100, null=True)
     LoadID = models.CharField(max_length=100, null=True)
     GoodsName = models.CharField(max_length=100, null=True)
     # PortEntryYear = models.CharField(max_length=100, null=True)
@@ -37,4 +37,6 @@ class Container(models.Model):
 
     class Meta:
         ordering = ['-Msn']       #Msn 기준 내림차순 정렬
+
+
 

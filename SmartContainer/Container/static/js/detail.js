@@ -70,9 +70,6 @@ function freeze(){
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
-                    alert("성공");
-                    console.log(data);
-
                     setTimeout(function(){
                     location.reload();
                     },1000); // 3000밀리초 = 3초
