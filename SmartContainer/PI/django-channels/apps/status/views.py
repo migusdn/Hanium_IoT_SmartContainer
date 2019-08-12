@@ -27,9 +27,17 @@ def test(request):
 @csrf_exempt
 def freeze(request):
     url="http://192.168.0.2:8000/main/sensor"
+    res = Device.objects.get(ConId='B1')
     paramDict = {
-        "abc" : "111",
-        "cde" : 123
+        "Temper": res.Temper,
+        "Humid": res.Humid,
+        "Door": res.Door,
+        "SetTemper": res.SetTemper,
+        "SetHumid": res.SetHumid,
+        "UpTemper": res.UpTemper,
+        "DoTemper": res.DoTemper,
+        "UpHumid": res.UpHumid,
+        "DoHumid": res.DoHumid
     }
     data = "test"
     jsonp_callback = request.GET.get("callback")

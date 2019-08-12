@@ -5,4 +5,4 @@ from .models import Device
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
-        fields = ('status', 'temper', 'humid', 'door', 'settemper', 'sethumid', 'uptemper', 'dotemper', 'uphumid', 'dohumid')
+        fields = ('ConId', 'Stat', 'Temper', 'Humid', 'Door', 'SetTemper', 'SetHumid', 'UpTemper', 'DoTemper', 'UpHumid', 'DoHumid')
