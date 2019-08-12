@@ -14,21 +14,41 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].ContainerID;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].PortID;
+                        var strn = strn + data[i].SizeType;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].PortName;
+                        var strn = strn + data[i].TotalWeight;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].PortExportDate;
+                        var strn = strn + data[i].Section;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].PortCheck;
+                        var strn = strn + data[i].MBLNum;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].Msn;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].GoodsClassfiy;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].Pol;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].LeavePlace;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].LeaveClassfiy;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].LoadID;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].GoodsName;
                         var strn = strn + "</td>";
                         var strn = strn + "</tr>";
                     }
                     var strn = strn + "</tbody>"
-
                     $("#sourcetable").append(strn);
                  }
       });
