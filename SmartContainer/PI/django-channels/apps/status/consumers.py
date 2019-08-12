@@ -44,8 +44,9 @@ class StatusConsumer(WebsocketConsumer):
 
     # Receive message from WebSocket
     def receive(self, text_data):
+        print("text" + text_data)
+
         text_data_json = json.loads(text_data)
-        print(text_data_json)
         device_num = text_data_json['device_num']
         message = text_data_json['message']
 
