@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/migrations/0002_auto_20190812_0616.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/migrations/0003_auto_20190812_0620.py" afterDir="false" />
+    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/migrations/0004_auto_20190812_0702.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +74,7 @@
       <workItem from="1565175437475" duration="181000" />
       <workItem from="1565175723932" duration="5817000" />
       <workItem from="1565453361987" duration="2062000" />
-      <workItem from="1565615807007" duration="7296000" />
+      <workItem from="1565615807007" duration="9267000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>
@@ -86,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565588093907</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1565592206523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565592206523</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

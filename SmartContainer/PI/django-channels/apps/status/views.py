@@ -26,12 +26,15 @@ def test(request):
 
 @csrf_exempt
 def freeze(request):
+
     url="http://192.168.0.2:8000/main/sensor"
     res = Device.objects.get(ConId='B1')
+    #전송 쿼리 작성
     paramDict = {
+        "ConId": res.ConId,
         "Temper": res.Temper,
         "Humid": res.Humid,
-        "Door": res.Door,
+        "Door": "1",
         "SetTemper": res.SetTemper,
         "SetHumid": res.SetHumid,
         "UpTemper": res.UpTemper,
@@ -50,5 +53,6 @@ def freeze(request):
         response = HttpResponse(json.dumps(data))
         response["Content-type"] = "application/json; charset=utf-8"
         print('2')
+    #params
     requests.get(url, params=paramDict)
     return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
