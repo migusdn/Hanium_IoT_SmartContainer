@@ -31,11 +31,10 @@ def container_input(request):
 
 @csrf_exempt
 def sensor(request):
-    print("sex")
     han = request.POST.dict()
 
 
-    return HttpResponse("seccess")
+    return HttpResponse("success")
 
 
 
