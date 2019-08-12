@@ -24,18 +24,25 @@ def container_input(request):
         else:
             upda = Container.objects.get(ContainerID=request.POST['ContainerID'])
             upda.ContainerID = request.POST['ContainerID']
-            upda.PortID = request.POST['PortID']
-            upda.PortName = request.POST['PortName']
-            upda.PortExportDate = request.POST['PortExportDate']
+            upda.SizeType = request.POST['SizeType']
+            upda.TotalWeight = request.POST['TotalWeight']
+            upda.Section = request.POST['Section']
+            upda.MBLNum = request.POST['MBLNum']
+            upda.Msn = request.POST['Msn']
+            upda.GoodsClassfiy = request.POST['GoodsClassfiy']
+            upda.Pol = request.POST['Pol']
+            upda.LeavePlace = request.POST['LeavePlace']
+            upda.LeaveClassfiy = request.POST['LeaveClassfiy']
+            upda.LoadID = request.POST['LoadID']
+            upda.GoodsName = request.POST['GoodsName']
     return HttpResponse("success")
 
 @csrf_exempt
 def sensor(request):
-    print("sex")
     han = request.POST.dict()
 
 
-    return HttpResponse("seccess")
+    return HttpResponse("success")
 
 
 
