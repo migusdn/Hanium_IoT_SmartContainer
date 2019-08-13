@@ -44,6 +44,26 @@ $(document).ready(function realmainpull(){
       });
 
 });
+$(document).ready(function() {
+
+ $("#sourcetable").tablesorter({
+    widthFixed : true,
+    showProcessing: true,
+    headerTemplate : '{content} {icon}',
+    widgets: [ 'uitheme', 'zebra', 'filter', 'scroller' ],
+    widgetOptions : {
+      scroller_height : 300,
+      scroller_barWidth : 18,
+      scroller_upAfterSort: true,
+      scroller_jumpToHeader: true,
+      scroller_idPrefix : 's_'
+    }
+  });
+});
+
+
+
+
 
 var pickedup;
 
@@ -71,3 +91,4 @@ $(document).ready(function() {
 
     });
 });
+
