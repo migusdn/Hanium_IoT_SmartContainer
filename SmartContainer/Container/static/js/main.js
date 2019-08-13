@@ -46,6 +46,9 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td>";
                         var strn = strn + data[i].GoodsName;
                         var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].CarryingDate;
+                        var strn = strn + "</td>";
                         var strn = strn + "</tr>";
                     }
                     var strn = strn + "</tbody>"

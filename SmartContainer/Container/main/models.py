@@ -13,6 +13,7 @@ class Container(models.Model):
     LeaveClassify = models.CharField(max_length=100, null=True)
     LoadID = models.CharField(max_length=100, null=True)
     GoodsName = models.CharField(max_length=100, null=True)
+    CarryingDate = models.CarryingDate(max_length=100, null=True)
     # PortEntryYear = models.CharField(max_length=100, null=True)
     # PortEntryCount = models.CharField(max_length=100, null=True)
     # PortImportDate = models.CharField(max_length=100, null=True)

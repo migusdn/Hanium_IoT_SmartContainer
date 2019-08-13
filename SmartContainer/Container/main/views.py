@@ -38,6 +38,7 @@ def container_input(request):
     #         upda.LeaveClassfiy = request.POST['LeaveClassfiy']
     #         upda.LoadID = request.POST['LoadID']
     #         upda.GoodsName = request.POST['GoodsName']
+    #         upda.CarryingDate = request.POST['CarryingDate']
     return HttpResponse("success")
 
 @csrf_exempt
