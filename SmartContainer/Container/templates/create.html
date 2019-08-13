@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/create.js' %}"></script>
+
+<div id="main">
+    <form id="form" name="form" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>컨테이너 정보 입력</legend>
+                첫번째 항목 : <input type ="text" name="1item"/> <br>
+                두번째 항목 : <input type ="text" name="2item"/> <br>
+                세번째 항목 : <input type ="text" name="3item"/> <br>
+                네번째 항목 : <input type ="text" name="4item"/> <br>
+                다섯번째 항목 : <input type ="text" name="5item"/> <br>
+                여섯번째 항목 : <input type ="text" name="6item"/> <br>
+
+                <input type="button" value="Submit" onclick="send()"/>
+                <input type="reset" value="reset"/>
+        </fieldset>
+
+
+
+
+    </form>
+
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+
+{% block js %}
+
+
+
+{% endblock %}
