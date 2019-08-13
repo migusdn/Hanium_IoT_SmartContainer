@@ -13,11 +13,22 @@ def index(request):
 
 @csrf_exempt
 def container_input(request):
-    print("헬로")
+    form = request.POST
+    raw_data = form.dict()
+    valid = Container.objects.filter(ContainerID=raw_data.get('ContainerID'))
+
+    if len(valid) == 0:
+        print("없음")
+        new_post = Container.objects.create(ContainerID=raw_data.get('ContainerID'), SizeType=raw_data.get('SizeType'), TotalWeight=raw_data.get('TotalWeight'),
+                                            GoodsName = raw_data.get('GoodsName'), GoodsClassify = raw_data.get('GoodsClassify'), Section = raw_data.get('Section'),
+                                            LeavePlace=raw_data.get('LeavePlace'), CarryingDate = raw_data.get('CarryingDate'), Check = "1")
+        return HttpResponse("Success")
+    else:
+        print("있음")
+        return HttpResponse("True")
     # form = containerForm(request.POST)
     # ContainerID = request.POST['ContainerID']
     # print(ContainerID)
-    #
     # if form.is_valid():
     #     print(ContainerID)
     #     upda = Container.objects.filter(ContainerID=request.POST['ContainerID'])
