@@ -64,31 +64,31 @@ function find_in_object(my_object, my_criteria){
 }
 
 function freeze(){
-    console.log("야이씨볼롬, freeze");
+    console.log("freeze");
+
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/freeze",
+                 url : "http://192.168.0.11:8000/status/freeze",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
-                    alert("성공");
-                    console.log(data);
+                    console.log("freeze 성공")
 
                     setTimeout(function(){
                     location.reload();
                     },1000); // 3000밀리초 = 3초
                  }
+
     });
 }
 
 function heat(){
-    console.log("야이씨볼롬, heat")
+    console.log("heat")
     $.ajax({
                  url : "http://192.168.0.4:8000/status/heat",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
-                    alert("성공");
-                    console.log(data);
+                    console.log("heat 성공")
 
                     setTimeout(function(){
                     location.reload();
@@ -98,14 +98,13 @@ function heat(){
 }
 
 function humid(){
-    console.log("야이씨볼롬, humid")
+    console.log("humid")
     $.ajax({
                  url : "http://192.168.0.4:8000/status/humid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
-                    alert("성공");
-                    console.log(data);
+                    console.log("humid 성공")
 
                     setTimeout(function(){
                     location.reload();
@@ -115,14 +114,13 @@ function humid(){
 }
 
 function dehum(){
-    console.log("야이씨볼롬, dehum")
+    console.log("dehum")
     $.ajax({
                  url : "http://192.168.0.4:8000/status/dehum",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
-                    alert("성공");
-                    console.log(data);
+                    console.log("dehum 성공")
 
                     setTimeout(function(){
                     location.reload();

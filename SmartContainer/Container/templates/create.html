@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/create.js' %}"></script>
+
+<div id="main">
+    <form id="form" name="form" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>컨테이너 정보 입력</legend>
+                ContainerID : <input type ="text" name="ContainerID"/> <br>
+                SizeType : <input type ="text" name="SizeType"/> <br>
+                TotalWeight : <input type ="text" name="TotalWeight"/> <br>
+                GoodsName : <input type ="text" name="GoodsName"/> <br>
+                GoodsClassify :
+                <select name="GoodsClassify">
+                    <option>철강</option>
+                    <option>금속</option>
+                    <option>기계</option>
+                    <option>식품</option>
+                    <option>의류</option>
+                    <option>부품</option>
+                    <option>목재</option>
+                    <option>액체</option>
+                </select><br>
+                Section :
+                <select name="Section">
+                    <option>0</option>
+                    <option>A</option>
+                    <option>B</option>
+                </select><br>
+                LeavePlace : <input type ="text" name="LeavePlace"/> <br>
+                CarryingDate : <input type ="text" name="CarryingDate"/> <br>
+
+                <input type="button" value="Submit" onclick="send()"/>
+                <input type="reset" value="reset"/>
+        </fieldset>
+
+
+
+
+    </form>
+
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+
+{% block js %}
+
+
+
+{% endblock %}

@@ -5,6 +5,7 @@
 {% load static %}
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
 
 <link href="{% static 'css/main.css'%}" rel="stylesheet">
 
@@ -13,21 +14,21 @@
     아이콘/탭 이름 나올 부분
 </div>
 
+
 <table id="sourcetable" border="1">
                     <thead>
                         <tr>
-                             <th>ContainerID</th>
+                            <th>ContainerID</th>
                             <th>SizeType</th>
                             <th>TotalWeight</th>
-                            <th>Section</th>
-                            <th>MBLNum</th>
-                            <th>Msn</th>
-                            <th>GoodsClassfiy</th>
-                            <th>Pol</th>
-                            <th>LeavePlace</th>
-                            <th>LeaveClassfiy</th>
-                            <th>LoadID</th>
                             <th>GoodsName</th>
+                            <th>GoodsClassify</th>
+
+                            <th>Section</th>
+                            <th>LeavePlace</th>
+                            <th>CarryingDate</th>
+
+                            <th>Check</th>
                         </tr>
                     </thead>
 </table>

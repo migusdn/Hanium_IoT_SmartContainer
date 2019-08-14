@@ -20,33 +20,23 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].TotalWeight;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
+                        var strn = strn + data[i].GoodsName;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
+                        var strn = strn + data[i].GoodsClassify;
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
                         var strn = strn + data[i].Section;
-                        var strn = strn + "</td>";
-                        var strn = strn + "<td>";
-                        var strn = strn + data[i].MBLNum;
-                        var strn = strn + "</td>";
-                        var strn = strn + "<td>";
-                        var strn = strn + data[i].Msn;
-                        var strn = strn + "</td>";
-                        var strn = strn + "<td>";
-                        var strn = strn + data[i].GoodsClassfiy;
-                        var strn = strn + "</td>";
-                        var strn = strn + "<td>";
-                        var strn = strn + data[i].Pol;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
                         var strn = strn + data[i].LeavePlace;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].LeaveClassfiy;
+                        var strn = strn + data[i].CarryingDate;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].LoadID;
+                        var strn = strn + data[i].Check;
                         var strn = strn + "</td>";
-                        var strn = strn + "<td>";
-                        var strn = strn + data[i].GoodsName;
-                        var strn = strn + "</td>";
-                        var strn = strn + "</tr>";
                     }
                     var strn = strn + "</tbody>"
                     $("#sourcetable").append(strn);
@@ -54,6 +44,26 @@ $(document).ready(function realmainpull(){
       });
 
 });
+$(document).ready(function() {
+
+ $("#sourcetable").tablesorter({
+    widthFixed : true,
+    showProcessing: true,
+    headerTemplate : '{content} {icon}',
+    widgets: [ 'uitheme', 'zebra', 'filter', 'scroller' ],
+    widgetOptions : {
+      scroller_height : 300,
+      scroller_barWidth : 18,
+      scroller_upAfterSort: true,
+      scroller_jumpToHeader: true,
+      scroller_idPrefix : 's_'
+    }
+  });
+});
+
+
+
+
 
 var pickedup;
 
@@ -81,3 +91,4 @@ $(document).ready(function() {
 
     });
 });
+
