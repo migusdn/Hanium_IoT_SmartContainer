@@ -62,6 +62,7 @@
     };
     function Send_data(device_num){
         StatusSocket.send(JSON.stringify({
+            'con_type': 'test',
             'device_num': device_num,
             'message': 'test'
         }))
