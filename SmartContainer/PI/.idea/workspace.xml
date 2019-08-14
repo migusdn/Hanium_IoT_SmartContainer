@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/migrations/0005_auto_20190814_1935.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/Status.html" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/Status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/room.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +80,7 @@
       <workItem from="1565615807007" duration="9267000" />
       <workItem from="1565595073213" duration="3228000" />
       <workItem from="1565673586560" duration="273000" />
-      <workItem from="1565798614153" duration="7209000" />
+      <workItem from="1565798614153" duration="7468000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>
@@ -106,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565592206523</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="freeze 등 함수 클라이언트 ip에 따른 동적 반응 추가, Model에 강제적으로 모듈 제어시에 필요한 필드 생성, NodeMcu Control 전용 코드 작성">
+      <created>1565814660400</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565814660400</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="freeze 등 함수 클라이언트 ip에 따른 동적 반응 추가, Model에 강제적으로 모듈 제어시에 필요한 필드 생성, NodeMcu Control 전용 코드 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="freeze 등 함수 클라이언트 ip에 따른 동적 반응 추가, Model에 강제적으로 모듈 제어시에 필요한 필드 생성, NodeMcu Control 전용 코드 작성" />
   </component>
 </project>
