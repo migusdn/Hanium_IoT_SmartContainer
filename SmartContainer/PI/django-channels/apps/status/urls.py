@@ -1,10 +1,11 @@
 from django.urls import path
-
+from . import consumers
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('<room_name>/', views.room, name='room'),
     path('test/test/', views.test, name='test'),
-    path('freeze', views.freeze, name='freeze')
+    path('freeze', views.freeze, name='freeze'),
+  #  path('test', consumers.TestConsumer, name='test')
 ]

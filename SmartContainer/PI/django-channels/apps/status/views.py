@@ -7,7 +7,8 @@ import requests
 import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 class DeviceViewSet(viewsets.ModelViewSet):
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
@@ -54,5 +55,14 @@ def freeze(request):
         response["Content-type"] = "application/json; charset=utf-8"
         print('2')
     #params
-    requests.get(url, params=paramDict)
+    #requests.get(url, params=paramDict)
+    layer = get_channel_layer()
+    async_to_sync(layer.group_send)(
+        'status',
+        {
+            'type': 'chat_message',
+            'message': 'freeze'
+        }
+    )
+
     return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
