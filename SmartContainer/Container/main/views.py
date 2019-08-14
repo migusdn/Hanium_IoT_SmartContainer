@@ -22,6 +22,8 @@ def container_input(request):
         Container.objects.create(ContainerID=raw_data.get('ContainerID'), SizeType=raw_data.get('SizeType'), TotalWeight=raw_data.get('TotalWeight'),
                                             GoodsName = raw_data.get('GoodsName'), GoodsClassify = raw_data.get('GoodsClassify'), Section = raw_data.get('Section'),
                                             LeavePlace=raw_data.get('LeavePlace'), CarryingDate = raw_data.get('CarryingDate'), Check = "1")
+
+        Detail.objects.create(ContainerID=raw_data.get('ContainerID'))
         return HttpResponse("Success")
     else:
         print("있음")
