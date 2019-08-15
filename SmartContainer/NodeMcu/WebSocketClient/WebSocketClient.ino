@@ -18,14 +18,14 @@ HTU21D myHumidity;
 #include <ESP8266WiFiMulti.h>
 
 #include <WebSocketsClient.h>
-
+#include <Arduino_JSON.h>
 #include <Hash.h>
 
 ESP8266WiFiMulti WiFiMulti;
 WebSocketsClient webSocket;
 
 #define USE_SERIAL Serial
-
+JSONVar myObj;
 
 void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
 
@@ -35,6 +35,11 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
 			break;
 		case WStype_CONNECTED: {
 			USE_SERIAL.printf("[WSc] Connected to url: %s\n", payload);
+      myObj["type"] = "chat_message";
+      myObj["message"] = "aa";
+      myObj["device_num"] = 00001;
+      String jsonString = JSON.stringify(myObj);
+      webSocket.sendTXT(jsonString);
 
 			// send message to server when Connected
 			//webSocket.sendTXT("Connected");
@@ -76,7 +81,7 @@ void setup() {
 		delay(1000);
 	}
 
-	WiFiMulti.addAP("iptime20", "46461234");
+	WiFiMulti.addAP("K_iptime", "12345678");
 
 	//WiFi.disconnect();
 	while(WiFiMulti.run() != WL_CONNECTED) {
@@ -84,7 +89,7 @@ void setup() {
 	}
 
 	// server address, port and URL
-	webSocket.begin("192.168.0.8", 8000, "/ws/status/00001/");
+	webSocket.begin("192.168.0.4", 8000, "/ws/status/00001/");
 
 	// event handler
 	webSocket.onEvent(webSocketEvent);
