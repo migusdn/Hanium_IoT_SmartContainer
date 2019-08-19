@@ -1,0 +1,35 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dropdown</title>
+
+</head>
+<body>
+	온도설정 : 
+	<select id='haan'></select>
+
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var temp = 5;
+	var pak='';
+	for(var i=(-20); i<=20;i++){
+		var pak = pak + "<option>"+i+"</option>" ;
+	}
+	$("#haan").append(pak);		//-20~20 옵션추가
+	$('#haan').val(temp).attr("selected", "selected");//기본값설정
+	$('#haan').on('change', function() {
+  	var value = $(this).val();
+  	alert("온도가"+value+" 도로 설정되었습니다");
+	});
+	
+
+//	$("#haan").val('1');
+</script>
