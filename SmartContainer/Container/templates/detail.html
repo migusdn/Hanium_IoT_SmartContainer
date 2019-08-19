@@ -24,7 +24,7 @@
 
         <div id="SetTemper">
             <label id="SetTemperX">설정온도</label>
-            <input type=text id="SetTemperY">
+            <select id="SetTemperY"></select>
         </div>
 
         <div id="UpTemper" >
@@ -51,7 +51,7 @@
 
         <div id="SetHumid">
             <label id="SetHumidX">설정습도</label>
-            <input type=text id="SetHumidY">
+            <select id="SetHumidY"></select>
         </div>
 
         <div id="UpHumid">
@@ -72,6 +72,12 @@
             <label id="DoorX">개폐장치</label>
             <input type=text id="DoorY">
             <input type="button" value="개폐" onclick="door()">
+        </div>
+
+        <div id="Check">
+            <label id="CheckX">체크여부</label>
+            <input type=text id="CheckY">
+            <input type="button" value="체크" onclick="check()">
         </div>
     </div>
 

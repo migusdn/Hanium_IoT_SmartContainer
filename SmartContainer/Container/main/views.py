@@ -23,7 +23,7 @@ def container_input(request):
                                             GoodsName = raw_data.get('GoodsName'), GoodsClassify = raw_data.get('GoodsClassify'), Section = raw_data.get('Section'),
                                             LeavePlace=raw_data.get('LeavePlace'), CarryingDate = raw_data.get('CarryingDate'), Check = "1")
 
-        Detail.objects.create(ContainerID=raw_data.get('ContainerID'))
+        Detail.objects.create(ContainerID=raw_data.get('ContainerID'), SetTemper="0", SetHumid="0", Door="0", UpTemper="0", DoTemper="0", UpHumid="0", DoHumid="0")
         return HttpResponse("Success")
     else:
         print("있음")
@@ -75,6 +75,23 @@ def sensor(request):
 
     update_han.save()
     return HttpResponse("success")
+
+
+@csrf_exempt
+def check(request):
+    ID = request.POST['data']
+    print(ID)
+    valid = Container.objects.get(ContainerID=ID)
+    if valid.Check == "0":
+        print("0이란다")
+        valid.Check = "1"
+    else:
+        print("1이란다")
+        valid.Check = "0"
+    valid.save()
+
+    json_data = json.dumps({"data": 1})
+    return HttpResponse(json_data)
 
 
 

@@ -35,7 +35,11 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].CarryingDate;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
-                        var strn = strn + data[i].Check;
+                        if(data[i].Check=='0'){
+                            strn = strn + "했음";
+                        }else {
+                            strn = strn + "해야함";
+                        }
                         var strn = strn + "</td>";
                     }
                     var strn = strn + "</tbody>"

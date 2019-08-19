@@ -4,7 +4,7 @@ var value = $('#ConID').val();
       $.ajax({
                  url : "http://127.0.0.1:8000/api/Detail/?format=json",
                  dataType : 'json',
-                 async: false,
+                 async: true,
                  success : function(data){
                         var my_json = JSON.stringify(data)
                         var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: value });
@@ -14,8 +14,23 @@ var value = $('#ConID').val();
                         }else{
                             $('#TemperY').val(filtered_json[0].Temper)
                             $('#HumidY').val(filtered_json[0].Humid)
-                            $('#SetTemperY').val(filtered_json[0].SetTemper)
-                            $('#SetHumidY').val(filtered_json[0].SetHumid)
+
+
+                            var SetTemper='';
+	                        for(var i=(-20); i<=20;i++){
+		                        var SetTemper = SetTemper + "<option>"+i+"</option>" ;
+	                        }
+	                        $("#SetTemperY").append(SetTemper);		//-20~20 옵션추가
+	                        $('#SetTemperY').val(filtered_json[0].SetTemper).attr("selected", "selected");//기본값설정
+
+
+                            var SetHumid='';
+	                        for(var i=(-20); i<=20;i++){
+		                        var SetHumid = SetHumid + "<option>"+i+"</option>" ;
+	                        }
+	                        $("#SetHumidY").append(SetHumid);		//-20~20 옵션추가
+	                        $('#SetHumidY').val(filtered_json[0].SetHumid).attr("selected", "selected");//기본값설정
+
 
                             if(filtered_json[0].Door==1){
                             $('#DoorY').val("열림")
@@ -49,6 +64,73 @@ var value = $('#ConID').val();
                         }
                  }
       });
+
+      $.ajax({
+                 url : "http://127.0.0.1:8000/api/Container/?format=json",
+                 dataType : 'json',
+                 async: true,
+                 success : function(data){
+                        var my_json = JSON.stringify(data);
+                        var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: value });
+
+                        if(filtered_json[0].Check=='1'){
+                            $('#CheckY').val("해야함")
+                        }else{
+                            $('#CheckY').val("했음")
+                        }
+                 }
+      });
+
+
+    $('#SetHumidY').on('change', function() {
+        console.log(value)
+        var humid = $(this).val();
+
+        $.ajax({
+                 url : "http://127.0.0.1:8000/detail/humid",
+                 dataType : 'json',
+                 data : {
+                   ConID : value,
+                   humid : humid
+                 },
+                 type : "POST",
+                 success : function(){
+
+                    alert("습도가"+humid+" 로 설정되었습니다");
+
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+        });
+
+    });
+
+
+    $('#SetTemperY').on('change', function() {
+        console.log(value)
+        var Temper = $(this).val();
+
+                $.ajax({
+                 url : "http://127.0.0.1:8000/detail/temper",
+                 dataType : 'json',
+                 data : {
+                   ConID : value,
+                   Temper : Temper
+                 },
+                 type : "POST",
+                 success : function(){
+
+                    alert("습도가"+Temper+" 로 설정되었습니다");
+
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+        });
+
+    });
+
 
 });
 
@@ -145,6 +227,29 @@ function door(){
                  }
     });
 }
+
+function check(){
+console.log("야이씨볼롬, check")
+var value = $('#ConID').val();
+
+    $.ajax({
+                 url : "http://127.0.0.1:8000/main/check",
+                 dataType : 'json',
+                 data : {
+                   data : value
+                 },
+                 type : "POST",
+                 success : function(){
+
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+    });
+
+}
+
+
 
 /*
 function control(){

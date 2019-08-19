@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from main.models import Container
-from . import models
+from .models import Detail
+
 from django.views.decorators.csrf import csrf_exempt
+import json
 # Create your views here.
 
 
@@ -22,6 +24,25 @@ def ContainerDetail(request):
 def DetailTest(request):
     Num = request.POST['ConID']
     return render(request, 'Detail.html', {'ConID': Num})
+
+@csrf_exempt
+def sethumid(request):
+    valid = Detail.objects.get(ContainerID=request.POST['ConID'])
+    valid.SetHumid = request.POST['humid']
+    valid.save()
+
+    json_data = json.dumps({"data": 1})
+    return HttpResponse(json_data)
+
+@csrf_exempt
+def settemper(request):
+
+    valid = Detail.objects.get(ContainerID=request.POST['ConID'])
+    valid.SetTemper = request.POST['Temper']
+    valid.save()
+
+    json_data = json.dumps({"data": 1})
+    return HttpResponse(json_data)
 
 
 
