@@ -1,24 +1,31 @@
+body {
+    margin : 0px;
+    background-color : rgb(243, 243, 243);
 
+}
 
 #topbar {
     float:left;
     width:100%;
     height:50px;
-    background-color: rgb(27,53,85);
+    background-color: rgb(13, 31, 52);
 }
 
 
 #sidebar {
     float:left;
     width:180px;
-    height:100%;
-    background-color:rgb(27,53,85);
-    border-top: 0.5px solid rgb(112, 115, 117);
+    height:94%;
+    background-color: rgb(14, 33, 56);
 }
+
 
 a {
    text-decoration : none;
    color : gray;
+   margin : 5%;
+   line-height : 2;
+   font-size : 17px;
 }
 
 /*a:hover{

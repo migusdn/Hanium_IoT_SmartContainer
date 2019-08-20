@@ -3,13 +3,13 @@
 }*/
 
 #sourcetable{
-    width : 82%;
+    width : 81%;
     text-align : center;
-    margin-top : 6%;
+    margin-top : 3%;
     margin-left : 15%;
     border-collapse: collapse;
-    line-height: 3;
-    border-left: 1px solid white;
+    line-height: 2.5;
+    border-left: 1px solid #00ff0000;
     border-right: 1px solid #00ff0000; /* 세로선 투명 */
     border-top : 1px solid #00ff0000; /* 세로선 투명 */
     table-layout : fixed; /* 너비고정 */
@@ -17,7 +17,7 @@
 
 thead { /* 표 상단 */
     border-bottom : 2px solid rgb(27, 53, 85) ;
-    background-color : rgba(40, 66, 96, 0.07);
+
 }
 
 tbody { /* 표바닥 */
@@ -29,10 +29,6 @@ tr { /* 가로줄 */
 }
 
 tr:hover {
-    background-color : rgba(40, 66, 96, 0.07);
-}
-
-tr:nth-child(even) { /* 짝수 행 */
     background-color : rgba(40, 66, 96, 0.07);
 }
 
