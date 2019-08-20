@@ -64,10 +64,8 @@ def sensor(request):
     print(han.get('Humid'))
 
     update_han = Detail.objects.get(ContainerID=han.get('ConId'))
-    update_han.Temper = han.get('Humid')
+    update_han.Temper = han.get('Temper')
     update_han.Humid = han.get('Humid')
-    update_han.SetTemper = han.get('SetTemper')
-    update_han.SetHumid = han.get('SetHumid')
     update_han.Door = han.get('Door')
     update_han.UpTemper = han.get('UpTemper')
     update_han.DoTemper = han.get('DoTemper')

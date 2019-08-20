@@ -148,10 +148,20 @@ function find_in_object(my_object, my_criteria){
 function freeze(){
     console.log("freeze");
 
+    var Temper = $('#SetTemperY').val();
+    var Humid = $('#SetHumidY').val();
+
+    console.log(Temper);
+    console.log(Humid);
+
     $.ajax({
                  url : "http://192.168.0.11:8000/status/freeze",
                  dataType : 'jsonp',
                  jsonp: "callback",
+                 data : {
+                    temper : Temper,
+                    humid : Humid
+                 },
                  success : function(data){
                     console.log("freeze 성공")
 
