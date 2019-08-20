@@ -3,6 +3,8 @@
 {% block content %}
 
 {% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/map.js' %}"></script>
 <link href="{% static 'css/map.css'%}" rel="stylesheet">
 
 <div id="bar">
@@ -10,16 +12,26 @@
 </div>
 
 <div id="map">
-    <div id="Section 0">
-        <input type="button" value="냉동">
+    <div id="menu0" class="menu">
+        <div class="close"></div>
     </div>
 
-    <div id="Section A">
-        <input type="button" value="A">
+    <div id="menuA" class="menu">
+        <div class="close"></div>
     </div>
 
-    <div id="Section B">
-        <input type="button" value="B">
+    <div id="menuB" class="menu">
+        <div class="close"></div>
+    </div>
+
+
+    <div id="btn0" class="btn">
+    </div>
+
+    <div id="btnA" class="btn">
+    </div>
+
+    <div id="btnB" class="btn">
     </div>
 
 

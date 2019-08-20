@@ -18,6 +18,7 @@ background-color:orange;
 width:200px;
 height:200px;
 background-color:skyblue;
+}
 
 input{
     background-color : rgb(224, 224, 224);
@@ -40,3 +41,4 @@ input:hover {
     height : 14%;
     border-bottom : 0.5px solid rgb(112, 115, 117);
 }
+
