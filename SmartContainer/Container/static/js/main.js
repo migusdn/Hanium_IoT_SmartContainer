@@ -34,7 +34,7 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td>";
                         var strn = strn + data[i].CarryingDate;
                         var strn = strn + "</td>";
-                        var strn = strn + "<td>";
+                        var strn = strn + "<td style='font-size:x-large'>";
                         var strn = strn + "■";
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
@@ -145,14 +145,16 @@ $(document).ready(function() {
     var result2= new Array();    //result배열과 오늘날짜차이 저장하기위한배열
     for(var i=1; i<result.length;i++){
         result2[i] = dateDiff(result[i],new Date());    //계산해서 배열저장
-        console.log("여여기여깅");
-        console.log(result2[i]);
-        if(result2[i]>=7){                  //차이값이 얼마이상이면
-            exTable.rows[i].cells[8].style.backgroundColor='#aabbcc';
-                                        //지정 배경색 칠하기
+        //console.log("여여기여깅");
+        //console.log(result2[i]);
+        if(result2[i]<=3){                  //차이값이 얼마이상이면
+            exTable.rows[i].cells[8].style.color='#ff0000'; //3일 이내 빨간색
         }
-        else if(result2[i]<=3){                  //3일이내면 빨간색
-            exTable.rows[i].cells[8].style.backgroundColor='#ff0000';
+        else if(result2[i]<=7){
+            exTable.rows[i].cells[8].style.color='#ff9900'; //7일 이내 주황색
+        }
+        else if(result2[i]>=8){
+            exTable.rows[i].cells[8].style.color='#00ff00'; //8일 이상 초록색
         }
 
     }
