@@ -42,3 +42,26 @@ input:hover {
     border-bottom : 0.5px solid rgb(112, 115, 117);
 }
 
+
+/*여기서부터 맵 CSS*/
+
+.select-bar{
+    position:absolute;
+    top:14%;
+    width:400px;
+    height:90%;
+    right:0px;
+    float:right;
+    background-color:gray;
+}
+#select-bar0{
+    z-index:3;
+}
+
+#select-barA{
+    z-index:2;
+}
+
+#select-barB{
+    z-index:1;
+}
