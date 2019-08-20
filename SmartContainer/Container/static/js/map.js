@@ -33,21 +33,21 @@ $(document).ready(function mappull(){
 
 function fun0(){
     console.log("0이 위로");
-    document.getElementById('select-barA').style.zindex = -1;
-    document.getElementById('select-barB').style.zindex = -1;
-    document.getElementById('select-bar0').style.zindex = 1;
+    document.getElementById('select-barA').style.zIndex = 2;
+    document.getElementById('select-barB').style.zIndex = 1;
+    document.getElementById('select-bar0').style.zIndex = 3;
 }
 
 function funA(){
     console.log("A이 위로");
-    document.getElementById('select-bar0').style.zindex = -1;
-    document.getElementById('select-barB').style.zindex = -1;
-    document.getElementById('select-barA').style.zindex = 1;
+    document.getElementById('select-bar0').style.zIndex = 2;
+    document.getElementById('select-barB').style.zIndex = 1;
+    document.getElementById('select-barA').style.zIndex = 3;
 }
 
 function funB(){
     console.log("B이 위로");
-    document.getElementById('select-bar0').style.zindex = -1;
-    document.getElementById('select-barA').style.zindex = -1;
-    document.getElementById('select-barB').style.zindex = 1;
+    document.getElementById('select-bar0').style.zIndex = 2;
+    document.getElementById('select-barA').style.zIndex = 1;
+    document.getElementById('select-barB').style.zIndex = 3;
 }
