@@ -35,6 +35,9 @@ $(document).ready(function realmainpull(){
                         var strn = strn + data[i].CarryingDate;
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
+                        var strn = strn + "■";
+                        var strn = strn + "</td>";
+                        var strn = strn + "<td>";
                         if(data[i].Check=='0'){
                             strn = strn + "했음";
                         }else {
@@ -145,11 +148,11 @@ $(document).ready(function() {
         console.log("여여기여깅");
         console.log(result2[i]);
         if(result2[i]>=7){                  //차이값이 얼마이상이면
-            exTable.rows[i].cells[7].style.backgroundColor='#aabbcc';
+            exTable.rows[i].cells[8].style.backgroundColor='#aabbcc';
                                         //지정 배경색 칠하기
         }
         else if(result2[i]<=3){                  //3일이내면 빨간색
-            exTable.rows[i].cells[7].style.backgroundColor='#ff0000';
+            exTable.rows[i].cells[8].style.backgroundColor='#ff0000';
         }
 
     }

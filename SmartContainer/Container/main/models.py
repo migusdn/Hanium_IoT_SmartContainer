@@ -9,7 +9,9 @@ class Container(models.Model):
     Section = models.CharField(max_length=100, null=True)
     LeavePlace = models.CharField(max_length=100, null=True)
     CarryingDate = models.CharField(max_length=100, null=True)
+    #Condition = models.CharField(max_length=100, null=True)
     Check = models.CharField(default="0", max_length=100, null=True)
+
     # PortEntryYear = models.CharField(max_length=100, null=True)
     # PortEntryCount = models.CharField(max_length=100, null=True)
     # PortImportDate = models.CharField(max_length=100, null=True)
