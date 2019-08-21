@@ -5,57 +5,55 @@
 {% load static %}
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/map.js' %}"></script>
+<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
 <link href="{% static 'css/map.css'%}" rel="stylesheet">
 
 
 
 <div id="map">
-<!--    <div id="menu0" class="menu">
-        <div class="close"></div>
-    </div>
-
-    <div id="menuA" class="menu">
-        <div class="close"></div>
-    </div>
-
-    <div id="menuB" class="menu">
-        <div class="close"></div>
-    </div>-->
-
-<!--    <div id="btn0" class="btn">
-
-    </div>
-
-
-    <div id="btnA" class="btn">
-
-    </div>
-
-    <div id="btnB" class="btn">
-
-    </div>-->
-
     <input type="button" value="0" onclick="fun0()">
     <input type="button" value="A" onclick="funA()">
     <input type="button" value="B" onclick="funB()">
-
+</div>
 
     <div id="select-bar0" class="select-bar">
-        0000
+        <table id="0table" class="placetable" border="1">
+                    <thead>
+                        <tr>
+                            <th width="110px">컨테이너 번호</th>
+                            <th width="110px">컨테이너 위치</th>
+                            <th>체크여부</th>
+                        </tr>
+                    </thead>
+        </table>
     </div>
     <div id="select-barA" class="select-bar">
-        AAAA
+        <table id="Atable" class="placetable" border="1">
+                    <thead>
+                        <tr>
+                            <th width="110px">컨테이너 번호</th>
+                            <th width="110px">컨테이너 위치</th>
+                            <th>체크여부</th>
+                        </tr>
+                    </thead>
+        </table>
     </div>
     <div id="select-barB" class="select-bar">
-        BBBB
+        <table id="Btable" class="placetable" border="1">
+                    <thead>
+                        <tr>
+                            <th width="110px">컨테이너 번호</th>
+                            <th width="110px">컨테이너 위치</th>
+                            <th>체크여부</th>
+                        </tr>
+                    </thead>
+        </table>
     </div>
 
-</div>
-
-<div id="Search">
 
 
-</div>
+    <div id="Search">
+    </div>
 {% endblock %}
 
 

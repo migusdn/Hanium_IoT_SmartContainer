@@ -1,5 +1,6 @@
 #map{
 float:left;
+width: 500px;
 }
 
 #SectionF{
@@ -47,12 +48,17 @@ input:hover {
 
 .select-bar{
     position:absolute;
-    top:14%;
+    top:50px;
     width:400px;
-    height:90%;
+    height:100%;
     right:0px;
     float:right;
     background-color:gray;
+}
+
+.placetable{
+    margin-top:10px;
+    margin-left:10px;
 }
 #select-bar0{
     z-index:3;
