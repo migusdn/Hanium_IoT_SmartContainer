@@ -11,11 +11,11 @@
     <form id="form" name="form" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>컨테이너 정보 입력</legend>
-                ContainerID : <input type ="text" name="ContainerID"/> <br>
-                SizeType : <input type ="text" name="SizeType"/> <br>
-                TotalWeight : <input type ="text" name="TotalWeight"/> <br>
-                GoodsName : <input type ="text" name="GoodsName"/> <br>
-                GoodsClassify :
+                컨테이너 번호 : <input type ="text" name="ContainerID"/> <br>
+                사이즈/타입 : <input type ="text" name="SizeType"/> <br>
+                총 중량 : <input type ="text" name="TotalWeight"/> <br>
+                품명 : <input type ="text" name="GoodsName"/> <br>
+                화물구분 :
                 <select name="GoodsClassify">
                     <option>철강</option>
                     <option>금속</option>
@@ -26,14 +26,14 @@
                     <option>목재</option>
                     <option>액체</option>
                 </select><br>
-                Section :
+                컨테이너 위치 :
                 <select name="Section">
                     <option>0</option>
                     <option>A</option>
                     <option>B</option>
                 </select><br>
-                LeavePlace : <input type ="text" name="LeavePlace"/> <br>
-                CarryingDate : <input type ="text" name="CarryingDate"/> <br>
+                하선장소 : <input type ="text" name="LeavePlace"/> <br>
+                반출일자 : <input type ="text" name="CarryingDate"/> <br>
 
                 <input type="button" value="Submit" onclick="send()"/>
                 <input type="reset" value="reset"/>
