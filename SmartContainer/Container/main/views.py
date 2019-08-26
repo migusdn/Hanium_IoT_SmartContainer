@@ -6,8 +6,8 @@ from detail.forms import DetailForm
 from .models import Container
 from detail.models import Detail
 import json
-import schedule
-import time
+
+
 
 def index(request):
     return render(request, 'templates/smain.html')
