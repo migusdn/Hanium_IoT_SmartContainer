@@ -91,7 +91,6 @@ $(document).ready(function() {
 	hiddenField.setAttribute('name', 'ConID');
 	hiddenField.setAttribute('value', ConID);
 	form.appendChild(hiddenField);
-
 	document.body.appendChild(form);
 	form.submit();
 
@@ -122,7 +121,6 @@ $(document).ready(function() {
             }   //result[1] 부터 배열 넣기
         }
     }
-
     for( var i=1; i<result.length;i++){
          console.log(result[i]);
     }
