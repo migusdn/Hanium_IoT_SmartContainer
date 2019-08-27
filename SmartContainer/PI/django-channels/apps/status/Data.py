@@ -23,6 +23,7 @@ def Node_Control(text_data, mode):
                 res.Humid = text_data_json['humid']
         elif (con_type == 'test'):
             print('con_type test')
+        #elif (con_type == ' ')
     else:
         if mode == 'freeze':
             print('request: freeze')
@@ -37,11 +38,12 @@ def Node_Control(text_data, mode):
         "Door": "1",
         "SetTemper": res.SetTemper,
         "SetHumid": res.SetHumid,
-        "UpTemper": str(res.UpTemper),
-        "DoTemper": str(res.DoTemper),
-        "UpHumid": str(res.UpHumid),
-        "DoHumid": str(res.DoHumid)
+        "UpTemper": res.UpTemper,
+        "DoTemper": res.DoTemper,
+        "UpHumid": res.UpHumid,
+        "DoHumid": res.DoHumid
     }
+    #DB 덤프 보내려면 아래줄 주석해제
     #requests.get(url, params=paramDict)
 
 def DB_dump(url):

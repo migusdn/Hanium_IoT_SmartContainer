@@ -33,7 +33,7 @@ class StatusConsumer(WebsocketConsumer):
             self.room_group_name,
             {
                 'type': 'chat_message',
-                'con_type': 'nomal_message',
+                'con_type': self.room_name,
                 'message': 'OFF',
                 'device_num': self.room_name
             }
@@ -50,7 +50,11 @@ class StatusConsumer(WebsocketConsumer):
         Node_Control(text_data, 'test')
         try:
             text_data_json = json.loads(text_data)
-            device_num = text_data_json['device_num']
+            device_num = None
+            try :
+                device_num = text_data_json['device_num']
+            except Exception as ex:
+                print('device_num field is none')
             message = text_data_json['message']
 
             # Send message to room group
@@ -70,7 +74,11 @@ class StatusConsumer(WebsocketConsumer):
     def chat_message(self, event):
         try:
             message = event['message']
-            device_num = event['device_num']
+            device_num = None
+            try :
+                device_num = event['device_num']
+            except Exception as ex:
+                print('device_num field is none')
             print(event)
         # Send message to WebSocket
 
