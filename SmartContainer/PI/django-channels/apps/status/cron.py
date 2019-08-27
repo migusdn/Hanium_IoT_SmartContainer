@@ -42,6 +42,8 @@ def control():
             print('Warn: TempDo Enforced')
             print('Can not run TempUp')
         elif(EnforceT_Do == False):
+            res.UpTempr = True
+            res.DoTemper = False
             async_to_sync(layer.group_send)(
                 'status',
                 {
@@ -58,6 +60,8 @@ def control():
             print('Warn: TempUp Enforced')
             print('Can not run TempDo')
         elif (EnforceT_Up == False):
+            res.DoTemper = True
+            res.UpTempr = False
             async_to_sync(layer.group_send)(
                 'status',
                 {
@@ -76,6 +80,8 @@ def control():
             print('Warn: HumidDo Enforced')
             print('Can not run HumidUp')
         elif(EnforceH_Do == False):
+            res.UpHumid = True
+            res.DoHumid = False
             async_to_sync(layer.group_send)(
                 'status',
                 {
@@ -92,6 +98,8 @@ def control():
             print('Warn: HumidUp Enforced')
             print('Can not run HumidDo')
         elif (EnforceH_Up == False):
+            res.DoHumid = True
+            res.UpHumid = False
             async_to_sync(layer.group_send)(
                 'status',
                 {

@@ -105,10 +105,20 @@ class AllStatusConsumer(WebsocketConsumer):
 
     def disconnect(self, close_code):
         # Leave room group
+        res = Device.objects.get(ConId='B1')
         async_to_sync(self.channel_layer.group_discard)(
             self.room_group_name,
             self.channel_name
         )
+        if self.room_name == uptemp :
+            res.UpTempr = None
+        elif self.room_name == dotemp:
+            res.DoTempr = None
+        elif self.room_name == uphumid:
+            res.UpHumid = None
+        elif self.room_name == dohumid:
+            res.DoHumid = None
+
 
     # Receive message from WebSocket
     def receive(self, text_data):
