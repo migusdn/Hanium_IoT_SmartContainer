@@ -19,13 +19,13 @@ class Device(models.Model):
     #온도 하강 모듈 (freeze)
     DoTemper = models.NullBooleanField()
 
-    UpHumid = models.CharField(max_length=100, null=True)
-    DoHumid = models.CharField(max_length=100, null=True)
+    UpHumid = models.NullBooleanField()
+    DoHumid = models.NullBooleanField()
     # 강제성 유무
-    EnforceT_Up = models.NullBooleanField()
-    EnforceT_Do = models.NullBooleanField()
-    EnforceH_Up = models.NullBooleanField()
-    EnforceH_Do = models.NullBooleanField()
+    EnforceT_Up = models.BooleanField(default=False)
+    EnforceT_Do = models.BooleanField(default=False)
+    EnforceH_Up = models.BooleanField(default=False)
+    EnforceH_Do = models.BooleanField(default=False)
 
     def __str__(self):
         return self.ConId
