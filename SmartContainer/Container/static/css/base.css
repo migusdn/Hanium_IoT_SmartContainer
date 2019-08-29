@@ -1,13 +1,12 @@
 body {
-    margin : 0px;
-    background-color : rgb(243, 243, 243);
-
+    margin : 0%;
+    background-color : rgb(236,237,204);
 }
 
 #topbar {
     float:left;
     width:100%;
-    height:50px;
+    height: 15px;
     background-color: rgb(13, 31, 52);
 }
 

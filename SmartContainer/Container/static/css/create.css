@@ -1,0 +1,61 @@
+#main {
+    width : 85%;
+    height : 66%;
+    background-color : white;
+    border-radius : 7px 7px 7px 7px;
+    margin-left : 13%;
+    margin-top : 0.5%;
+    position : fixed;
+}
+
+h2 {
+    padding-top : 4.9%;
+    padding-left : 13%;
+    font-weight : bold;
+}
+
+b {
+    font-size : 19px;
+    padding-left : 5%;
+    vertical-align : middle;
+}
+
+input {
+    border-radius : 5px 5px 5px 5px;
+    border : 1px solid #9d9c9c;
+    width : 20%;
+    height : 6.5%;
+    margin-top : 2%;
+    margin-left : 1%;
+}
+
+select {
+    border-radius : 5px 5px 5px 5px;
+    border : 1px solid #9d9c9c;
+    width : 15%;
+    height : 6.5%;
+    margin-top : 2%;
+}
+
+.button input {
+    width : 8%;
+    height : 8%;
+    font-size : 15px;
+    border : 0px;
+    margin-top : 4%;
+    margin-left : 4.7%;
+    margin-right : 0.5%;
+    float : left;
+    background-color : rgb(71,164,71);
+    color : white;
+}
+
+.reset input{
+    width : 8%;
+    height : 8%;
+    font-size : 15px;
+    border : 0px;
+    background-color :  rgb(171,178,184);
+    color : white;
+    margin-top : 4%;
+}
