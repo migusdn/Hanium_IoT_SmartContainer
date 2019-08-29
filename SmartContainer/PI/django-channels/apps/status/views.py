@@ -74,3 +74,12 @@ def freeze(request):
     )
 
     return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+
+def dohumid(request) :
+    return
+def uphumid(request):
+    return
+def door(request) :
+    return
+def dotemp(request):
+    return

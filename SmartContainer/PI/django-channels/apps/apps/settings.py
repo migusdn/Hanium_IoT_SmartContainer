@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'status',
     'device',
     'rest_framework',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -92,6 +93,11 @@ REST_FRAMEWORK = {
     ]
 }
 
+#CronTab
+CRONJOBS = [
+    ('* * * * *', 'status.cron.control'),
+    ('* * * * *', 'status.cron.test'),
+]
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 

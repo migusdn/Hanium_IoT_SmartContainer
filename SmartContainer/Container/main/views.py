@@ -6,6 +6,11 @@ from detail.forms import DetailForm
 from .models import Container
 from detail.models import Detail
 import json
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9b96c01b60fa9edb65406d48a06375dbaa106959
 
 def index(request):
     return render(request, 'templates/smain.html')
