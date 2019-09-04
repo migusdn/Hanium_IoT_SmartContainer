@@ -3,7 +3,7 @@
     height : 71%;
     background-color : white;
     border-radius : 2px;
-    margin-left : 15%;
+    margin-left : 220px;
     position : fixed;
     margin-top : -0.1%;
 }
@@ -51,7 +51,7 @@ select {
     font-size : 15px;
     border : 0px;
     margin-top : 4.3%;
-    margin-left : -0.03%;
+    margin-left : 1%;
     float : left;
     background-color : rgb(71,164,71);
     color : white;
