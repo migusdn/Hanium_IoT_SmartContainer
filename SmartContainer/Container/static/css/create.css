@@ -1,18 +1,18 @@
 #main {
     width : 83.3%;
-    height : 71%;
+    height : 68%;
     background-color : white;
     border-radius : 2px;
     margin-left : 250px;
     position : fixed;
-    margin-top : -0.1%;
+    margin-top : -0.4%;
 }
 
 h2 {
-    padding-top : 4%;
+    padding-top : 3.6%;
     padding-left : 15%;
     font-weight : bold;
-    font-size : 23px;
+    font-size : 21px;
 }
 
 b {
@@ -27,7 +27,7 @@ input {
     border : 0px;
     width : 17%;
     height : 6.5%;
-    margin-top : 2.15%;
+    margin-top : 2%;
     margin-left : 1%;
     background-color : rgb(243,243,243);
     padding : 1%;
@@ -49,8 +49,8 @@ select {
     height : 8%;
     font-size : 15px;
     border : 0px;
-    margin-top : 4.3%;
-    margin-left : 1%;
+    margin-top : 3.7%;
+    margin-left : 0%;
     float : left;
     background-color : rgb(71,164,71);
     color : white;
@@ -63,7 +63,7 @@ select {
     border : 0px;
     background-color :  rgb(171,178,184);
     color : white;
-    margin-top :4.3%;
+    margin-top :3.7%;
 }
 
 

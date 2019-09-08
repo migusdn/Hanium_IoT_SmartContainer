@@ -85,7 +85,8 @@ input:hover {
 }
 
 .placetable th {
-     background-color : rgba(30, 75, 117,0.7);
+     background-color : rgb(109,114,134);
+     /*background-color : rgba(30, 75, 117,0.7);*/
      border-bottom : 1px solid rgb(124,124,124);
      border-right: 1px solid rgb(124,124,124);
      border-top : 1px solid #00ff0000; /* 세로선 투명 */

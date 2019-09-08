@@ -106,8 +106,15 @@ input {
    border : 2px solid rgb(27, 53, 85);
    width : 200px;
    height : 30px;
+   float:left;
 }
 
 input:focus {
     outline : none;
+}
+
+img {
+  width : 30px;
+  height : 30px;
+  float : left;
 }
