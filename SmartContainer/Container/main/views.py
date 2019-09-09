@@ -7,6 +7,7 @@ from .models import Container
 from detail.models import Detail
 import json
 
+
 def index(request):
     return render(request, 'templates/smain.html')
 

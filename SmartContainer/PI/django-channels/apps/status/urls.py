@@ -7,5 +7,9 @@ urlpatterns = [
     path('<room_name>/', views.room, name='room'),
     path('test/test/', views.test, name='test'),
     path('freeze', views.freeze, name='freeze'),
+    path('dohumid', views.dohumid, name='heat'),
+    path('uphumid', views.uphumid, name='uphumid'),
+    path('set', views.SetTempHumid, name='setting'),
+    path('SetTempHumidAct', views.SetTempHumidAct, name="acting"),
   #  path('test', consumers.TestConsumer, name='test')
 ]

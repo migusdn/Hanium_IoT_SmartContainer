@@ -74,3 +74,25 @@ def freeze(request):
     )
 
     return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+
+def dohumid(request) :
+    return
+def uphumid(request):
+    return
+def door(request) :
+    return
+def dotemp(request):
+    return
+
+def SetTempHumid(request):
+    return render(request, 'chat/setting.html', {})
+
+def SetTempHumidAct(request):
+    Temp = request.POST.get('SetTemp')
+    Humid = request.POST.get('SetHumid')
+    res = Device.objects.get(ConId='B1')
+    res.SetTemper = Temp
+    res.SetHumid = Humid
+    res.save()
+    print('설정 온습도 변경 완료.')
+    return HttpResponse("성공")

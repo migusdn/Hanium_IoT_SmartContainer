@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'status',
     'device',
     'rest_framework',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-# Rest
+# Restr
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -92,6 +93,11 @@ REST_FRAMEWORK = {
     ]
 }
 
+#CronTab
+CRONJOBS = [
+    ('* * * * *', 'status.cron.control', '>>/home/migusdn/log/abc.log2>&1'),
+    ('* * * * *', 'status.cron.test'),
+]
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 

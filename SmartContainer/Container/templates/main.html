@@ -6,16 +6,16 @@
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
-
 <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+
 <title>Main</title>
 
-
-
 <div id="input-form">
-            검색 : <input type="text" id="keyword" />
+    <input type="text" id="keyword" />
 </div>
 
+<img src="{% static "images/search.png" %}">
 
 <table id="sourcetable" border="1">
                     <thead>
@@ -34,8 +34,6 @@
                     </thead>
 
 </table>
-
-The field to fill in with second item of a row : <input type="text" id="fillname" value="" />
 
 {% endblock %}
 

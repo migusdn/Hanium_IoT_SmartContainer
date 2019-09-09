@@ -62,6 +62,27 @@ var value = $('#ConID').val();
                             $('#DoHumidY').val("닫힘")
                             }
                         }
+                          var temY  = document.getElementById("TemperY").value;
+                          var settemY  = document.getElementById("SetTemperY").value;
+                            if(((settemY<temY) && filtered_json[0].UpTemper==1) || (((settemY>temY) && filtered_json[0].DoTemper==1))) {
+
+                /*                $.ajax({
+                                 url : "http://127.0.0.1:8000/detail/StatCheck",
+                               dataType : 'json',
+                               data : {
+                                  ConID : value,
+                                  StatCheck : StatCheck
+                                 },
+                              type : "POST",
+                              success : function(){
+                                   setTimeout(function(){
+                                   location.reload();
+                                  },1000); // 3000밀리초 = 3초
+                               }
+                     });*/
+                     alert("오류오류오류");
+                     console.log("오류오류오류");
+                      }
                  }
       });
 
@@ -121,7 +142,7 @@ var value = $('#ConID').val();
                  type : "POST",
                  success : function(){
 
-                    alert("습도가"+Temper+" 로 설정되었습니다");
+                    alert("온도가"+Temper+" 로 설정되었습니다");
 
                     setTimeout(function(){
                     location.reload();
@@ -259,6 +280,29 @@ var value = $('#ConID').val();
 
 }
 
+$(document).ready(function() {
+    var temY  = document.getElementById("TemperY").value;
+    var settemY  = document.getElementById("SetTemperY").value;
+
+        if(((settemY<temY) && filtered_json[0].UpTemper==1) || (((settemY>temY) && filtered_json[0].DoTemper==1))) {
+
+                 $.ajax({
+                 url : "http://127.0.0.1:8000/detail/StatCheck",
+                 dataType : 'json',
+                 data : {
+                   ConID : value,
+                   StatCheck : 1
+                 },
+                 type : "POST",
+                 success : function(){
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+        });
+        alert("오류오류오류");
+        }
+    });
 
 
 /*

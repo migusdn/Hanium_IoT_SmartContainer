@@ -4,18 +4,27 @@
 {% block content %}
 
 {% load static %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/create.js' %}"></script>
+<link href="{% static 'css/create.css'%}" rel="stylesheet">
+
+<script>
+
+</script>
+
+<h2>컨테이너 추가</h2>
+
 
 <div id="main">
-    <form id="form" name="form" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <legend>컨테이너 정보 입력</legend>
-                컨테이너 번호 : <input type ="text" name="ContainerID"/> <br>
-                사이즈/타입 : <input type ="text" name="SizeType"/> <br>
-                총 중량 : <input type ="text" name="TotalWeight"/> <br>
-                품명 : <input type ="text" name="GoodsName"/> <br>
-                화물구분 :
+     <form id="form" name="form" method="post" enctype="multipart/form-data">
+                <b>컨테이너 번호</b>&nbsp; &nbsp;  <input type ="text" name="ContainerID"/><br>
+                <b>사이즈/타입</b>&nbsp;&nbsp; &nbsp; &nbsp; <input type ="text" name="SizeType"/><br>
+                <b>총 중량</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="TotalWeight"/><br>
+                <b>품명 &nbsp;</b>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="GoodsName"/><br>
+                <b>화물구분</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <select name="GoodsClassify">
                     <option>철강</option>
                     <option>금속</option>
@@ -26,27 +35,22 @@
                     <option>목재</option>
                     <option>액체</option>
                 </select><br>
-                컨테이너 위치 :
+                <b>컨테이너 위치</b>&nbsp; &nbsp; &nbsp;
                 <select name="Section">
                     <option>0</option>
                     <option>A</option>
                     <option>B</option>
                 </select><br>
-                하선장소 : <input type ="text" name="LeavePlace"/> <br>
-                반출일자 : <input type ="text" name="CarryingDate"/> <br>
+                <b>하선장소</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="text" name="LeavePlace"/><br>
+                <b>반출일자</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="text" id="datepicker1" name="CarryingDate"/><br>
 
-                <input type="button" value="Submit" onclick="send()"/>
-                <input type="reset" value="reset"/>
-        </fieldset>
-
-
-
-
+            <div class="button">
+                <input type="button" value="등록" onclick="send()" />
+            </div>
+            <div class="reset">
+                <input type="reset" value="초기화"/>
+            </div>
     </form>
-
-
-
-
 </div>
 
 

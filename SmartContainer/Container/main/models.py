@@ -11,6 +11,7 @@ class Container(models.Model):
     CarryingDate = models.CharField(max_length=100, null=True)
     #Condition = models.CharField(max_length=100, null=True)
     Check = models.CharField(default="0", max_length=100, null=True)
+    StatCheck = models.CharField(default="0", max_length=100, null=True)
 
     # PortEntryYear = models.CharField(max_length=100, null=True)
     # PortEntryCount = models.CharField(max_length=100, null=True)
