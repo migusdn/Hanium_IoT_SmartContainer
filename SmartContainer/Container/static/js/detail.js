@@ -8,7 +8,8 @@ var value = $('#ConID').val();
                  success : function(data){
                         var my_json = JSON.stringify(data)
                         var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: value });
-
+                        console.log(filtered_json)
+                        console.log(value)
                         if (filtered_json.length==0){
                             document.write("상세정보가 없음")
                         }else{
@@ -62,11 +63,11 @@ var value = $('#ConID').val();
                             $('#DoHumidY').val("닫힘")
                             }
                         }
-                          var temY  = document.getElementById("TemperY").value;
+                          /*var temY  = document.getElementById("TemperY").value;
                           var settemY  = document.getElementById("SetTemperY").value;
                             if(((settemY<temY) && filtered_json[0].UpTemper==1) || (((settemY>temY) && filtered_json[0].DoTemper==1))) {
 
-                /*                $.ajax({
+                *//*                $.ajax({
                                  url : "http://127.0.0.1:8000/detail/StatCheck",
                                dataType : 'json',
                                data : {
@@ -79,14 +80,14 @@ var value = $('#ConID').val();
                                    location.reload();
                                   },1000); // 3000밀리초 = 3초
                                }
-                     });*/
+                     });*//*
                      alert("오류오류오류");
                      console.log("오류오류오류");
-                      }
+                      }*/
                  }
       });
 
-      $.ajax({
+/*      $.ajax({
                  url : "http://127.0.0.1:8000/api/Container/?format=json",
                  dataType : 'json',
                  async: true,
@@ -100,7 +101,7 @@ var value = $('#ConID').val();
                             $('#CheckY').val("했음")
                         }
                  }
-      });
+      });*/
 
 
     $('#SetHumidY').on('change', function() {
@@ -280,7 +281,7 @@ var value = $('#ConID').val();
 
 }
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     var temY  = document.getElementById("TemperY").value;
     var settemY  = document.getElementById("SetTemperY").value;
 
@@ -302,7 +303,7 @@ $(document).ready(function() {
         });
         alert("오류오류오류");
         }
-    });
+    });*/
 
 
 /*

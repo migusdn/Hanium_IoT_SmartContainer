@@ -23,6 +23,7 @@ def ContainerDetail(request):
 @csrf_exempt
 def DetailTest(request):
     Num = request.POST['ConID']
+    print(Num)
     return render(request, 'Detail.html', {'ConID': Num})
 
 @csrf_exempt
