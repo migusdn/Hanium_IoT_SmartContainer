@@ -10,6 +10,7 @@ urlpatterns = [
     path('test', TemplateView.as_view(template_name='smain.html'), name='smain'),
     path('map', TemplateView.as_view(template_name="map.html"), name='map'),
     path('create', TemplateView.as_view(template_name="create.html"), name='create'),
+    path('detail', TemplateView.as_view(template_name="detail.html"), name='detail'),
     path('check', views.check, name='check'),
 
     path('sensor', views.sensor, name='sensor'),
