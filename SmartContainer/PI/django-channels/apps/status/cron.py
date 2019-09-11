@@ -110,4 +110,5 @@ def control():
                 }
             )
             print('info: HumidDo is run')
+    res.save()
     pass
