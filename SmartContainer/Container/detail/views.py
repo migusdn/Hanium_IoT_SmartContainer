@@ -23,6 +23,7 @@ def ContainerDetail(request):
 @csrf_exempt
 def DetailTest(request):
     Num = request.POST['ConID']
+    print(Num)
     return render(request, 'Detail.html', {'ConID': Num})
 
 @csrf_exempt
@@ -43,6 +44,7 @@ def settemper(request):
 
     json_data = json.dumps({"data": 1})
     return HttpResponse(json_data)
+
 
 
 
