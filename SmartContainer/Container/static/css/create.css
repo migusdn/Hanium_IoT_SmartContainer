@@ -5,14 +5,23 @@
     border-radius : 2px;
     margin-left : 250px;
     position : fixed;
-    margin-top : -0.4%;
+    margin-top : -0.25%;
+}
+
+img {
+    width : 30px;
+    height : 30px;
+    float : left;
+    padding-top : 0.72%;
+    padding-left : 1.7%;
+    padding-right : 0.3%;
 }
 
 h2 {
-    padding-top : 3.6%;
-    padding-left : 15%;
+    padding-top : 3.7%;
     font-weight : bold;
-    font-size : 21px;
+    font-size : 19px;
+    color : #1c1c1c;
 }
 
 b {
@@ -45,11 +54,11 @@ select {
 }
 
 .button input {
-    width : 9%;
+    width : 8.3%;
     height : 8%;
     font-size : 15px;
     border : 0px;
-    margin-top : 3.7%;
+    margin-top : 3.5%;
     margin-left : 0%;
     float : left;
     background-color : rgb(71,164,71);
@@ -57,13 +66,13 @@ select {
 }
 
 .reset input{
-    width : 9%;
+    width : 8.3%;
     height : 8%;
     font-size : 15px;
     border : 0px;
     background-color :  rgb(171,178,184);
     color : white;
-    margin-top :3.7%;
+    margin-top :3.5%;
 }
 
 

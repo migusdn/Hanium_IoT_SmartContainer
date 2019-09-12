@@ -11,12 +11,13 @@
     line-height: 2.5;
     border-left: 1px solid #00ff0000;
     border-right: 1px solid #00ff0000; /* 세로선 투명 */
-    border-top : 1px solid #00ff0000; /* 세로선 투명 */
     table-layout : fixed; /* 너비고정 */
 }
 
 thead { /* 표 상단 */
-    border-bottom : 2px solid rgb(27, 53, 85) ;
+    border-bottom :2px solid rgb(27, 53, 85) ;
+    background-color : rgba(40, 66, 96, 0.07);
+    border-top : 2px solid rgb(27, 53, 85) ;
 }
 
 tbody { /* 표바닥 */
@@ -105,7 +106,10 @@ input {
    background-color : rgb(239,239,239);
    border : 2px solid rgb(27, 53, 85);
    width : 200px;
-   height : 30px;
+   height :37px;
+   margin-top : 1.5%;
+   margin-bottom : 1.5%;
+   margin-left : 69.3%;
    float:left;
 }
 
@@ -114,8 +118,10 @@ input:focus {
 }
 
 img {
-  width : 30px;
-  height : 30px;
+  width : 37px;
+  height : 37px;
+  float : left;
+  margin-top : 1.5%;
   float : left;
 }
 
