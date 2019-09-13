@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f594f33a-4856-45a3-a341-12cd322bb1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/static/css/create.css" beforeDir="false" afterPath="$PROJECT_DIR$/Container/static/css/create.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Container/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/Container/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/static/images/search.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/Container/templates/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Container/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Container/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Container/templates/create.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="750">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
               <folding>
                 <element signature="e#868#874#0" expanded="true" />
                 <element signature="e#1007#1013#0" expanded="true" />
@@ -41,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Container/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="210">
               <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding>
                 <element signature="e#84#93#0" expanded="true" />
@@ -244,7 +237,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15103339" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15103339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -255,7 +248,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49920508" visible="true" weight="0.42348754" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49920508" visible="true" weight="0.32384342" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007949" side_tool="true" weight="0.42348754" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -334,6 +327,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Container/templates/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="e#868#874#0" expanded="true" />
+            <element signature="e#1007#1013#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Container/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Container/static/css/create.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -383,30 +394,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Container/static/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Container/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="210">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
             <element signature="e#84#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Container/templates/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-          <folding>
-            <element signature="e#868#874#0" expanded="true" />
-            <element signature="e#1007#1013#0" expanded="true" />
           </folding>
         </state>
       </provider>
