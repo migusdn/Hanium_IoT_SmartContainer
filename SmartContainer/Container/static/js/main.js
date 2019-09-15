@@ -37,6 +37,13 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td style='font-size:x-large'>";
                         var strn = strn + "■";
                         var strn = strn + "</td>";
+                        var strn = strn + "<td style='font-size:x-large'>";
+                        if(data[i].StatCheck=='0'){
+                           strn = strn + "정상";
+                         }else{
+                           strn = strn + "문제";
+                         }
+                        var strn = strn + "</td>";
                         var strn = strn + "<td>";
                         if(data[i].Check=='0'){
                             strn = strn + "했음";
@@ -47,6 +54,7 @@ $(document).ready(function realmainpull(){
                     }
                     var strn = strn + "</tbody>"
                     $("#sourcetable").append(strn);
+
                  }
       });
 
@@ -154,6 +162,7 @@ $(document).ready(function() {
         else if(result2[i]>=8){
             exTable.rows[i].cells[8].style.color='#00ff00'; //8일 이상 초록색
         }
+
 
     }
 
