@@ -130,16 +130,16 @@ var value = $('#ConID').val();
 
                              if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
                              $.ajax({
-                              url : "http://127.0.0.1:8000/api/Container/?format=json",
+                              url : "http://127.0.0.1:8000/main/statcheck",
                               type:'POST',
                               data : {
-                                'StatCheck':check,
+                                'data':value,
+                                'statcheck':check,
                                     },
                                dataType : 'json',
                               success: function(){
 		                	    alert("SUCESS");
 		                                  }
-
                                    })
                                 }
 
