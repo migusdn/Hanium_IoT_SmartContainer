@@ -1,0 +1,81 @@
+#main {
+    width : 83.3%;
+    height : 68%;
+    background-color : white;
+    border-radius : 2px;
+    margin-left : 250px;
+    position : fixed;
+    margin-top : -0.25%;
+}
+
+img {
+    width : 30px;
+    height : 30px;
+    float : left;
+    padding-top : 0.72%;
+    padding-left : 1.7%;
+    padding-right : 0.3%;
+}
+
+h2 {
+    padding-top : 3.7%;
+    font-weight : bold;
+    font-size : 19px;
+    color : #1c1c1c;
+}
+
+b {
+    font-size : 19px;
+    padding-left : 5%;
+    vertical-align : middle;
+    color : #1c1c1c;
+}
+
+input {
+    border-radius : 3px;
+    border : 0px;
+    width : 17%;
+    height : 6.5%;
+    margin-top : 2%;
+    margin-left : 1%;
+    background-color : rgb(243,243,243);
+    padding : 1%;
+    font-size : 15px;
+}
+
+select {
+    border-radius : 2px 2px 2px 2px;
+    border : 0px;
+    width : 10%;
+    height : 6.5%;
+    margin-top : 2.12%;
+    background-color : rgb(243,243,243);
+    padding-left : 1%;
+}
+
+.button input {
+    width : 8.3%;
+    height : 8%;
+    font-size : 15px;
+    border : 0px;
+    margin-top : 3.5%;
+    margin-left : 0%;
+    float : left;
+    background-color : rgb(71,164,71);
+    color : white;
+}
+
+.reset input{
+    width : 8.3%;
+    height : 8%;
+    font-size : 15px;
+    border : 0px;
+    background-color :  rgb(171,178,184);
+    color : white;
+    margin-top :3.5%;
+}
+
+
+input,select,reset:focus {
+    outline : none;
+}

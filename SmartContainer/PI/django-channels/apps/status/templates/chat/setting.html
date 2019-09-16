@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="SetTempHumidAct" method="post">
+{% csrf_token %}
+<input name="SetTemp" type="text">온도 <br>
+<input  name="SetHumid" type="text">습도
+<input type="submit">
+</form>
+</body>
+</html>

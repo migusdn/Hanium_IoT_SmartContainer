@@ -22,10 +22,10 @@ def control():
     Temper = int(res.Temper)
     Humid = int(res.Humid)
 
-    EnforceT_Up = res.EnforceT_Up
-    EnforceT_Do = res.EnforceT_Do
-    EnforceH_Up = res.EnforceH_Up
-    EnforceH_Do = res.EnforceH_Do
+    EnforceT_Up = False#res.EnforceT_Up
+    EnforceT_Do = False#res.EnforceT_Do
+    EnforceH_Up = False#res.EnforceH_Up
+    EnforceH_Do = False#res.EnforceH_Do
     print('현재 설정온도:',SetTemp)
     print('현재 설정습도:',SetHumid)
     print('현재 온도:', Temper)

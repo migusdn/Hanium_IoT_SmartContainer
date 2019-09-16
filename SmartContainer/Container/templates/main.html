@@ -6,16 +6,15 @@
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
-
 <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+
 <title>Main</title>
 
-
-
 <div id="input-form">
-            검색 : <input type="text" id="keyword" />
+    <input type="text" id="keyword" />
+    <img src="{% static "images/search4.png" %}">
 </div>
-
 
 <table id="sourcetable" border="1">
                     <thead>
@@ -28,14 +27,15 @@
                             <th width="110px">컨테이너 위치</th>
                             <th>하선 장소</th>
                             <th width="">반출일자</th>
-                            <th width="50px">상태</th>
+                            <th width="">반출상태</th>
+                            <th width="110px">컨테이너상태</th>
                             <th>체크여부</th>
                         </tr>
                     </thead>
 
 </table>
 
-The field to fill in with second item of a row : <input type="text" id="fillname" value="" />
+<input type="label" id="fillname">
 
 {% endblock %}
 

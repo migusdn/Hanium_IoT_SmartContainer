@@ -8,7 +8,6 @@ from detail.models import Detail
 import json
 
 
-
 def index(request):
     return render(request, 'templates/smain.html')
 
@@ -59,11 +58,8 @@ def container_input(request):
 
 @csrf_exempt
 def sensor(request):
-    print("야임마!")
     form = request.GET
-    print(form.dict())
     han = form.dict()
-    print(han.get('Humid'))
 
     update_han = Detail.objects.get(ContainerID=han.get('ConId'))
     update_han.Temper = han.get('Temper')
@@ -81,18 +77,30 @@ def sensor(request):
 @csrf_exempt
 def check(request):
     ID = request.POST['data']
-    print(ID)
     valid = Container.objects.get(ContainerID=ID)
     if valid.Check == "0":
-        print("0이란다")
         valid.Check = "1"
     else:
-        print("1이란다")
         valid.Check = "0"
     valid.save()
 
     json_data = json.dumps({"data": 1})
     return HttpResponse(json_data)
+
+
+@csrf_exempt
+def statcheck(request):
+    ID = request.POST['data']
+    print(ID)
+    Test = request.POST['statcheck']
+    print(Test)
+    valid = Container.objects.get(ContainerID=ID)
+    print(valid)
+    valid.StatCheck = "1"
+    valid.save()
+    return HttpResponse("success")
+
+
 
 
 

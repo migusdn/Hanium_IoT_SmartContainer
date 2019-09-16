@@ -8,12 +8,13 @@ var value = $('#ConID').val();
                  success : function(data){
                         var my_json = JSON.stringify(data)
                         var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: value });
-
+                        console.log(filtered_json);
+                        console.log(value);
                         if (filtered_json.length==0){
                             document.write("상세정보가 없음")
                         }else{
-                            $('#TemperY').val(filtered_json[0].Temper)
-                            $('#HumidY').val(filtered_json[0].Humid)
+                            $('#TemperY').val(filtered_json[0].Temper);
+                            $('#HumidY').val(filtered_json[0].Humid);
 
 
                             var SetTemper='';
@@ -61,11 +62,96 @@ var value = $('#ConID').val();
                             }else{
                             $('#DoHumidY').val("닫힘")
                             }
-                        }
+                        }//else 문
                  }
       });
+$(document).ready(function detailpull2(){   //온습도 문제시 alert
+var value = $('#ConID').val();
 
       $.ajax({
+                 url : "http://127.0.0.1:8000/api/Detail/?format=json",
+                 dataType : 'json',
+                 async: true,
+                 success : function(data){
+                        var my_json = JSON.stringify(data)
+                        var filtered_json = find_in_object(JSON.parse(my_json), {ContainerID: value });
+                        console.log(filtered_json);
+                        console.log(value);
+                        if (filtered_json.length==0){
+                            document.write("상세정보가 없음");
+                        }else{
+                           var Hcheck=0;
+                           var Tcheck=0;
+                           var check=0;
+
+                           var Temper = parseInt(filtered_json[0].Temper);
+                           var SetTemper = parseInt(filtered_json[0].SetTemper);
+                           var UpTemper = parseInt(filtered_json[0].UpTemper);
+	                       var DoTemper = parseInt(filtered_json[0].DoTemper);
+                           var Humid = parseInt(filtered_json[0].Humid);
+                           var SetHumid = parseInt(filtered_json[0].SetHumid);
+                           var UpHumid = parseInt(filtered_json[0].UpHumid);
+	                       var DoHumid = parseInt(filtered_json[0].DoHumid);
+
+                            if(UpTemper==1 && DoTemper==1){
+                            	alert("온열기와 냉방기가 동시에 켜져있습니다");
+	                            Tcheck=1;
+                               	}
+                            else if((Temper>SetTemper) && UpTemper==1){
+                                console.log("온열기문제");
+	                            alert("온열기가 켜져있습니다 온도확인좀요");
+	                            Tcheck=1;
+	                            }
+                            else if(((Temper<SetTemper) && DoTemper==1)){
+                            	alert("냉방기가 켜져있습니다 온도확인좀요");
+                            	Tcheck=1;
+                            	}
+                            else{Tcheck=0;}
+
+
+                            if(UpHumid==1 && DoHumid==1){
+	                            alert("가아아아습기랑 제에에에습기 둘다켜져있습니다 가아아스키야");
+	                            Hcheck=1;
+                            }
+                            else if((Humid>SetHumid) && UpHumid==1){
+	                            alert("가습기가 켜져있습니다 확인좀");
+	                            Hcheck=1;
+                            }
+                            else if((Humid<SetHumid) && DoTemper==1){
+	                            alert("제습기가 켜져있습니다 확인좀");
+	                            Hcheck=1;
+                            }
+                            else{Hcheck=0;}
+
+                            if(Tcheck==1 || Hcheck==1){
+                                check=1;}
+                            else check==0;
+                            }
+
+                             if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
+                             $.ajax({
+                              url : "http://127.0.0.1:8000/main/statcheck",
+                              type:'POST',
+                              data : {
+                                'data':value,
+                                'statcheck':check,
+                                    },
+                               dataType : 'json',
+                              success: function(){
+		                	    alert("SUCESS");
+		                                  }
+                                   })
+                                }
+
+                    }
+                 });
+
+
+
+         });
+
+
+/*      $.ajax({
                  url : "http://127.0.0.1:8000/api/Container/?format=json",
                  dataType : 'json',
                  async: true,
@@ -79,7 +165,7 @@ var value = $('#ConID').val();
                             $('#CheckY').val("했음")
                         }
                  }
-      });
+      });*/
 
 
     $('#SetHumidY').on('change', function() {
@@ -121,7 +207,7 @@ var value = $('#ConID').val();
                  type : "POST",
                  success : function(){
 
-                    alert("습도가"+Temper+" 로 설정되었습니다");
+                    alert("온도가"+Temper+" 로 설정되었습니다");
 
                     setTimeout(function(){
                     location.reload();
@@ -258,7 +344,6 @@ var value = $('#ConID').val();
     });
 
 }
-
 
 
 /*

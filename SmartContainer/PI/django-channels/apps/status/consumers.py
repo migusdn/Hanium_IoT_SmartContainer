@@ -1,5 +1,6 @@
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
+from .models import Device
 from .Data import Node_Control
 import json
 
@@ -92,7 +93,10 @@ class StatusConsumer(WebsocketConsumer):
 
 class AllStatusConsumer(WebsocketConsumer):
     def connect(self):
-
+        try:
+            self.room_name = self.scope['url_route']['kwargs']['room_name']
+        except Exception :
+            self.room_name = 'test'
         self.room_group_name = 'status'
         # Join room group
         print(self.room_group_name)
@@ -110,14 +114,15 @@ class AllStatusConsumer(WebsocketConsumer):
             self.room_group_name,
             self.channel_name
         )
-        if self.room_name == uptemp :
+        if self.room_name == 'uptemp' :
             res.UpTempr = None
-        elif self.room_name == dotemp:
+        elif self.room_name == 'dotemp':
             res.DoTempr = None
-        elif self.room_name == uphumid:
+        elif self.room_name == 'uphumid':
             res.UpHumid = None
-        elif self.room_name == dohumid:
+        elif self.room_name == 'dohumid':
             res.DoHumid = None
+        res.save()
 
 
     # Receive message from WebSocket

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
+=======
+    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="DB Table 수정">
+      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +36,7 @@
     <expand />
     <select />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -70,10 +82,13 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,6 +96,7 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -90,6 +106,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
   <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
@@ -189,7 +207,12 @@
       <workItem from="1565798614153" duration="7604000" />
       <workItem from="1566942573357" duration="6969000" />
       <workItem from="1566921852408" duration="1084000" />
+<<<<<<< HEAD
       <workItem from="1567069791267" duration="2377000" />
+=======
+      <workItem from="1567069791267" duration="817000" />
+      <workItem from="1567469456789" duration="2501000" />
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>
@@ -243,6 +266,7 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3461000" />
   </component>
@@ -274,6 +298,8 @@
       <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
+=======
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -329,6 +355,7 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/django-channels/apps/status/consumers.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -364,4 +391,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> 3f6e31093e19b17ad7b01c4f634b8251afb7a59a
 </project>

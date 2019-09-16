@@ -47,6 +47,7 @@ def settemper(request):
 
 
 
+
 #@csrf_exempt
 #def containerdetail(request):
 #    if request.method == 'GET':

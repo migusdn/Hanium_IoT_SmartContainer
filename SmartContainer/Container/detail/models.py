@@ -12,3 +12,5 @@ class Detail(models.Model):
     DoTemper = models.CharField(max_length=100, null=True)
     UpHumid = models.CharField(max_length=100, null=True)
     DoHumid = models.CharField(max_length=100, null=True)
+    StatCheck = models.CharField(default="0", max_length=100, null=True)
+
