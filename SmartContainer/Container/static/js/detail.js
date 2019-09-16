@@ -142,6 +142,20 @@ var value = $('#ConID').val();
 		                                  }
                                    })
                                 }
+                                else{
+                            $.ajax({
+                              url : "http://127.0.0.1:8000/main/statcheck",
+                              type:'POST',
+                              data : {
+                                'data':value,
+                                'statcheck':check,
+                                    },
+                               dataType : 'json',
+                              success: function(){
+		                	    alert("SUCESS");
+		                                  }
+                                   })
+                                }
 
                     }
                  });
