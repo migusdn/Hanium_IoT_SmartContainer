@@ -101,15 +101,6 @@ def statcheck(request):
     return HttpResponse("success")
 
 
-
-
-
-
-
-
-
-
-
 def container_list(request):
     cons = Container.objects.all()
     return render(request, 'templates/detail222.html',{'cons':cons})

@@ -241,7 +241,7 @@ function freeze(){
     console.log(Humid);
 
     $.ajax({
-                 url : "http://192.168.0.11:8000/status/freeze",
+                 url : "http://192.168.0.11:8000/status/DoTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  data : {
@@ -262,7 +262,7 @@ function freeze(){
 function heat(){
     console.log("heat")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/heat",
+                 url : "http://192.168.0.4:8000/status/UpTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -278,7 +278,7 @@ function heat(){
 function humid(){
     console.log("humid")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/humid",
+                 url : "http://192.168.0.4:8000/status/UpHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -294,7 +294,7 @@ function humid(){
 function dehum(){
     console.log("dehum")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/dehum",
+                 url : "http://192.168.0.4:8000/status/DoHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
