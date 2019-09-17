@@ -36,6 +36,7 @@ urlpatterns = [
     path('main/', include('main.urls')),
     path('detail/', include('detail.urls')),
     path('control/', include('control.urls')),
+    path('tensor/', include('tensor.urls')),
 
     path('api/', include((router.urls, 'Container'), namespace='Container')),
     path('api/', include((router.urls, 'Detail'), namespace='Detail')),
