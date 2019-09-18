@@ -2,7 +2,9 @@
 float:left;
 width: 500px;
 }
-
+.fill{
+   visibility:hidden;
+}
 #SectionF{
 width:200px;
 height:200px;

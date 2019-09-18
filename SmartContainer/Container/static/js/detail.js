@@ -128,21 +128,21 @@ var value = $('#ConID').val();
                             else check==0;
                             }
 
-                             if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
+                             //if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
                              $.ajax({
                               url : "http://127.0.0.1:8000/main/statcheck",
                               type:'POST',
                               data : {
                                 'data':value,
-                                'statcheck':check,
+                                'StatCheck':check,
                                     },
                                dataType : 'json',
                               success: function(){
 		                	    alert("SUCESS");
 		                                  }
                                    })
-                                }
-                                else{
+                               // }
+                                /*else{
                             $.ajax({
                               url : "http://127.0.0.1:8000/main/statcheck",
                               type:'POST',
@@ -155,7 +155,7 @@ var value = $('#ConID').val();
 		                	    alert("SUCESS");
 		                                  }
                                    })
-                                }
+                                }*/
 
                     }
                  });

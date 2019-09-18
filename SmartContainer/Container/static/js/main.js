@@ -37,11 +37,12 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td style='font-size:x-large'>";
                         var strn = strn + "■";
                         var strn = strn + "</td>";
-                        var strn = strn + "<td style='font-size:x-large'>";
                         if(data[i].StatCheck=='0'){
-                           strn = strn + "정상";
+                        var strn = strn + "<td style='font-size:x-large' color:green>";
+                           strn = strn + "■";
                          }else{
-                           strn = strn + "문제";
+                         var strn = strn + "<td style='font-size:x-large' color:red>";
+                           strn = strn + "■";
                          }
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
