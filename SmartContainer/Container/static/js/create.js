@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   $( "#datepicker1" ).datepicker({
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
