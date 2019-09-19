@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $( "#datepicker1" ).datepicker({
+  $( "#datepicker" ).datepicker({
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
     nextText: '다음 달',

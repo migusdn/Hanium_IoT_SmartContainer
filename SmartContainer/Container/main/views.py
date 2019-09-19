@@ -92,7 +92,7 @@ def check(request):
 def statcheck(request):
     ID = request.POST['data']
     print(ID)
-    Test = request.POST['statcheck']
+    Test = request.POST['StatCheck']
     print(Test)
     valid = Container.objects.get(ContainerID=ID)
     print(valid)
