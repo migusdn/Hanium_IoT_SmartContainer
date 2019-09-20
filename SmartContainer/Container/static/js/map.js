@@ -95,11 +95,11 @@ $(document).ready(function() {
     console.log("fillname0");
     $( "#0table tbody tr" ).on( "click", function( event ) {
 
-          $("#fillname0").val($(this).find("td").eq(0).html());
-          var ConID = $("#fillname0").val();
+          $("#fillname").val($(this).find("td").eq(0).html());
+          var ConID = $("#fillname").val();
           pickedup = $( this );
 
-    var ConID = $("#fillname0").val();
+    var ConID = $("#fillname").val();
     console.log(ConID);
     var form = document.createElement('form');
 	form.setAttribute('method', 'post');
@@ -115,9 +115,8 @@ $(document).ready(function() {
 	form.submit();
 
     });
-});
-$(document).ready(function() {
-    console.log("HIA");
+
+        console.log("fillnameA");
     $( "#Atable tbody tr" ).on( "click", function( event ) {
 
           $("#fillnameA").val($(this).find("td").eq(0).html());
@@ -138,13 +137,9 @@ $(document).ready(function() {
 
 	document.body.appendChild(form);
 	form.submit();
-
     });
-});
 
-$(document).ready(function() {
-    console.log("HIB");
-    $( "#Btable tbody tr" ).on( "click", function( event ) {
+ $( "#Btable tbody tr" ).on( "click", function( event ) {
 
           $("#fillnameB").val($(this).find("td").eq(0).html());
           var ConID = $("#fillnameB").val();
@@ -166,7 +161,10 @@ $(document).ready(function() {
 	form.submit();
 
     });
+
+
 });
+
 
 function fun0(){
     console.log("0이 위로");
