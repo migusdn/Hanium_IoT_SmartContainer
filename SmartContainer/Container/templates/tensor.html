@@ -10,32 +10,35 @@
 <script src="{% static 'js/tensor.js' %}"></script>
 <link href="{% static 'css/tensor.css'%}" rel="stylesheet">
 
-
+<div id="newimg">
+    <img src="{% static "images/graph2.png" %}">
+</div>
+<h2>데이터분석</h2>
 <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <img src="{% static 'images/test1.png' %}" style="width:100%">
-  <div class="text">Caption Text</div>
+<div class="fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test1.png' %}" >
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <img src="{% static 'images/test2.png' %}" style="width:100%">
-  <div class="text">Caption Two</div>
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test1.png' %}" >
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <img src="{% static 'images/test3.png' %}" style="width:100%">
-  <div class="text">Caption Three</div>
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test2.png' %}" >
 </div>
 
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test3.png' %}">
+</div>
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <img src="{% static 'images/test4.png' %}" style="width:100%">
-  <div class="text">Caption Three</div>
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test4.png' %}" >
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -43,13 +46,12 @@
 
 </div>
 <br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
+  <div class="dot1">
+      <span class="dot" onclick="currentSlide(1)"></span>
+  </div>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
-</div>
 
 
 {% endblock %}

@@ -4,13 +4,18 @@
 <link href="{% static 'css/login.css'%}" rel="stylesheet">
 
 <div class="sign_box">
-  <h1>Smart Container</h1>
+  <div id="newimg">
+    <img src="{% static "images/logo.png" %}">
+  </div>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Login</button>
   </form>
-  <a href="">회원가입</a> | <a href="">계정정보 찾기</a>
+  <div class="a1">
+    <a href="">회원가입&nbsp|&nbsp;</a>
+  </div>
+  <a href=""> 계정정보 찾기</a>
 </div>
 
 {% endblock %}

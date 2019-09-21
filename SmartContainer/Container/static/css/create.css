@@ -1,20 +1,20 @@
 #main {
-    width : 83.3%;
+    width : 82%;
     height : 68%;
     background-color : white;
     border-radius : 2px;
-    margin-left : 250px;
+    margin-left : 270px;
     position : fixed;
     margin-top : -0.25%;
 }
 
-img {
-    width : 30px;
-    height : 30px;
+#newimg img {
+    width : 25px;
+    height : 25px;
     float : left;
-    padding-top : 0.72%;
-    padding-left : 1.7%;
-    padding-right : 0.3%;
+    padding-top : 0.61%;
+    padding-left : 1.9%;
+    padding-right : 0.2%;
 }
 
 h2 {
@@ -26,7 +26,7 @@ h2 {
 
 b {
     font-size : 19px;
-    padding-left : 5%;
+    padding-left : 4%;
     vertical-align : middle;
     color : #1c1c1c;
 }
@@ -58,7 +58,7 @@ select {
     height : 8%;
     font-size : 15px;
     border : 0px;
-    margin-top : 3.5%;
+    margin-top : 3.9%;
     margin-left : 0%;
     float : left;
     background-color : rgb(71,164,71);
@@ -72,7 +72,7 @@ select {
     border : 0px;
     background-color :  rgb(171,178,184);
     color : white;
-    margin-top :3.5%;
+    margin-top :3.9%;
 }
 
 

@@ -1,24 +1,48 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto;
+}
+
+/*아이콘이미지*/
+#newimg img {
+    width : 25px;
+    height : 32px;
+    padding-top : 0.73%;
+    margin-left : 1.9%;
+    padding-right : 0.3%;
+    float : left;
+}
+
+h2 {
+    padding-top : 3.7%;
+    font-weight : bold;
+    font-size : 19px;
+    color : #1c1c1c;
+}
+
+/*그래프이미지*/
+img {
+  width : 82%;
+  height : 80%;
+  margin-left : 1.9%;
+  margin-top : -0.25%;
+  margin-bottom : -0.2%;
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 32%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
-  color: white;
+  margin : 90px;
+  color: rgb(230,230,230);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -38,7 +62,7 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: #717171;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -51,17 +75,22 @@ img {vertical-align: middle;}
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+  ,top: -40%;
+ }
+
 
 /* The dots/bullets/indicators */
+.dot1 {
+    float : left;
+    margin-right : 0.3%;
+    margin-top : 0.05%;
+    margin-left : 41%;
+}
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0.2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;

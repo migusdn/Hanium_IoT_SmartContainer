@@ -37,7 +37,6 @@ input{
     width : 30%;
     height : 20%;
     margin : 1%;
-
 }
 
 input:hover {
@@ -56,12 +55,12 @@ input:hover {
 
 .select-bar{
     position:absolute;
-    top:6%;
+    top:6.5%;
     width:400px;
-    height:94%;
+    height:93%;
     right:0px;
     float:right;
-    background-color:rgb(234,234,234);
+    background-color:rgb(240,240,240);
     border-left : 1px solid #a7a7a7;
     /*border-left : 1px solid rgb(175,175,175);*/
 }
@@ -83,7 +82,7 @@ input:hover {
 }
 
 .placetable {
-     width:401px;
+     width:400px;
      margin : 0px;
      table-layout : fixed; /* 너비고정 */
      border-collapse: collapse;
@@ -95,7 +94,9 @@ input:hover {
 }
 
 .placetable th {
-     background-color : rgb(109,114,134);
+     background-color : rgb(106, 146, 187);
+     /*background-color: rgb(191, 204, 217);*/
+     /*background-color : rgb(109,114,134);/*
      border-bottom : 2px solid rgb(89, 92, 105);
      /*background-color : rgba(30, 75, 117,0.7);*/
      border-top : 1px solid #00ff0000; /* 세로선 투명 */
