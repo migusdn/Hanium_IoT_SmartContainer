@@ -1,9 +1,34 @@
 #status/cron.py
+import requests
 from .models import Device
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-def test():
-    print('Hi')
+import datetime
+def update():
+    res = Device.objects.get(ConId='B1')
+    url = "http://192.168.0.x:8000/main/reset"
+    paramDict = {
+        "ConId": res.ConId,
+        "Temper": res.Temper,
+        "Humid": res.Humid,
+        "Door": "1",
+        "SetTemper": res.SetTemper,
+        "SetHumid": res.SetHumid,
+        "UpTemper": res.UpTemper,
+        "DoTemper": res.DoTemper,
+        "UpHumid": res.UpHumid,
+        "DoHumid": res.DoHumid
+    }
+    print(datetime.datetime.now(), paramDict)
+    requests.post(url, params=paramDict)
+def init():
+    res = Device.objects.get(ConId='B1')
+    res.EnforceH_Do = False
+    res.EnforceT_Do = False
+    res.EnforceT_Up = False
+    res.EnforceH_Up = False
+    res.save()
+    print(datetime.datetime.now(), 'init finish')
     pass
 def control():
     layer = get_channel_layer()
@@ -22,10 +47,10 @@ def control():
     Temper = int(res.Temper)
     Humid = int(res.Humid)
 
-    EnforceT_Up = False#res.EnforceT_Up
-    EnforceT_Do = False#res.EnforceT_Do
-    EnforceH_Up = False#res.EnforceH_Up
-    EnforceH_Do = False#res.EnforceH_Do
+    EnforceT_Up = res.EnforceT_Up
+    EnforceT_Do = res.EnforceT_Do
+    EnforceH_Up = res.EnforceH_Up
+    EnforceH_Do = res.EnforceH_Do
     print('현재 설정온도:',SetTemp)
     print('현재 설정습도:',SetHumid)
     print('현재 온도:', Temper)
@@ -110,4 +135,5 @@ def control():
                 }
             )
             print('info: HumidDo is run')
+    res.save()
     pass

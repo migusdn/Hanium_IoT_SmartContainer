@@ -95,8 +95,9 @@ REST_FRAMEWORK = {
 
 #CronTab
 CRONJOBS = [
-    ('* * * * *', 'status.cron.control', '>>/home/migusdn/log/abc.log2>&1'),
-    ('* * * * *', 'status.cron.test'),
+    ('* * * * *', 'status.cron.control', '>>/home/migusdn/log/control.log>&1'),
+    ('0 5 * * *', 'status.cron.init', '>>/home/migusdn/log/init.log>&1'),
+    ('* * * * *', 'status.cron.update', '>>/home/migusdn/log/update.log>&1'),
 ]
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
