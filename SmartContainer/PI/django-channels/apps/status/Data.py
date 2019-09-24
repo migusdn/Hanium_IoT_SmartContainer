@@ -31,21 +31,6 @@ def Node_Control(text_data, mode):
             res.DoTemper = True
     res.save()
 
-    paramDict = {
-        "ConId": res.ConId,
-        "Temper": res.Temper,
-        "Humid": res.Humid,
-        "Door": "1",
-        "SetTemper": res.SetTemper,
-        "SetHumid": res.SetHumid,
-        "UpTemper": res.UpTemper,
-        "DoTemper": res.DoTemper,
-        "UpHumid": res.UpHumid,
-        "DoHumid": res.DoHumid
-    }
-    #DB 덤프 보내려면 아래줄 주석해제
-    #requests.get(url, params=paramDict)
-
 def DB_dump(url):
     res = Device.objects.get(ConId='B1')
     paramDict = {
