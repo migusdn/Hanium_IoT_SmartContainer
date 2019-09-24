@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django-channels/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,7 @@
       <workItem from="1568738300285" duration="2178000" />
       <workItem from="1568809824660" duration="978000" />
       <workItem from="1569227738235" duration="2469000" />
-      <workItem from="1569318561859" duration="4748000" />
+      <workItem from="1569318561859" duration="5244000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>
@@ -193,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569340976668</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="log 한글 영어로 바꿈">
+      <created>1569341588097</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569341588097</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +241,8 @@
     <MESSAGE value="crontab) 메인서버에 db 1분마다 전송추가 , dohumid uphumid dotemp uptemp url 추가" />
     <MESSAGE value="크론 로직수정" />
     <MESSAGE value="socket 메시지 처리 로직 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="socket 메시지 처리 로직 수정" />
+    <MESSAGE value="log 한글 영어로 바꿈" />
+    <option name="LAST_COMMIT_MESSAGE" value="log 한글 영어로 바꿈" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

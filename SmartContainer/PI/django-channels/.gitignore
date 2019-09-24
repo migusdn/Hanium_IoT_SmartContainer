@@ -1,4 +1,3 @@
 /.vscode
 /.venv
-/apps/db.sqlite3
 __pycache__
