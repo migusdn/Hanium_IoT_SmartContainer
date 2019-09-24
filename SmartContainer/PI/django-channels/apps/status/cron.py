@@ -45,6 +45,7 @@ def control():
     )
     print('layer send fin')
     res = Device.objects.get(ConId='B1')
+    print('res get fin')
     SetTemp = int(res.SetTemper)
     SetHumid = int(res.SetHumid)
     Temper = int(res.Temper)
@@ -54,10 +55,10 @@ def control():
     EnforceT_Do = res.EnforceT_Do
     EnforceH_Up = res.EnforceH_Up
     EnforceH_Do = res.EnforceH_Do
-    print('현재 설정온도:',SetTemp)
-    print('현재 설정습도:',SetHumid)
-    print('현재 온도:', Temper)
-    print('현재 습도:', Humid)
+    print('Now SetTemp:',SetTemp)
+    print('Now SetHumid:',SetHumid)
+    print('Now Temp:', Temper)
+    print('Now Humid:', Humid)
     print('EnforceT_Up', str(res.EnforceT_Up))
     print('EnforceT_Do', str(res.EnforceT_Do))
     print('EnforceH_Up', str(res.EnforceH_Up))

@@ -15,8 +15,8 @@ def Node_Control(text_data, mode):
             res.DoTemper = True
         elif (con_type == 'TempHumid'):
             print('request: TempHumid')
-            res.Temper = text_data_json['temp']
-            res.Humid = text_data_json['humid']
+            res.Temper = int(text_data_json['temp'])
+            res.Humid = int(text_data_json['humid'])
         elif (con_type == 'test'):
             print('con_type test')
         #elif (con_type == ' ')
