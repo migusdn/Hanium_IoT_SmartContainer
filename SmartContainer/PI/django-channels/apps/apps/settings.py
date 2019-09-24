@@ -96,7 +96,7 @@ REST_FRAMEWORK = {
 #CronTab
 CRONJOBS = [
     ('* * * * *', 'status.cron.control', '>>/home/migusdn/log/control.log>&1'),
-    ('0 5 * * *', 'status.cron.init', '>>/home/migusdn/log/init.log>&1'),
+    ('*/5 * * * *', 'status.cron.init', '>>/home/migusdn/log/init.log>&1'),
     ('* * * * *', 'status.cron.update', '>>/home/migusdn/log/update.log>&1'),
 ]
 # Password validation

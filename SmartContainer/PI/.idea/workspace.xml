@@ -4,9 +4,6 @@
     <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +34,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="박현우 &lt;migusdn@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1P5skCZSdbW4MfTLsOdNmuc7H4m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -108,7 +105,7 @@
       <workItem from="1568672054503" duration="497000" />
       <workItem from="1568738300285" duration="2178000" />
       <workItem from="1568809824660" duration="978000" />
-      <workItem from="1569227738235" duration="1684000" />
+      <workItem from="1569227738235" duration="2469000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>
@@ -159,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567471970278</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="crontab) 메인서버에 db 1분마다 전송추가 , dohumid uphumid dotemp uptemp url 추가">
+      <created>1569229545628</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569229545628</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +202,8 @@
     <MESSAGE value="freeze 등 함수 클라이언트 ip에 따른 동적 반응 추가, Model에 강제적으로 모듈 제어시에 필요한 필드 생성, NodeMcu Control  코드 작성" />
     <MESSAGE value="DB Table 수정" />
     <MESSAGE value="crontab 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="crontab 수정" />
+    <MESSAGE value="crontab) 메인서버에 db 1분마다 전송추가 , dohumid uphumid dotemp uptemp url 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="crontab) 메인서버에 db 1분마다 전송추가 , dohumid uphumid dotemp uptemp url 추가" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
