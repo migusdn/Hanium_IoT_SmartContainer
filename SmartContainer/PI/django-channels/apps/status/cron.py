@@ -33,6 +33,7 @@ def init():
 def control():
     print(datetime.datetime.now(), ':control log start')
     layer = get_channel_layer()
+    print('layer get fin')
     async_to_sync(layer.group_send)(
         'status',
         {
@@ -42,6 +43,7 @@ def control():
             'device_num': 'manager'
         }
     )
+    print('layer send fin')
     res = Device.objects.get(ConId='B1')
     SetTemp = int(res.SetTemper)
     SetHumid = int(res.SetHumid)
