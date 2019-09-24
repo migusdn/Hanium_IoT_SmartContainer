@@ -116,7 +116,6 @@ def uptemp(request):
     res = Device.objects.get(ConId='B1')
     send_Message('Request_UpTemp')
     res.EnforceT_Up = True
-    res.UpTemper = True
     res.save()
     return HttpResponse("성공")
 

@@ -31,6 +31,7 @@ def init():
     print(datetime.datetime.now(), 'init finish')
     pass
 def control():
+    print(datetime.datetime.now(), ':control log start')
     layer = get_channel_layer()
     async_to_sync(layer.group_send)(
         'status',
@@ -62,78 +63,123 @@ def control():
 
 
     if(SetTemp > Temper):
-        print('Temp lower than SetTemp')
-        if(EnforceT_Do == True):
-            print('Warn: TempDo Enforced')
-            print('Can not run TempUp')
-        elif(EnforceT_Do == False):
-            res.UpTempr = True
-            res.DoTemper = False
+        if res.UpTemper is not None:
+            print('Temp lower than SetTemp')
+            if(EnforceT_Do == True):
+                print('Warn: TempDo Enforced')
+                print('Can not run TempUp')
+            elif(EnforceT_Do == False):
+                res.UpTempr = True
+                res.DoTemper = False
+                async_to_sync(layer.group_send)(
+                    'status',
+                    {
+                        'type': 'chat_message',
+                        'con_type': 'Request_UpTemp',
+                        'message': 'Request_UpTemp',
+                        'device_num': 'manager'
+                    }
+                )
+                print('info: TempUp is run')
+        else:
             async_to_sync(layer.group_send)(
                 'status',
                 {
                     'type': 'chat_message',
-                    'con_type': 'Request_UpTemp',
-                    'message': 'Request_UpTemp',
+                    'con_type': 'Error_UpTemp',
+                    'message': 'Error_UpTemp',
                     'device_num': 'manager'
                 }
             )
-            print('info: TempUp is run')
     elif(SetTemp < Temper):
-        print('Temp higher than SetTemp')
-        if (EnforceT_Up == True):
-            print('Warn: TempUp Enforced')
-            print('Can not run TempDo')
-        elif (EnforceT_Up == False):
-            res.DoTemper = True
-            res.UpTempr = False
+        if res.DoTemper is not None:
+            print('Temp higher than SetTemp')
+            if (EnforceT_Up == True):
+                print('Warn: TempUp Enforced')
+                print('Can not run TempDo')
+            elif (EnforceT_Up == False):
+                res.DoTemper = True
+                res.UpTempr = False
+                async_to_sync(layer.group_send)(
+                    'status',
+                    {
+                        'type': 'chat_message',
+                        'con_type': 'Request_DoTemp',
+                        'message': 'Request_DoTemp',
+                        'device_num': 'manager'
+                    }
+                )
+                print('info: TempDo is run')
+        else:
             async_to_sync(layer.group_send)(
                 'status',
                 {
                     'type': 'chat_message',
-                    'con_type': 'Request_DoTemp',
-                    'message': 'Request_DoTemp',
+                    'con_type': 'Error',
+                    'message': 'Error_DoTemp',
                     'device_num': 'manager'
                 }
             )
-            print('info: TempDo is run')
+
 
 #습도
     if(SetHumid > Humid):
-        print('Humid lower than SetHumid')
-        if(EnforceH_Do == True):
-            print('Warn: HumidDo Enforced')
-            print('Can not run HumidUp')
-        elif(EnforceH_Do == False):
-            res.UpHumid = True
-            res.DoHumid = False
+        if res.Uphumid is not None:
+            print('Humid lower than SetHumid')
+            if(EnforceH_Do == True):
+                print('Warn: HumidDo Enforced')
+                print('Can not run HumidUp')
+            elif(EnforceH_Do == False):
+                res.UpHumid = True
+                res.DoHumid = False
+                async_to_sync(layer.group_send)(
+                    'status',
+                    {
+                        'type': 'chat_message',
+                        'con_type': 'Request_UpHumid',
+                        'message': 'Request_UpHumid',
+                        'device_num': 'manager'
+                    }
+                )
+                print('info: HumidUp is run')
+        else:
             async_to_sync(layer.group_send)(
                 'status',
                 {
                     'type': 'chat_message',
-                    'con_type': 'Request_UpHumid',
-                    'message': 'Request_UpHumid',
+                    'con_type': 'Error',
+                    'message': 'Error_UpHumid',
                     'device_num': 'manager'
                 }
             )
-            print('info: HumidUp is run')
     elif(SetHumid < Humid):
-        print('Humid higher than SetHumid')
-        if (EnforceH_Up == True):
-            print('Warn: HumidUp Enforced')
-            print('Can not run HumidDo')
-        elif (EnforceH_Up == False):
-            res.DoHumid = True
-            res.UpHumid = False
+        if res.DoHumid is not None:
+            print('Humid higher than SetHumid')
+            if (EnforceH_Up == True):
+                print('Warn: HumidUp Enforced')
+                print('Can not run HumidDo')
+            elif (EnforceH_Up == False):
+                res.DoHumid = True
+                res.UpHumid = False
+                async_to_sync(layer.group_send)(
+                    'status',
+                    {
+                        'type': 'chat_message',
+                        'con_type': 'Request_DoHumid',
+                        'message': 'Request_DoHumid',
+                        'device_num': 'manager'
+                    }
+                )
+                print('info: HumidDo is run')
+        else:
             async_to_sync(layer.group_send)(
                 'status',
                 {
                     'type': 'chat_message',
-                    'con_type': 'Request_DoHumid',
-                    'message': 'Request_DoHumid',
+                    'con_type': 'Error',
+                    'message': 'Error_DoHumid',
                     'device_num': 'manager'
                 }
             )
-            print('info: HumidDo is run')
     res.save()
     pass
