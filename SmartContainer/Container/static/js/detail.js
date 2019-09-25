@@ -1,3 +1,105 @@
+$(document).ready(function(){
+  var modalLayer = $("#modalLayer");
+  var modalLayer = $("#modalLayer1");
+  var modalLink = $(".modalLink");
+  var modalCont = $(".modalContent");
+  var marginLeft = modalCont.outerWidth()/2;
+  var marginTop = modalCont.outerHeight()/2;
+
+  modalLink.click(function(){
+    modalLayer.fadeIn("slow");
+    modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
+    $(this).blur();
+    $(".modalContent > a").focus();
+    return false;
+  });
+
+  $(".modalContent > button").click(function(){
+    modalLayer.fadeOut("slow");
+    modalLink.focus();
+  });
+  //--------------------여기까지 모달
+});
+
+  //여기부터 온도장치,냉방장치,개폐장치 z-index
+  /*온도장치*/
+ function temfunB(){
+    console.log("0이 위로");
+    document.getElementById('temperMacA').style.zIndex = 2;
+    document.getElementById('temperMacB').style.zIndex = 1;
+    document.getElementById('temperMac').style.zIndex = 3;
+}
+
+function temfun0(){
+    console.log("A가 위로");
+    document.getElementById('temperMacA').style.zIndex = 3;
+    document.getElementById('temperMacB').style.zIndex = 2;
+    document.getElementById('temperMac').style.zIndex = 1;
+}
+function temfunA(){
+    console.log("B가 위로");
+    document.getElementById('temperMacA').style.zIndex = 1;
+    document.getElementById('temperMacB').style.zIndex = 3;
+    document.getElementById('temperMac').style.zIndex = 2;
+}
+/*냉방장치*/
+ function humfunB(){
+    console.log("0이 위로");
+    document.getElementById('humidMacA').style.zIndex = 2;
+    document.getElementById('humidMacB').style.zIndex = 1;
+    document.getElementById('humidMac').style.zIndex = 3;
+}
+
+function humfun0(){
+    console.log("A가 위로");
+    document.getElementById('humidMacA').style.zIndex = 3;
+    document.getElementById('humidMacB').style.zIndex = 2;
+    document.getElementById('humidMac').style.zIndex = 1;
+}
+function humfunA(){
+    console.log("B가 위로");
+    document.getElementById('humidMacA').style.zIndex = 1;
+    document.getElementById('humidMacB').style.zIndex = 3;
+    document.getElementById('humidMac').style.zIndex = 2;
+}
+/*개폐장치*/
+ function doorfunB(){
+    console.log("0이 위로");
+    document.getElementById('doorMacA').style.zIndex = 2;
+    document.getElementById('doorMacB').style.zIndex = 1;
+    document.getElementById('doorMac').style.zIndex = 3;
+}
+
+function doorfun0(){
+    console.log("A가 위로");
+    document.getElementById('doorMacA').style.zIndex = 3;
+    document.getElementById('doorMacB').style.zIndex = 2;
+    document.getElementById('doorMac').style.zIndex = 1;
+}
+function doorfunA(){
+    console.log("B가 위로");
+    document.getElementById('doorMacA').style.zIndex = 1;
+    document.getElementById('doorMacB').style.zIndex = 3;
+    document.getElementById('doorMac').style.zIndex = 2;
+}
+
+
+function checkfun0(){
+    console.log("확인해야함");
+    document.getElementById('checkMacA').style.zIndex = 3;
+    document.getElementById('checkMac').style.zIndex = 1;
+}
+
+function checkfunA(){
+    console.log("확인했음");
+    document.getElementById('checkMac').style.zIndex = 3;
+    document.getElementById('checkMacA').style.zIndex = 1;
+}
+
+
+
+
+
 $(document).ready(function detailpull(){
 var value = $('#ConID').val();
 
@@ -358,6 +460,16 @@ var value = $('#ConID').val();
     });
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /*
