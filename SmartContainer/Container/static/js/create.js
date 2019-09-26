@@ -1,4 +1,18 @@
-$(document).ready(function() {
+/*
+var picker = new Pikaday({
+ field: document.getElementById('datepicker'),
+ format: 'yyyy-MM-dd',
+ toString(date, format) {
+   let day = ("0" + date.getDate()).slice(-2);
+   let month = ("0" + (date.getMonth() + 1)).slice(-2);
+   let year = date.getFullYear();
+   return `${year}-${month}-${day}`;
+ }
+});*/
+
+
+/*$(document).ready(function() {
+
   $( "#datepicker" ).datepicker({
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
@@ -12,9 +26,12 @@ $(document).ready(function() {
     changeMonth: true,
     changeYear: true,
     yearSuffix: '년'
+
   });
-});
-  $( "#datepicker" ).on( "click", function( event ) {
+});*/
+/*
+function date(){
+console.log("gggg");
  $( "#datepicker" ).datepicker({
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
@@ -31,6 +48,8 @@ $(document).ready(function() {
   });
 
 }
+*/
+
 
 
 

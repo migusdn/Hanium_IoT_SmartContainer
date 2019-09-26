@@ -7,6 +7,18 @@
     position : fixed;
     margin-top : -0.25%;
 }
+/*.ui-datepicker{ font-size: 12px; width: 160px; }
+.ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 11px; }
+.ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 11px; }*/
+
+
+/*
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    appearance: none;
+}
+*/
 
 #newimg img {
     width : 25px;

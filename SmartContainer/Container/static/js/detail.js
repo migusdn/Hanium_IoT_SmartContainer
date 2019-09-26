@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var modalLayer = $("#modalLayer");
-  var modalLayer = $("#modalLayer1");
   var modalLink = $(".modalLink");
   var modalCont = $(".modalContent");
   var marginLeft = modalCont.outerWidth()/2;
@@ -11,13 +10,36 @@ $(document).ready(function(){
     modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
     $(this).blur();
     $(".modalContent > a").focus();
+
     return false;
   });
 
-  $(".modalContent > button").click(function(){
+  $(".modalContent").click(function(){
     modalLayer.fadeOut("slow");
     modalLink.focus();
   });
+
+   var modalLayer1 = $("#modalLayer1");
+  var modalLink1 = $(".modalLink1");
+  var modalCont1 = $(".modalContent1");
+  var marginLeft1 = modalCont1.outerWidth()/2;
+  var marginTop1 = modalCont1.outerHeight()/2;
+
+  modalLink1.click(function(){
+  console.log("ggggggsadasd");
+    modalLayer1.fadeIn("slow");
+    modalCont1.css({"margin-top" : -marginTop1, "margin-left" : -marginLeft1});
+    $(this).blur();
+    $(".modalContent1 > a").focus();
+    return false;
+  });
+
+  $(".modalContent1").click(function(){
+    modalLayer1.fadeOut("slow");
+    modalLink1.focus();
+  });
+
+
   //--------------------여기까지 모달
 });
 
@@ -63,24 +85,22 @@ function humfunA(){
     document.getElementById('humidMac').style.zIndex = 2;
 }
 /*개폐장치*/
- function doorfunB(){
+/* function doorfunB(){
     console.log("0이 위로");
     document.getElementById('doorMacA').style.zIndex = 2;
     document.getElementById('doorMacB').style.zIndex = 1;
     document.getElementById('doorMac').style.zIndex = 3;
-}
+}*/
 
 function doorfun0(){
     console.log("A가 위로");
     document.getElementById('doorMacA').style.zIndex = 3;
-    document.getElementById('doorMacB').style.zIndex = 2;
     document.getElementById('doorMac').style.zIndex = 1;
 }
 function doorfunA(){
-    console.log("B가 위로");
+    console.log("0이 위로");
     document.getElementById('doorMacA').style.zIndex = 1;
-    document.getElementById('doorMacB').style.zIndex = 3;
-    document.getElementById('doorMac').style.zIndex = 2;
+    document.getElementById('doorMac').style.zIndex = 3;
 }
 
 
