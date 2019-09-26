@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'main', #main 앱
     'detail',#detail 앱
+    'tensor',
 ]
 
 MIDDLEWARE = [

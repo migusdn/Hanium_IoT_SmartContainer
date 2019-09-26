@@ -92,22 +92,13 @@ def check(request):
 def statcheck(request):
     ID = request.POST['data']
     print(ID)
-    Test = request.POST['statcheck']
+    Test = request.POST['StatCheck']
     print(Test)
     valid = Container.objects.get(ContainerID=ID)
     print(valid)
     valid.StatCheck = "1"
     valid.save()
     return HttpResponse("success")
-
-
-
-
-
-
-
-
-
 
 
 def container_list(request):

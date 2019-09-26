@@ -92,7 +92,7 @@ $(document).ready(function mappull(){
 var pickedup;
 
 $(document).ready(function() {
-    console.log("HI");
+    console.log("fillname0");
     $( "#0table tbody tr" ).on( "click", function( event ) {
 
           $("#fillname").val($(this).find("td").eq(0).html());
@@ -115,7 +115,56 @@ $(document).ready(function() {
 	form.submit();
 
     });
+
+        console.log("fillnameA");
+    $( "#Atable tbody tr" ).on( "click", function( event ) {
+
+          $("#fillnameA").val($(this).find("td").eq(0).html());
+          var ConID = $("#fillnameA").val();
+          pickedup = $( this );
+
+    var ConID = $("#fillnameA").val();
+    console.log(ConID);
+    var form = document.createElement('form');
+	form.setAttribute('method', 'post');
+	form.setAttribute('action', 'http://127.0.0.1:8000/detail/test');
+	document.charset = "utf-8";
+	var hiddenField = document.createElement('input');
+	hiddenField.setAttribute('type', 'hidden');
+	hiddenField.setAttribute('name', 'ConID');
+	hiddenField.setAttribute('value', ConID);
+	form.appendChild(hiddenField);
+
+	document.body.appendChild(form);
+	form.submit();
+    });
+
+ $( "#Btable tbody tr" ).on( "click", function( event ) {
+
+          $("#fillnameB").val($(this).find("td").eq(0).html());
+          var ConID = $("#fillnameB").val();
+          pickedup = $( this );
+
+    var ConID = $("#fillnameB").val();
+    console.log(ConID);
+    var form = document.createElement('form');
+	form.setAttribute('method', 'post');
+	form.setAttribute('action', 'http://127.0.0.1:8000/detail/test');
+	document.charset = "utf-8";
+	var hiddenField = document.createElement('input');
+	hiddenField.setAttribute('type', 'hidden');
+	hiddenField.setAttribute('name', 'ConID');
+	hiddenField.setAttribute('value', ConID);
+	form.appendChild(hiddenField);
+
+	document.body.appendChild(form);
+	form.submit();
+
+    });
+
+
 });
+
 
 function fun0(){
     console.log("0이 위로");

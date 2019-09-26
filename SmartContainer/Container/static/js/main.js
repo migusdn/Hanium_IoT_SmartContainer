@@ -37,11 +37,12 @@ $(document).ready(function realmainpull(){
                         var strn = strn + "<td style='font-size:x-large'>";
                         var strn = strn + "■";
                         var strn = strn + "</td>";
-                        var strn = strn + "<td style='font-size:x-large'>";
                         if(data[i].StatCheck=='0'){
-                           strn = strn + "정상";
+                        var strn = strn + "<td style='font-size:x-large; color: rgb(, 255, 0)'>";
+                           strn = strn + "■";
                          }else{
-                           strn = strn + "문제";
+                         var strn = strn + "<td style='font-size:x-large; color: rgb(255, 0, 0)'>";
+                           strn = strn + "■";
                          }
                         var strn = strn + "</td>";
                         var strn = strn + "<td>";
@@ -124,7 +125,7 @@ $(document).ready(function() {
    if (exTable){            //복사테이블 존재할시
     for(var i=1; i<exTable.rows.length; i++ ){      //데이터행있는만큼 반복문
         if(exTable.rows[i].cells[7]){               //행이있다면
-            console.log(exTable.rows[i].cells[7].innerText);    //연습으로콘솔
+           // console.log(exTable.rows[i].cells[7].innerText);    //연습으로콘솔
             result[i] = exTable.rows[i].cells[7].innerText;
             }   //result[1] 부터 배열 넣기
         }

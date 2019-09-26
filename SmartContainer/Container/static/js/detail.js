@@ -1,3 +1,125 @@
+$(document).ready(function(){
+  var modalLayer = $("#modalLayer");
+  var modalLink = $(".modalLink");
+  var modalCont = $(".modalContent");
+  var marginLeft = modalCont.outerWidth()/2;
+  var marginTop = modalCont.outerHeight()/2;
+
+  modalLink.click(function(){
+    modalLayer.fadeIn("slow");
+    modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
+    $(this).blur();
+    $(".modalContent > a").focus();
+
+    return false;
+  });
+
+  $(".modalContent").click(function(){
+    modalLayer.fadeOut("slow");
+    modalLink.focus();
+  });
+
+   var modalLayer1 = $("#modalLayer1");
+  var modalLink1 = $(".modalLink1");
+  var modalCont1 = $(".modalContent1");
+  var marginLeft1 = modalCont1.outerWidth()/2;
+  var marginTop1 = modalCont1.outerHeight()/2;
+
+  modalLink1.click(function(){
+  console.log("ggggggsadasd");
+    modalLayer1.fadeIn("slow");
+    modalCont1.css({"margin-top" : -marginTop1, "margin-left" : -marginLeft1});
+    $(this).blur();
+    $(".modalContent1 > a").focus();
+    return false;
+  });
+
+  $(".modalContent1").click(function(){
+    modalLayer1.fadeOut("slow");
+    modalLink1.focus();
+  });
+
+
+  //--------------------여기까지 모달
+});
+
+  //여기부터 온도장치,냉방장치,개폐장치 z-index
+  /*온도장치*/
+ function temfunB(){
+    console.log("0이 위로");
+    document.getElementById('temperMacA').style.zIndex = 2;
+    document.getElementById('temperMacB').style.zIndex = 1;
+    document.getElementById('temperMac').style.zIndex = 3;
+}
+
+function temfun0(){
+    console.log("A가 위로");
+    document.getElementById('temperMacA').style.zIndex = 3;
+    document.getElementById('temperMacB').style.zIndex = 2;
+    document.getElementById('temperMac').style.zIndex = 1;
+}
+function temfunA(){
+    console.log("B가 위로");
+    document.getElementById('temperMacA').style.zIndex = 1;
+    document.getElementById('temperMacB').style.zIndex = 3;
+    document.getElementById('temperMac').style.zIndex = 2;
+}
+/*냉방장치*/
+ function humfunB(){
+    console.log("0이 위로");
+    document.getElementById('humidMacA').style.zIndex = 2;
+    document.getElementById('humidMacB').style.zIndex = 1;
+    document.getElementById('humidMac').style.zIndex = 3;
+}
+
+function humfun0(){
+    console.log("A가 위로");
+    document.getElementById('humidMacA').style.zIndex = 3;
+    document.getElementById('humidMacB').style.zIndex = 2;
+    document.getElementById('humidMac').style.zIndex = 1;
+}
+function humfunA(){
+    console.log("B가 위로");
+    document.getElementById('humidMacA').style.zIndex = 1;
+    document.getElementById('humidMacB').style.zIndex = 3;
+    document.getElementById('humidMac').style.zIndex = 2;
+}
+/*개폐장치*/
+/* function doorfunB(){
+    console.log("0이 위로");
+    document.getElementById('doorMacA').style.zIndex = 2;
+    document.getElementById('doorMacB').style.zIndex = 1;
+    document.getElementById('doorMac').style.zIndex = 3;
+}*/
+
+function doorfun0(){
+    console.log("A가 위로");
+    document.getElementById('doorMacA').style.zIndex = 3;
+    document.getElementById('doorMac').style.zIndex = 1;
+}
+function doorfunA(){
+    console.log("0이 위로");
+    document.getElementById('doorMacA').style.zIndex = 1;
+    document.getElementById('doorMac').style.zIndex = 3;
+}
+
+
+function checkfun0(){
+    console.log("확인해야함");
+    document.getElementById('checkMacA').style.zIndex = 3;
+    document.getElementById('checkMac').style.zIndex = 1;
+}
+
+function checkfunA(){
+    console.log("확인했음");
+    document.getElementById('checkMac').style.zIndex = 3;
+    document.getElementById('checkMacA').style.zIndex = 1;
+}
+
+
+
+
+
 $(document).ready(function detailpull(){
 var value = $('#ConID').val();
 
@@ -128,21 +250,21 @@ var value = $('#ConID').val();
                             else check==0;
                             }
 
-                             if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
+                             //if(check==1){       //check==1 온도나습도에 하나라도 문제있을때 check=1
                              $.ajax({
                               url : "http://127.0.0.1:8000/main/statcheck",
                               type:'POST',
                               data : {
                                 'data':value,
-                                'statcheck':check,
+                                'StatCheck':check,
                                     },
                                dataType : 'json',
                               success: function(){
 		                	    alert("SUCESS");
 		                                  }
                                    })
-                                }
-                                else{
+                               // }
+                                /*else{
                             $.ajax({
                               url : "http://127.0.0.1:8000/main/statcheck",
                               type:'POST',
@@ -155,7 +277,7 @@ var value = $('#ConID').val();
 		                	    alert("SUCESS");
 		                                  }
                                    })
-                                }
+                                }*/
 
                     }
                  });
@@ -255,7 +377,7 @@ function freeze(){
     console.log(Humid);
 
     $.ajax({
-                 url : "http://192.168.0.11:8000/status/freeze",
+                 url : "http://192.168.0.11:8000/status/DoTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  data : {
@@ -276,7 +398,7 @@ function freeze(){
 function heat(){
     console.log("heat")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/heat",
+                 url : "http://192.168.0.4:8000/status/UpTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -292,7 +414,7 @@ function heat(){
 function humid(){
     console.log("humid")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/humid",
+                 url : "http://192.168.0.4:8000/status/UpHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -308,7 +430,7 @@ function humid(){
 function dehum(){
     console.log("dehum")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/dehum",
+                 url : "http://192.168.0.4:8000/status/DoHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -358,6 +480,16 @@ var value = $('#ConID').val();
     });
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /*

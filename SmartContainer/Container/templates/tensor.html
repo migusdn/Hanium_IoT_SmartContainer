@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<!--<script src="{% static 'js/map.js' %}"></script>-->
+<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
+<!--<link href="{% static 'css/map.css'%}" rel="stylesheet">-->
+<script src="{% static 'js/tensor.js' %}"></script>
+<link href="{% static 'css/tensor.css'%}" rel="stylesheet">
+
+<div id="newimg">
+    <img src="{% static "images/graph2.png" %}">
+</div>
+<h2>데이터분석</h2>
+<div class="slideshow-container">
+
+<div class="fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test1.png' %}" >
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test1.png' %}" >
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test2.png' %}" >
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test3.png' %}">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="{% static 'images/test4.png' %}" >
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+  <div class="dot1">
+      <span class="dot" onclick="currentSlide(1)"></span>
+  </div>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+
+
+{% endblock %}
+
+
+
+
+
+{% block js %}
+
+
+
+{% endblock %}

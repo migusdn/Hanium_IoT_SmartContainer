@@ -1,5 +1,38 @@
-$(function() {
-  $( "#datepicker1" ).datepicker({
+/*
+var picker = new Pikaday({
+ field: document.getElementById('datepicker'),
+ format: 'yyyy-MM-dd',
+ toString(date, format) {
+   let day = ("0" + date.getDate()).slice(-2);
+   let month = ("0" + (date.getMonth() + 1)).slice(-2);
+   let year = date.getFullYear();
+   return `${year}-${month}-${day}`;
+ }
+});*/
+
+
+/*$(document).ready(function() {
+
+  $( "#datepicker" ).datepicker({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    dayNames: ['일','월','화','수','목','금','토'],
+    dayNamesShort: ['일','월','화','수','목','금','토'],
+    dayNamesMin: ['일','월','화','수','목','금','토'],
+    showMonthAfterYear: true,
+    changeMonth: true,
+    changeYear: true,
+    yearSuffix: '년'
+
+  });
+});*/
+/*
+function date(){
+console.log("gggg");
+ $( "#datepicker" ).datepicker({
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
     nextText: '다음 달',
@@ -13,7 +46,12 @@ $(function() {
     changeYear: true,
     yearSuffix: '년'
   });
-});
+
+}
+*/
+
+
+
 
 function send(){
 
