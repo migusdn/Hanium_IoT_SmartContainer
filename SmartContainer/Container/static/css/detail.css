@@ -76,15 +76,15 @@ float:left;
 }
 
 
-#temperMac{
+#DoTemp_On{
     z-index:3;
 }
 
-#temperMacA{
+#UpTemp_On{
     z-index:2;
 }
 
-#temperMacB{
+#Temp_Module_Off{
     z-index:1;
 }
 #temperDiv{
@@ -92,15 +92,15 @@ float:left;
 }
 
 
-#humidMac{
+#UpHumid_On{
     z-index:3;
 }
 
-#humidMacA{
+#UpHumid_Off{
     z-index:2;
 }
 
-#humidMacB{
+#Humid_Module_Off{
     z-index:1;
 }
 

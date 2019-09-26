@@ -45,44 +45,50 @@ $(document).ready(function(){
 
   //여기부터 온도장치,냉방장치,개폐장치 z-index
   /*온도장치*/
- function temfunB(){
+ function Temp_Module_Off(){
     console.log("0이 위로");
-    document.getElementById('temperMacA').style.zIndex = 2;
-    document.getElementById('temperMacB').style.zIndex = 1;
-    document.getElementById('temperMac').style.zIndex = 3;
+    document.getElementById('UpTemp_On').style.zIndex = 2;
+    document.getElementById('Temp_Module_Off').style.zIndex = 1;
+    document.getElementById('DoTemp_On').style.zIndex = 3;
+    freeze()
 }
 
-function temfun0(){
+function DoTemp_Off(){
     console.log("A가 위로");
-    document.getElementById('temperMacA').style.zIndex = 3;
-    document.getElementById('temperMacB').style.zIndex = 2;
-    document.getElementById('temperMac').style.zIndex = 1;
+    document.getElementById('UpTemp_On').style.zIndex = 3;
+    document.getElementById('Temp_Module_Off').style.zIndex = 2;
+    document.getElementById('DoTemp_On').style.zIndex = 1;
+    heat()
 }
-function temfunA(){
+function UpTemp_Off(){
     console.log("B가 위로");
-    document.getElementById('temperMacA').style.zIndex = 1;
-    document.getElementById('temperMacB').style.zIndex = 3;
-    document.getElementById('temperMac').style.zIndex = 2;
+    document.getElementById('UpTemp_On').style.zIndex = 1;
+    document.getElementById('Temp_Module_Off').style.zIndex = 3;
+    document.getElementById('DoTemp_On').style.zIndex = 2;
+
 }
 /*냉방장치*/
- function humfunB(){
+ function Humid_Module_Off(){
     console.log("0이 위로");
-    document.getElementById('humidMacA').style.zIndex = 2;
-    document.getElementById('humidMacB').style.zIndex = 1;
-    document.getElementById('humidMac').style.zIndex = 3;
+    document.getElementById('UpHumid_Off').style.zIndex = 2;
+    document.getElementById('Humid_Module_Off').style.zIndex = 1;
+    document.getElementById('UpHumid_On').style.zIndex = 3;
+    humid()
 }
 
-function humfun0(){
+function UpHumid_Off(){
     console.log("A가 위로");
-    document.getElementById('humidMacA').style.zIndex = 3;
-    document.getElementById('humidMacB').style.zIndex = 2;
-    document.getElementById('humidMac').style.zIndex = 1;
+    document.getElementById('UpHumid_Off').style.zIndex = 3;
+    document.getElementById('Humid_Module_Off').style.zIndex = 2;
+    document.getElementById('UpHumid_On').style.zIndex = 1;
+    dehum()
 }
-function humfunA(){
+function DoHumid_Off(){
     console.log("B가 위로");
-    document.getElementById('humidMacA').style.zIndex = 1;
-    document.getElementById('humidMacB').style.zIndex = 3;
-    document.getElementById('humidMac').style.zIndex = 2;
+    document.getElementById('UpHumid_Off').style.zIndex = 1;
+    document.getElementById('Humid_Module_Off').style.zIndex = 3;
+    document.getElementById('UpHumid_On').style.zIndex = 2;
+
 }
 /*개폐장치*/
 /* function doorfunB(){

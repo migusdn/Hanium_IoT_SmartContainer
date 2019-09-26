@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32ed690-73a7-4f25-8e57-a3c100da84ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Container/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Container/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Container/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/js/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/Container.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Container/static/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/css/detail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Container/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Container/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
