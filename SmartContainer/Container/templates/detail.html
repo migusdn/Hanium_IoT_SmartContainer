@@ -2,240 +2,240 @@
 
 {% block content %}
 
-{% load static %}
-<script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/detail.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-<link href="{% static 'css/detail.css'%}" rel="stylesheet">
+    {% load static %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/detail.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="{% static 'css/detail.css'%}" rel="stylesheet">
 
 
-<input type="hidden" value={{ConID}} id="ConID" class="ConID">
+    <input type="hidden" value={{ConID}} id="ConID" class="ConID">
 
-<div id="maindiv">
-    <div id="name_line">
-        여기에 컨테이너 이름 및 안내사항
-    </div>
-
-<!--     <div class="se">       //float실험용
-              <div id="CheckDiv1" class="se">
-            111111111111111111111111111111111111111111111
+    <div id="maindiv">
+        <div id="name_line">
+            여기에 컨테이너 이름 및 안내사항
         </div>
-      <div id="CheckDiv2" class="se">
-            22222222222222222222222222222222222222222
-        </div>
-      <div id="CheckDiv3" class="se">
-            33333333333333333333333333333333333333333
-        </div>
-        </div>-->
 
-    <div id="first_line">
-        <div id="temperDiv" class="section">
-            <a href="#modalLayer" class="modalLink">온도설정(Click)</a>
+        <!--     <div class="se">       //float실험용
+                      <div id="CheckDiv1" class="se">
+                    111111111111111111111111111111111111111111111
+                </div>
+              <div id="CheckDiv2" class="se">
+                    22222222222222222222222222222222222222222
+                </div>
+              <div id="CheckDiv3" class="se">
+                    33333333333333333333333333333333333333333
+                </div>
+                </div>-->
+
+        <div id="first_line">
+            <div id="temperDiv" class="section">
+                <a href="#modalLayer" class="modalLink">온도설정(Click)</a>
+
+                <div id="Temper">
+                    <label id="TemperX">현재온도</label>
+                    <input type=text id="TemperY">
+                </div>
+                <div id="modalLayer">
+                    <div class="modalContent">
+                        <div id="SetTemper">
+                            <label id="SetTemperX">설정온도</label>
+                            <select id="SetTemperY"></select>
+                        </div>
+                        <button type="button">닫기</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--/*여기까지 온도 모달*/-->
+
+            <!--여기부터 습도 모달-->
+            <div id="HumidDiv" class="section">
+                <a href="#modalLayer1" class="modalLink1">습도설정(Click)</a>
+
+                <div id="Humid">
+                    <label id="HumidX">현재습도</label>
+                    <input type=text id="HumidY">
+                </div>
+                <div id="modalLayer1">
+                    <div class="modalContent1">
+                        <div id="SetHumid">
+                            <label id="SetHumidX">설정습도</label>
+                            <select id="SetHumidY"></select>
+                        </div>
+                        <button type="button">닫기</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--  <div id="HumidDiv" class="section">
+                  <a href="#modalLayer1" class="modalLink1">습도설정(Click)</a>
+
+                  <div id="Humid">
+                      <label id="HumidX">현재습도</label>
+                      <input type=text id="HumidY">
+                  </div>
+
+                  <div id="modalLayer1">
+                      <div class="modalContent1">
+                              <div id="SetHumid">
+                                  <label id="SetHumidX">설정습도</label>
+                                  <select id="SetHumidY"></select>
+                              </div>
+                          <button type="button">닫기</button>
+                      </div>
+                  </div>
+              </div>-->
+
+            <!--여기까지 습도 모달-->
+            <!--      <div id="CheckDiv" class="section">
+                      체크 Section
+                  </div>
+          -->
+
+
+            <div id="checkMac" class="checksection" onclick="checkfun0()">
+                확인했음
+            </div>
+            <div id="checkMacA" class="checksection" onclick="checkfunA()" >
+                확인해야함
+            </div>
+        </div>
+
+
+        <div id="second_line">
+            <div>
+                <div id="DoTemp_On" class="temsection" onclick="DoTemp_Off()">
+                    냉풍기 ON
+                </div>
+                <div id="UpTemp_On" class="temsection" onclick="UpTemp_Off()" >
+                    온풍기 ON
+                </div>
+                <div id="Temp_Module_Off" class="temsection" onclick="Temp_Module_Off()">
+                    온도 제어 중지
+                </div>
+            </div>
+
+            <!--     <div id="humidMac" class="section">
+                     냉방 장치
+                 </div>-->
+            <div>
+                <div id="UpHumid_On" class="humsection" onclick="UpHumid_Off()">
+                    가습기 ON
+                </div>
+                <div id="UpHumid_Off" class="humsection" onclick="DoHumid_Off()" >
+                    제습기 ON
+                </div>
+                <div id="Humid_Module_Off" class="humsection" onclick="Humid_Module_Off()">
+                    습도 제어 중지
+                </div>
+            </div>
+
+
+            <!--   <div id="doorMac" class="section">
+                   개폐 장치
+               </div>-->
+
+
+            <div>
+                <div id="doorMac" class="doorsection" onclick="doorfun0()">
+                    개폐 장치열림
+                </div>
+                <div id="doorMacA" class="doorsection" onclick="doorfunA()" >
+                    개폐 장치닫힘
+                </div>
+                <!--            <div id="doorMacB" class="doorsection" onclick="doorfunB()">
+                               개폐 장치 B 지금누르면 0이 위로갑니다
+                           </div>-->
+            </div>
+
+
+        </div>
+
+
+        <!--<div id="TemperSection" class="div">
 
             <div id="Temper">
                 <label id="TemperX">현재온도</label>
                 <input type=text id="TemperY">
             </div>
-            <div id="modalLayer">
-                <div class="modalContent">
-                    <div id="SetTemper">
-                        <label id="SetTemperX">설정온도</label>
-                        <select id="SetTemperY"></select>
-                    </div>
-                    <button type="button">닫기</button>
 
-                </div>
+            <div id="SetTemper">
+                <label id="SetTemperX">설정온도</label>
+                <select id="SetTemperY"></select>
             </div>
+
+            <div id="UpTemper" >
+                <label id="UpTemperX">온열기</label>
+                <input type=text id="UpTemperY">
+                <input type="button" value="온열기" onclick="freeze()">
+            </div>
+
+            <div id="DoTemper">
+                <label id="DoTemperX">냉방기</label>
+                <input type=text id="DoTemperY">
+                <input type="button" value="냉방기" onclick="freeze()">
+            </div>
+
         </div>
-<!--/*여기까지 온도 모달*/-->
 
-<!--여기부터 습도 모달-->
-<div id="HumidDiv" class="section">
-            <a href="#modalLayer1" class="modalLink1">습도설정(Click)</a>
 
-            <div id="Humid">
-                <label id="HumidX">현재습도</label>
-                <input type=text id="HumidY">
-            </div>
-            <div id="modalLayer1">
-                <div class="modalContent1">
-                    <div id="SetHumid">
-                        <label id="SetHumidX">설정습도</label>
-                        <select id="SetHumidY"></select>
-                    </div>
-                    <button type="button">닫기</button>
-
-                </div>
-            </div>
-        </div>
-      <!--  <div id="HumidDiv" class="section">
-            <a href="#modalLayer1" class="modalLink1">습도설정(Click)</a>
+        <div id="HumidSection" class="div">
 
             <div id="Humid">
                 <label id="HumidX">현재습도</label>
                 <input type=text id="HumidY">
             </div>
 
-            <div id="modalLayer1">
-                <div class="modalContent1">
-                        <div id="SetHumid">
-                            <label id="SetHumidX">설정습도</label>
-                            <select id="SetHumidY"></select>
-                        </div>
-                    <button type="button">닫기</button>
-                </div>
+            <div id="SetHumid">
+                <label id="SetHumidX">설정습도</label>
+                <select id="SetHumidY"></select>
             </div>
+
+            <div id="UpHumid">
+                <label id="UpHumidX">가습기</label>
+                <input type=text id="UpHumidY">
+                <input type="button" value="가습기" onclick="humid()">
+            </div>
+
+            <div id="DoHumid" >
+                <label id="DoHumidX">제습기</label>
+                <input type=text id="DoHumidY">
+                <input type="button" value="제습기" onclick="dehum()">
+            </div>
+        </div>
+
+        <div id="DoorSection" class="div">
+            <div id="Door">
+                <label id="DoorX">개폐장치</label>
+                <input type=text id="DoorY">
+                <input type="button" value="개폐" onclick="door()">
+            </div>
+
+            <div id="Check">
+                <label id="CheckX">체크여부</label>
+                <input type=text id="CheckY">
+                <input type="button" value="체크" onclick="check()">
+            </div>
+        </div>
+
+        <div id="graph1" class="div">
+
+        온도 추세선
+
+        </div>
+
+        <div id="graph2" class="div">
+
+        습도 추세선
+
         </div>-->
 
-<!--여기까지 습도 모달-->
-  <!--      <div id="CheckDiv" class="section">
-            체크 Section
-        </div>
--->
-
-
-        <div id="checkMac" class="checksection" onclick="checkfun0()">
-            확인했음
-        </div>
-         <div id="checkMacA" class="checksection" onclick="checkfunA()" >
-            확인해야함
-        </div>
     </div>
 
-
-    <div id="second_line">
-        <div>
-            <div id="DoTemp_On" class="temsection" onclick="DoTemp_Off()">
-                냉풍기 ON
-            </div>
-             <div id="UpTemp_On" class="temsection" onclick="UpTemp_Off()" >
-                온풍기 ON
-            </div>
-             <div id="Temp_Module_Off" class="temsection" onclick="Temp_Module_Off()">
-                온도 제어 중지
-            </div>
-        </div>
-
-   <!--     <div id="humidMac" class="section">
-            냉방 장치
-        </div>-->
-        <div>
-            <div id="UpHumid_On" class="humsection" onclick="UpHumid_Off()">
-                가습기 ON
-            </div>
-             <div id="UpHumid_Off" class="humsection" onclick="DoHumid_Off()" >
-                제습기 ON
-            </div>
-             <div id="Humid_Module_Off" class="humsection" onclick="Humid_Module_Off()">
-                습도 제어 중지
-            </div>
-        </div>
-
-
-     <!--   <div id="doorMac" class="section">
-            개폐 장치
-        </div>-->
-
-
-        <div>
-            <div id="doorMac" class="doorsection" onclick="doorfun0()">
-                개폐 장치열림
-            </div>
-             <div id="doorMacA" class="doorsection" onclick="doorfunA()" >
-                개폐 장치닫힘
-            </div>
- <!--            <div id="doorMacB" class="doorsection" onclick="doorfunB()">
-                개폐 장치 B 지금누르면 0이 위로갑니다
-            </div>-->
-        </div>
-
-
- </div>
-
-
-    <!--<div id="TemperSection" class="div">
-
-        <div id="Temper">
-            <label id="TemperX">현재온도</label>
-            <input type=text id="TemperY">
-        </div>
-
-        <div id="SetTemper">
-            <label id="SetTemperX">설정온도</label>
-            <select id="SetTemperY"></select>
-        </div>
-
-        <div id="UpTemper" >
-            <label id="UpTemperX">온열기</label>
-            <input type=text id="UpTemperY">
-            <input type="button" value="온열기" onclick="freeze()">
-        </div>
-
-        <div id="DoTemper">
-            <label id="DoTemperX">냉방기</label>
-            <input type=text id="DoTemperY">
-            <input type="button" value="냉방기" onclick="freeze()">
-        </div>
-
-    </div>
-
-
-    <div id="HumidSection" class="div">
-
-        <div id="Humid">
-            <label id="HumidX">현재습도</label>
-            <input type=text id="HumidY">
-        </div>
-
-        <div id="SetHumid">
-            <label id="SetHumidX">설정습도</label>
-            <select id="SetHumidY"></select>
-        </div>
-
-        <div id="UpHumid">
-            <label id="UpHumidX">가습기</label>
-            <input type=text id="UpHumidY">
-            <input type="button" value="가습기" onclick="humid()">
-        </div>
-
-        <div id="DoHumid" >
-            <label id="DoHumidX">제습기</label>
-            <input type=text id="DoHumidY">
-            <input type="button" value="제습기" onclick="dehum()">
-        </div>
-    </div>
-
-    <div id="DoorSection" class="div">
-        <div id="Door">
-            <label id="DoorX">개폐장치</label>
-            <input type=text id="DoorY">
-            <input type="button" value="개폐" onclick="door()">
-        </div>
-
-        <div id="Check">
-            <label id="CheckX">체크여부</label>
-            <input type=text id="CheckY">
-            <input type="button" value="체크" onclick="check()">
-        </div>
-    </div>
-
-    <div id="graph1" class="div">
-
-    온도 추세선
-
-    </div>
-
-    <div id="graph2" class="div">
-
-    습도 추세선
-
-    </div>-->
-
-</div>
-
-<!--<button onclick="control()">조작</button>
-<br>-->
+    <!--<button onclick="control()">조작</button>
+    <br>-->
 
 {% endblock %}
 

@@ -1,12 +1,12 @@
 #maindiv{
-float:left;
+    float:left;
 }
 
 .div {
-width:95%;
-height:90%;
-/*border: 1px solid black;*/
-float:left;
+    width:95%;
+    height:90%;
+    /*border: 1px solid black;*/
+    float:left;
 }
 
 
@@ -133,32 +133,32 @@ a{color:#000;}
     filter:alpha(opacity=50);}
 
 #modalLayer{display:none;
-            position:relative;}
+    position:relative;}
 #modalLayer1{display:none;
-            position:relative;}
+    position:relative;}
 #modalLayer .modalContent{width:440px;
-                            height:200px;
-                            padding:20px;
-                            border:1px solid #ccc;
-                            position:fixed;
-                            left:50%;
-                            top:50%;
-                            z-index:11;
-                            background:#fff;}
+    height:200px;
+    padding:20px;
+    border:1px solid #ccc;
+    position:fixed;
+    left:50%;
+    top:50%;
+    z-index:11;
+    background:#fff;}
 #modalLayer .modalContent button{position:absolute;
-                                    right:0; top:0;
-                                         cursor:pointer;}
+    right:0; top:0;
+    cursor:pointer;}
 
 
 #modalLayer1 .modalContent1{width:440px;
-                            height:200px;
-                            padding:20px;
-                            border:1px solid #ccc;
-                            position:fixed;
-                            left:50%;
-                            top:50%;
-                            z-index:11;
-                            background:#fff;}
+    height:200px;
+    padding:20px;
+    border:1px solid #ccc;
+    position:fixed;
+    left:50%;
+    top:50%;
+    z-index:11;
+    background:#fff;}
 #modalLayer1 .modalContent1 button{position:absolute;
-                                    right:0; top:0;
-                                         cursor:pointer;}
+    right:0; top:0;
+    cursor:pointer;}
