@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="776bbdfc-7c67-4e93-9141-6518129d4a95" name="Default Changelist" comment="DB Table 수정">
-      <change afterPath="$PROJECT_DIR$/django-channels/apps/status/templates/chat/setting.html" afterDir="false" />
+    <list default="true" id="c32ed690-73a7-4f25-8e57-a3c100da84ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Container/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Container/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Container/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/apps/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +47,15 @@
     <option name="height" value="1047" />
   </component>
   <component name="ProjectId" id="1P5skCZSdbW4MfTLsOdNmuc7H4m" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -153,6 +159,38 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="627000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -162,6 +200,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>

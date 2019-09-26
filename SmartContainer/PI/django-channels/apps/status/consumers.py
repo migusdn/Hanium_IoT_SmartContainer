@@ -91,6 +91,17 @@ class StatusConsumer(WebsocketConsumer):
         except Exception as ex:
             print('에러 발생', ex)
 
+
+
+
+
+
+
+
+
+
+
+
 class AllStatusConsumer(WebsocketConsumer):
     def connect(self):
         try:

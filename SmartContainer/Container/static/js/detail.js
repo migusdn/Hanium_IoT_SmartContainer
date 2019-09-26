@@ -366,7 +366,7 @@ function find_in_object(my_object, my_criteria){
   });
 
 }
-
+target_url = "http://192.168.0.x:8000/"
 function freeze(){
     console.log("freeze");
 
@@ -377,7 +377,7 @@ function freeze(){
     console.log(Humid);
 
     $.ajax({
-                 url : "http://192.168.0.11:8000/status/DoTemp",
+                 url : target_url+"/status/DoTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  data : {
@@ -398,7 +398,7 @@ function freeze(){
 function heat(){
     console.log("heat")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/UpTemp",
+                 url : target_url+"/status/UpTemp",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -414,7 +414,7 @@ function heat(){
 function humid(){
     console.log("humid")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/UpHumid",
+                 url : target_url+"/status/UpHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -430,7 +430,7 @@ function humid(){
 function dehum(){
     console.log("dehum")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/DoHumid",
+                 url : target_url+"/status/DoHumid",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
@@ -446,7 +446,7 @@ function dehum(){
 function door(){
     console.log("야이씨볼롬, door")
     $.ajax({
-                 url : "http://192.168.0.4:8000/status/door",
+                 url : target_url+"/status/door",
                  dataType : 'jsonp',
                  jsonp: "callback",
                  success : function(data){
