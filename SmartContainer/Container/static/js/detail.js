@@ -332,6 +332,24 @@ var value = $('#ConID').val();
                  }
         });
 
+                $.ajax({
+                 url : target_url+"/detail/humid",
+                 dataType : 'json',
+                 data : {
+                   ConID : value,
+                   Temper : humid
+                 },
+                 type : "POST",
+                 success : function(){
+
+                    console.log("습도가"+humid+" 로 설정되었습니다");
+
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+        });
+
     });
 
 
@@ -350,6 +368,24 @@ var value = $('#ConID').val();
                  success : function(){
 
                     alert("온도가"+Temper+" 로 설정되었습니다");
+
+                    setTimeout(function(){
+                    location.reload();
+                    },1000); // 3000밀리초 = 3초
+                 }
+        });
+
+                $.ajax({
+                 url : target_url+"/detail/temper",
+                 dataType : 'json',
+                 data : {
+                   ConID : value,
+                   Temper : Temper
+                 },
+                 type : "POST",
+                 success : function(){
+
+                    console.log("온도가"+Temper+" 로 설정되었습니다");
 
                     setTimeout(function(){
                     location.reload();
