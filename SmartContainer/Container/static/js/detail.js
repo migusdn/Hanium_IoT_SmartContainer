@@ -408,7 +408,7 @@ function find_in_object(my_object, my_criteria){
   });
 
 }
-target_url = "http://192.168.0.x:8000/"
+target_url = "http://192.168.0.x:8000"
 function freeze(){
     console.log("freeze");
 
