@@ -408,7 +408,7 @@ function find_in_object(my_object, my_criteria){
     });
 
 }
-target_url = "http://192.168.0.x:8000"
+target_url = "http://192.168.0.9:8000"
 function freeze(){
     console.log("freeze");
 
@@ -419,7 +419,7 @@ function freeze(){
     console.log(Humid);
 
     $.ajax({
-        url : target_url+"/status/DoTemp",
+        url : target_url+"/status/dotemp",
         dataType : 'jsonp',
         jsonp: "callback",
         data : {
@@ -440,7 +440,7 @@ function freeze(){
 function heat(){
     console.log("heat")
     $.ajax({
-        url : target_url+"/status/UpTemp",
+        url : target_url+"/status/uptemp",
         dataType : 'jsonp',
         jsonp: "callback",
         success : function(data){
@@ -456,7 +456,7 @@ function heat(){
 function humid(){
     console.log("humid")
     $.ajax({
-        url : target_url+"/status/UpHumid",
+        url : target_url+"/status/uphumid",
         dataType : 'jsonp',
         jsonp: "callback",
         success : function(data){
@@ -472,7 +472,7 @@ function humid(){
 function dehum(){
     console.log("dehum")
     $.ajax({
-        url : target_url+"/status/DoHumid",
+        url : target_url+"/status/dohumid",
         dataType : 'jsonp',
         jsonp: "callback",
         success : function(data){
