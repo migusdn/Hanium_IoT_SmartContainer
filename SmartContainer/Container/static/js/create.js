@@ -49,11 +49,76 @@ console.log("gggg");
 
 }
 */
+/*
+$(document).ready(function(){
+    $("#sendbtn").click(function(){
+    var result = txtFieldCheck() == true ? true : false;
+        console.log(result);
+    });
+});
+function txtFieldCheck(){ // form안의 모든 text type 조회
+    var txtEle = $("#frm input[type=text]");
+    for(var i = 0; i < txtEle.length; i ++){
+    // console.log($(txtEle[i]).val());
+        if("" == $(txtEle[i]).val() || null == $(txtEle[i]).val()){
+    var ele_id = $(txtEle[i]).attr("id");
+    var label_txt = $("label[for='" + ele_id +"']").text();
+    console.log("id : " + ele_id + ", label : " + label_txt);
+    showAlert(ele_id, label_txt);
+    return true;
+        }
+    }
+}
 
 
 
+function showAlert(ele_id, label_txt){
+    alert(label_txt + " is null");
+    $("#" + ele_id).focus(); // 해당 id에 focus.
+}
+
+*/
+
+
+
+/*
+function required(){
+    var empt = new Array();
+     empt[1] = document.form.ContainerID.value;
+     empt[2] = document.form.SizeType.value;
+     empt[3] = document.form.TotalWeight.value;
+     empt[4] = document.form.GoodsName.value;
+     empt[5] = document.form.GoodsClassify.value;
+     empt[6] = document.form.Section.value;
+     empt[7] = document.form.LeavePlace.value;
+     empt[8] = document.form.CarryingDate.value;
+
+    for(var i=0; i<empt.length; i++){
+        if (!empt[i]){
+             alert("Please input a Value");
+              return false;
+       }
+       else {
+          alert('Code has accepted : you can try another');
+          return true;
+                }
+            }
+    }*/
 
 function send(){
+
+            if (    $('input[name=ContainerID]').val()=="" ||
+                    $('input[name=SizeType]').val()=="" ||
+                    $('input[name=TotalWeight]').val()=="" ||
+                    $('input[name=GoodsName]').val()=="" ||
+                    $('input[name=GoodsClassify]').val()=="" ||
+                    $('input[name=Section]').val()=="" ||
+                    $('input[name=LeavePlace]').val()=="" ||
+                    $('input[name=CarryingDate]').val()==""){
+                    alert('필수 항목을 기입해주세요!');
+                    e.preventDefault();
+                    return false;
+                }
 
 var form = $("form")[0];
 var formData = new FormData(form);

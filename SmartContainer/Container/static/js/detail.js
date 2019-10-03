@@ -10,14 +10,13 @@ $(document).ready(function(){
         modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
         $(this).blur();
         $(".modalContent > a").focus();
-
         return false;
     });
 
-    $(".modalContent").click(function(){
+  /*  $(".modalContent").click(function(){
         modalLayer.fadeOut("slow");
         modalLink.focus();
-    });
+    });*/
 
     var modalLayer1 = $("#modalLayer1");
     var modalLink1 = $(".modalLink1");
@@ -34,10 +33,10 @@ $(document).ready(function(){
         return false;
     });
 
-    $(".modalContent1").click(function(){
+ /*   $(".modalContent1").click(function(){
         modalLayer1.fadeOut("slow");
         modalLink1.focus();
-    });
+    });*/
 
 
     //--------------------여기까지 모달
@@ -329,6 +328,8 @@ $(document).ready(function detailpull(){
                 setTimeout(function(){
                     location.reload();
                 },1000); // 3000밀리초 = 3초
+                  modalLayer1.fadeOut("slow");
+                  modalLink1.focus();
             }
         });
 
@@ -347,6 +348,8 @@ $(document).ready(function detailpull(){
                 setTimeout(function(){
                     location.reload();
                 },1000); // 3000밀리초 = 3초
+                modalLayer1.fadeOut("slow");
+                modalLink1.focus();
             }
         });
 
@@ -354,7 +357,7 @@ $(document).ready(function detailpull(){
 
 
     $('#SetTemperY').on('change', function() {
-        console.log(value)
+//        console.log(value)
         var Temper = $(this).val();
 
         $.ajax({
@@ -372,6 +375,8 @@ $(document).ready(function detailpull(){
                 setTimeout(function(){
                     location.reload();
                 },1000); // 3000밀리초 = 3초
+                modalLayer.fadeOut("slow");
+                modalLink.focus();
             }
         });
 
@@ -390,6 +395,8 @@ $(document).ready(function detailpull(){
                 setTimeout(function(){
                     location.reload();
                 },1000); // 3000밀리초 = 3초
+                modalLayer.fadeOut("slow");
+                modalLink.focus();
             }
         });
 

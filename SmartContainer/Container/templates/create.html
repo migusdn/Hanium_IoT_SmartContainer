@@ -20,13 +20,13 @@
 
 
 <div id="main">
-     <form id="form" name="form" method="post" enctype="multipart/form-data">
-                <b>컨테이너 번호</b>&nbsp; &nbsp;  <input type ="text" name="ContainerID"/><br>
-                <b>사이즈/타입</b>&nbsp;&nbsp; &nbsp; &nbsp; <input type ="text" name="SizeType"/><br>
-                <b>총 중량</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="TotalWeight"/><br>
-                <b>품명 &nbsp;</b>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="GoodsName"/><br>
+     <form id="form" name="form" method="post" enctype="multipart/form-data" >
+                <b>컨테이너 번호</b>&nbsp; &nbsp;  <input type ="text" name="ContainerID" /><br>
+                <b>사이즈/타입</b>&nbsp;&nbsp; &nbsp; &nbsp; <input type ="text" name="SizeType" /><br>
+                <b>총 중량</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="TotalWeight" /><br>
+                <b>품명 &nbsp;</b>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type ="text" name="GoodsName" /><br>
                 <b>화물구분</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <select name="GoodsClassify">
+                <select name="GoodsClassify" >
                     <option>철강</option>
                     <option>금속</option>
                     <option>기계</option>
@@ -37,16 +37,16 @@
                     <option>액체</option>
                 </select><br>
                 <b>컨테이너 위치</b>&nbsp; &nbsp; &nbsp;
-                <select name="Section">
+                <select name="Section" >
                     <option>0</option>
                     <option>A</option>
                     <option>B</option>
                 </select><br>
-                <b>하선장소</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="text" name="LeavePlace"/><br>
-                <b>반출일자</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="date" id="datepicker" name="CarryingDate"/><br>
+                <b>하선장소</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="text" name="LeavePlace" /><br>
+                <b>반출일자</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type ="date" id="datepicker" name="CarryingDate" /><br>
 
             <div class="button">
-                <input type="button" value="등록" onclick="send()" />
+                <input type="button" value="등록" onclick="send()"/>
             </div>
             <div class="reset">
                 <input type="reset" value="초기화"/>
