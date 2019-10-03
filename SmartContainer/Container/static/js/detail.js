@@ -13,10 +13,10 @@ $(document).ready(function(){
         return false;
     });
 
-  /*  $(".modalContent").click(function(){
+    $(".modalContent button").click(function(){
         modalLayer.fadeOut("slow");
         modalLink.focus();
-    });*/
+    });
 
     var modalLayer1 = $("#modalLayer1");
     var modalLink1 = $(".modalLink1");
@@ -33,10 +33,10 @@ $(document).ready(function(){
         return false;
     });
 
- /*   $(".modalContent1").click(function(){
+    $(".modalContent1 button").click(function(){
         modalLayer1.fadeOut("slow");
         modalLink1.focus();
-    });*/
+    });
 
 
     //--------------------여기까지 모달
