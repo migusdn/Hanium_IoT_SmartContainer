@@ -31,11 +31,20 @@
 
         <div id="first_line">
             <div id="temperDiv" class="section">
-                     <a href="#modalLayer" class="modalLink"><p>온도설정(Click)</p></a>
+
                 <div id="Temper">
                     <label id="TemperX"><b>현재온도</b></label>
+                    <br>
+
+                    <label id="TemperDate" class="Date">8월15일 ~ 10월4일</label>
+                    <br>
+
                     <input type=text id="TemperY">
-                </div><br>
+                </div>
+                <br>
+                <a href="#modalLayer" class="modalLink"><p>온도설정(Click)</p></a>
+
+
                 <div id="modalLayer">
                     <div class="modalContent">
                         <div id="SetTemper">
@@ -43,8 +52,6 @@
                             <select id="SetTemperY"></select>
                             <button type="button">닫기</button>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -52,12 +59,19 @@
 
             <!--여기부터 습도 모달-->
             <div id="HumidDiv" class="section">
-                <a href="#modalLayer1" class="modalLink1"><p>습도설정(Click)</p></a>
-
                 <div id="Humid">
                     <label id="HumidX"><b>현재습도</b></label>
+                    <br>
+
+                    <label id="HumidDate" class="Date">8월15일 ~ 10월4일</label>
+                    <br>
+
                     <input type=text id="HumidY">
                 </div><br>
+
+                <a href="#modalLayer1" class="modalLink1"><p>습도설정(Click)</p></a>
+
+
                 <div id="modalLayer1">
                     <div class="modalContent1">
                         <div id="SetHumid">
@@ -94,12 +108,15 @@
                   </div>
           -->
 
-
-            <div id="checkMac" class="checksection" onclick="checkfun0()">
-                <p>확인했음</p>
-            </div>
-            <div id="checkMacA" class="checksection" onclick="checkfunA()" >
-                <p>확인해야함</p>
+            <div class="section">
+                <div id="checkMac" class="checksection" onclick="checkfun0()">
+                    <p>컨테이너 체크 여부</p>
+                    <p>컨테이너를 확인해야 합니다</p>
+                </div>
+                <div id="checkMacA" class="checksection" onclick="checkfunA()" >
+                    <p>컨테이너 체크 여부</p>
+                    <p>컨테이너를 확인 하였습니다</p>
+                </div>
             </div>
         </div>
 
@@ -107,13 +124,16 @@
         <div id="second_line">
             <div>
                 <div id="DoTemp_On" class="temsection" onclick="DoTemp_Off()">
-                    <p>냉풍기 ON</p>
+                    <p>온도 장치</p>
+                    <h6 class="textcc">냉풍기 ON</h6>
                 </div>
                 <div id="UpTemp_On" class="temsection" onclick="UpTemp_Off()" >
-                    <p>온풍기 ON</p>
+                    <p>온도 장치</p>
+                    <h6 class="textcc">온풍기 ON</h6>
                 </div>
                 <div id="Temp_Module_Off" class="temsection" onclick="Temp_Module_Off()">
-                    <p>온도 제어 중지</p>
+                    <p>온도 장치</p>
+                    <h6 class="textcc">온도 제어 중지</h6>
                 </div>
             </div>
 
@@ -122,13 +142,16 @@
                  </div>-->
             <div>
                 <div id="UpHumid_On" class="humsection" onclick="UpHumid_Off()">
-                    <p>가습기 ON</p>
+                    <p>습도 장치</p>
+                    <p class="humtext">가습기 ON</p>
                 </div>
                 <div id="UpHumid_Off" class="humsection" onclick="DoHumid_Off()" >
-                    <p>제습기 ON</p>
+                    <p>습도 장치</p>
+                    <p class="humtext">제습기 ON</p>
                 </div>
                 <div id="Humid_Module_Off" class="humsection" onclick="Humid_Module_Off()">
-                    <p>습도 제어 중지</p>
+                    <p>습도 장치</p>
+                    <p class="humtext">습도 제어 중지</p>
                 </div>
             </div>
 

@@ -28,13 +28,13 @@
     height:280px;
     background-color:white;
     float:left;
-    margin : 26px;
+    margin : 5px;
     margin-top : 70px;
     font-weight : bold;
 }
 
 #temperDiv{
-margin-left : 140px
+margin-left : 102px
 }
 
 .temsection{    /*온도장치 절대위치변경->TOP/LEFT조절*/
@@ -48,7 +48,10 @@ margin-left : 140px
     margin-right: 15px;
     font-weight : bold;
 }
+#HumidX{
+    margin-top: 30px;
 
+}
 #temperDiv{
     left : 50%:
     color : black;
@@ -119,6 +122,14 @@ button {
     vertical-align : middle;
 }
 
+#HumidDiv{
+    left:10%;
+}
+
+#second_line{
+    margin: 30px 0px 0px 0px;
+
+}
 
 .checksection{    /* 컨테이너 체크여부 절대위치변경->TOP/LEFT조절*/
     top:13.7%;
@@ -226,3 +237,12 @@ a{
 #modalLayer1 .modalContent1 button{position:absolute;
     right:0; top:0;
     cursor:pointer;}
+
+.Date{
+margin-left:100px;
+}
+
+h6{
+    color: grey;
+    margin-left:200px;
+}
