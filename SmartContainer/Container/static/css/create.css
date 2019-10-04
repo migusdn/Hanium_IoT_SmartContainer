@@ -24,13 +24,13 @@ input[type="date"]::-webkit-inner-spin-button {
     width : 25px;
     height : 25px;
     float : left;
-    padding-top : 0.61%;
-    padding-left : 1.9%;
-    padding-right : 0.2%;
+    padding-top : 0.656%;
+    padding-left : 2%;
+    padding-right : 0.1%;
 }
 
 h2 {
-    padding-top : 3.7%;
+    padding-top : 4%;
     font-weight : bold;
     font-size : 19px;
     color : #1c1c1c;
@@ -66,11 +66,11 @@ select {
 }
 
 .button input {
-    width : 8.3%;
+    width : 8%;
     height : 8%;
     font-size : 15px;
     border : 0px;
-    margin-top : 3.9%;
+    margin-top : 4%;
     margin-left : 0%;
     float : left;
     background-color : rgb(71,164,71);
@@ -78,13 +78,13 @@ select {
 }
 
 .reset input{
-    width : 8.3%;
+    width : 8%;
     height : 8%;
     font-size : 15px;
     border : 0px;
     background-color :  rgb(171,178,184);
     color : white;
-    margin-top :3.9%;
+    margin-top :4%;
 }
 
 
