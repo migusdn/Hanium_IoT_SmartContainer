@@ -32,11 +32,6 @@
     margin-top : 70px;
     font-weight : bold;
 }
-
-#temperDiv{
-margin-left : 102px
-}
-
 .temsection{    /*온도장치 절대위치변경->TOP/LEFT조절*/
     top:55%;
     left:22.2%;
@@ -50,11 +45,6 @@ margin-left : 102px
 }
 #HumidX{
     margin-top: 30px;
-
-}
-#temperDiv{
-    left : 50%:
-    color : black;
 }
 
 .modalLink, .modalLink1{
@@ -63,15 +53,65 @@ margin-left : 102px
 }
 
 p {
-   margin-left : 5%;
+   margin-left : 7%;
    margin-top : 7%;
+   font-size : 19px;
+   margin-bottom : 3%;
 }
 
 b {
-    margin-left : 6%;
-    vertical-align : middle;
+    margin-left : 6.2%;
+    color : #5d5d5d;
 }
 
+h {
+    font-size : 18px;
+    margin-left : 7%;
+    float : left;
+}
+
+h1 {
+    font-size : 18px;
+    color : #5d5d5d;
+    margin-left : 17%;
+    margin-top : 23%;
+}
+
+h2 {
+    font-size : 18px;
+    color : #5d5d5d;
+    margin-left : 18.5%;
+    margin-top : 23%;
+}
+
+h3 {
+    font-size : 18px;
+    color : #5d5d5d;
+    margin-left : 22%;
+    margin-top : 23%;
+}
+
+h4 {
+    font-size : 18px;
+    color : #5d5d5d;
+    margin-left : 31%;
+    margin-top : 23%;
+}
+
+
+#TemperDate, #HumidDate {
+    margin-left : 1.5%;
+}
+
+#TemperY, #HumidY {
+    margin-left : 7.1%;
+    margin-top : 5%;
+    margin-bottom : 2%;
+}
+
+#TemperX b{
+    margin-`top : 30%;
+}
 input {
     border : 0px;
     background-color : rgb(243,243,243);
@@ -118,29 +158,84 @@ button {
     background-color:white;
     float:left;
     margin: 15px;
+    margin-left : 17px;
     font-weight : bold;
     vertical-align : middle;
 }
 
-#HumidDiv{
-    left:10%;
+#HumidDiv {
+    margin-left : 46px;
+}
+
+#temperDiv{
+    margin-left : 140px;
+    color : black;
 }
 
 #second_line{
     margin: 30px 0px 0px 0px;
-
 }
 
 .checksection{    /* 컨테이너 체크여부 절대위치변경->TOP/LEFT조절*/
-    top:13.7%;
+    top: 15.5%;
     left:68.8%;
     position:absolute;
     width:350px;
     height:280px;
     background-color:white;
     float:left;
-    margin: 15px;
     font-weight : bold;
+    margin-left : 17px;
+}
+
+#SetTemperX p{
+    float : left;
+    font-size : 18px;
+    margin-left : 7%;
+    margin-top : 15.5%;
+}
+
+#SetTemper select {
+    margin-left : 4%;
+    margin-top : 15%;
+    width : 70px;
+    height : 27px;
+}
+
+#SetTemper button {
+    margin-top : 12.7%;
+    width : 50px;
+    height : 27px;
+    margin-left : 3%;
+}
+
+#SetHumid p{
+    float : left;
+    font-size : 18px;
+    margin-left : 7%;
+    margin-top : 15.5%;
+}
+
+#SetHumid select {
+    margin-left : 4%;
+    margin-top : 15%;
+    width : 70px;
+    height : 27px;
+}
+
+#SetHumid button {
+    margin-top : 12.7%;
+    width : 50px;
+    height : 27px;
+    margin-left : 3%;
+}
+
+img{
+    width : 22px;
+    height : 22px;
+    margin-top : 3.5%;
+    margin-left : -4.5%;
+}
 
 .se{
     position:float;
@@ -159,9 +254,6 @@ button {
 
 #Temp_Module_Off{
     z-index:1;
-}
-#temperDiv{
-    margin: 15 15 15 30px;
 }
 
 
@@ -209,40 +301,48 @@ a{
 
 #modalLayer{display:none;
     position:relative;}
+
 #modalLayer1{display:none;
     position:relative;}
-#modalLayer .modalContent{width:440px;
-    height:200px;
+
+#modalLayer .modalContent{width:240px;
+    height:100px;
     padding:20px;
     border:1px solid #ccc;
     position:fixed;
-    left:50%;
-    top:50%;
+    left:37%;
+    top:46%;
     z-index:11;
-    background:#fff;}
-#modalLayer .modalContent button{position:absolute;
-    right:0; top:0;
-    cursor:pointer;}
+    background:#fff;
+    }
 
+#modalLayer .modalContent button{
+    position:absolute;
+    cursor:pointer;
+}
 
-#modalLayer1 .modalContent1{width:440px;
-    height:200px;
+#modalLayer1 .modalContent1{width:240px;
+    height:100px;
     padding:20px;
     border:1px solid #ccc;
     position:fixed;
-    left:50%;
-    top:50%;
+    left:61%;
+    top:46%;
     z-index:11;
     background:#fff;}
-#modalLayer1 .modalContent1 button{position:absolute;
-    right:0; top:0;
-    cursor:pointer;}
+
+#modalLayer1 .modalContent1 button{
+    position:absolute;
+    cursor:pointer;
+}
 
 .Date{
 margin-left:100px;
 }
 
+/*
 h6{
     color: grey;
     margin-left:200px;
 }
+*/

@@ -33,22 +33,18 @@
             <div id="temperDiv" class="section">
 
                 <div id="Temper">
-                    <label id="TemperX"><b>현재온도</b></label>
+                    <label id="TemperX"><p>현재온도</p></label>
+                    <label id="TemperDate" class="Date"><b>8월15일 ~ 10월4일</b></label>
                     <br>
-
-                    <label id="TemperDate" class="Date">8월15일 ~ 10월4일</label>
-                    <br>
-
                     <input type=text id="TemperY">
                 </div>
-                <br>
-                <a href="#modalLayer" class="modalLink"><p>온도설정(Click)</p></a>
 
+                    <a href="#modalLayer" class="modalLink"><h>온도설정</h><img src="{% static "images/setting.png" %}"></a>
 
                 <div id="modalLayer">
                     <div class="modalContent">
                         <div id="SetTemper">
-                            <label id="SetTemperX"><b>설정온도</b></label>
+                            <label id="SetTemperX"><p>설정온도</p></label>
                             <select id="SetTemperY"></select>
                             <button type="button">닫기</button>
                         </div>
@@ -60,22 +56,18 @@
             <!--여기부터 습도 모달-->
             <div id="HumidDiv" class="section">
                 <div id="Humid">
-                    <label id="HumidX"><b>현재습도</b></label>
+                    <label id="HumidX"><p>현재습도</p></label>
+                    <label id="HumidDate" class="Date"><b>8월15일 ~ 10월4일</b></label>
                     <br>
-
-                    <label id="HumidDate" class="Date">8월15일 ~ 10월4일</label>
-                    <br>
-
                     <input type=text id="HumidY">
-                </div><br>
+                </div>
 
-                <a href="#modalLayer1" class="modalLink1"><p>습도설정(Click)</p></a>
-
+                <a href="#modalLayer1" class="modalLink1"><h>습도설정</h><img src="{% static "images/setting.png" %}"></a>
 
                 <div id="modalLayer1">
                     <div class="modalContent1">
                         <div id="SetHumid">
-                            <label id="SetHumidX"><b>설정습도</b></label>
+                            <label id="SetHumidX"><p>설정습도</p></label>
                             <select id="SetHumidY"></select>
                             <button type="button">닫기</button>
                         </div>
@@ -108,16 +100,16 @@
                   </div>
           -->
 
-            <div class="section">
+
                 <div id="checkMac" class="checksection" onclick="checkfun0()">
                     <p>컨테이너 체크 여부</p>
-                    <p>컨테이너를 확인해야 합니다</p>
+                    <h1 style="color : #ca3737;">컨테이너를 확인해야 합니다</h1>
                 </div>
                 <div id="checkMacA" class="checksection" onclick="checkfunA()" >
                     <p>컨테이너 체크 여부</p>
-                    <p>컨테이너를 확인 하였습니다</p>
+                    <h1>컨테이너를 확인 하였습니다</h1>
                 </div>
-            </div>
+
         </div>
 
 
@@ -125,15 +117,15 @@
             <div>
                 <div id="DoTemp_On" class="temsection" onclick="DoTemp_Off()">
                     <p>온도 장치</p>
-                    <h6 class="textcc">냉풍기 ON</h6>
+                    <h2 style="color : #2f2fc7;">현재 냉방기 작동 중입니다</h2>
                 </div>
                 <div id="UpTemp_On" class="temsection" onclick="UpTemp_Off()" >
                     <p>온도 장치</p>
-                    <h6 class="textcc">온풍기 ON</h6>
+                    <h2 style="color : #ca3737;">현재 온열기 작동 중입니다</h2>
                 </div>
                 <div id="Temp_Module_Off" class="temsection" onclick="Temp_Module_Off()">
                     <p>온도 장치</p>
-                    <h6 class="textcc">온도 제어 중지</h6>
+                    <h3>현재 작동 중지 중입니다</h3>
                 </div>
             </div>
 
@@ -143,15 +135,15 @@
             <div>
                 <div id="UpHumid_On" class="humsection" onclick="UpHumid_Off()">
                     <p>습도 장치</p>
-                    <p class="humtext">가습기 ON</p>
+                    <h2 style="color : #2f2fc7;">현재 가습기 작동 중입니다 </h2>
                 </div>
                 <div id="UpHumid_Off" class="humsection" onclick="DoHumid_Off()" >
                     <p>습도 장치</p>
-                    <p class="humtext">제습기 ON</p>
+                    <h2 style="color : #ca3737;">현재 제습기 작동 중입니다</h2>
                 </div>
                 <div id="Humid_Module_Off" class="humsection" onclick="Humid_Module_Off()">
                     <p>습도 장치</p>
-                    <p class="humtext">습도 제어 중지</p>
+                    <h3>현재 작동 중지 중입니다</h3>
                 </div>
             </div>
 
@@ -163,10 +155,12 @@
 
             <div>
                 <div id="doorMac" class="doorsection" onclick="doorfun0()">
-                    <p>개폐 장치열림</p>
+                    <p>개폐 장치</p>
+                    <h4 style="color : #ca3737;">개폐 장치 열림</h4>
                 </div>
                 <div id="doorMacA" class="doorsection" onclick="doorfunA()" >
-                    <p>개폐 장치닫힘</p>
+                    <p>개폐 장치</p>
+                    <h4>개폐 장치 닫힘</h4>
                 </div>
                 <!--            <div id="doorMacB" class="doorsection" onclick="doorfunB()">
                                개폐 장치 B 지금누르면 0이 위로갑니다

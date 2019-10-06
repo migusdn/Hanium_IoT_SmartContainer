@@ -105,6 +105,10 @@ input:hover {
      line-height: 2.5;
 }
 
+.placetable tr:hover {
+    background-color : rgba(40, 66, 96, 0.07);
+}
+
 /*
 tr:nth-child(odd) {
     background-color : rgba(107, 107, 107, 0.07)
