@@ -34,7 +34,7 @@
 }
 .temsection{    /*온도장치 절대위치변경->TOP/LEFT조절*/
     top:55%;
-    left:22.2%;
+    left:19.3%;
     position:absolute;
     width:350px;
     height:280px;
@@ -139,7 +139,7 @@ button {
 
 .humsection{    /*냉방장치 절대위치변경->TOP/LEFT조절*/
     top:53%;
-    left:45.2%;
+    left:44.2%;
     position:absolute;
     width:350px;
     height:280px;
@@ -151,7 +151,7 @@ button {
 
 .doorsection{    /*개폐장치 절대위치변경->TOP/LEFT조절*/
     top:53%;
-    left:68.8%;
+    left:70.3%;
     position:absolute;
     width:350px;
     height:280px;
@@ -164,11 +164,16 @@ button {
 }
 
 #HumidDiv {
-    margin-left : 46px;
+    position:absolute;
+    top : 1%;
+    left:45%
 }
 
 #temperDiv{
-    margin-left : 140px;
+    position:absolute;
+    left: 19%;
+    top : 1%;
+
     color : black;
 }
 
@@ -177,8 +182,8 @@ button {
 }
 
 .checksection{    /* 컨테이너 체크여부 절대위치변경->TOP/LEFT조절*/
-    top: 15.5%;
-    left:68.8%;
+    top: 11.1%;
+    left:70.3%;
     position:absolute;
     width:350px;
     height:280px;
