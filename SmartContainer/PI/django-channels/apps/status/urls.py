@@ -13,5 +13,7 @@ urlpatterns = [
     path('uphumid', views.uphumid, name='uph'),
     path('set', views.SetTempHumid, name='setting'),
     path('SetTempHumidAct', views.SetTempHumidAct, name="acting"),
+    path('SetHumid', view.SetHumid, name='SetHumid'),
+    path('SetTemp', view.SetTemp, name='SetTemp'),
   #  path('test', consumers.TestConsumer, name='test')
 ]

@@ -134,6 +134,20 @@ def SetTempHumidAct(request):
     print('설정 온습도 변경 완료.')
     return HttpResponse("성공")
 
+def SetHumid(request):
+    res = Device.objects.get(ConId='B1')
+    data = json.loads(request)
+    humid = data[humid]
+    res.SetHumid = humid
+    res.save()
+    return HttpResponse("성공")
+def SetTemp(request):
+    res = Device.objects.get(ConId='B1')
+    data = json.loads(request)
+    temp = data[Temper]
+    res.SetTemper = temp
+    res.save()
+    return HttpResponse("성공")
 
 def send_Message(msg):
     layer = get_channel_layer()

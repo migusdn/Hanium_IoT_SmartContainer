@@ -1,3 +1,4 @@
+target_url = "http://localhost:8080"
 $(document).ready(function(){
     var modalLayer = $("#modalLayer");
     var modalLink = $(".modalLink");
@@ -334,11 +335,11 @@ $(document).ready(function detailpull(){
         });
 
         $.ajax({
-            url : target_url+"/detail/humid",
+            url : target_url+"/status/SetHumid",
             dataType : 'json',
             data : {
                 ConID : value,
-                Temper : humid
+                humid : humid
             },
             type : "POST",
             success : function(){
@@ -381,7 +382,7 @@ $(document).ready(function detailpull(){
         });
 
         $.ajax({
-            url : target_url+"/detail/temper",
+            url : target_url+"/status/temper",
             dataType : 'json',
             data : {
                 ConID : value,
@@ -415,7 +416,6 @@ function find_in_object(my_object, my_criteria){
     });
 
 }
-target_url = "http://192.168.0.9:8000"
 function freeze(){
     console.log("freeze");
 
