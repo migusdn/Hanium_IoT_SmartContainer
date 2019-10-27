@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32ed690-73a7-4f25-8e57-a3c100da84ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Container/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/cron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,6 +101,7 @@
       <workItem from="1572093828135" duration="34000" />
       <workItem from="1572093882079" duration="1359000" />
       <workItem from="1572165974373" duration="3891000" />
+      <workItem from="1572178310468" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>

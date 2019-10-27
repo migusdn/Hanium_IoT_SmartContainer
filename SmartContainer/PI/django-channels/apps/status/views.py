@@ -88,7 +88,16 @@ def dohumid(request):
     res.EnforceH_Do = True
     res.DoHumid = True
     res.save()
-    return HttpResponse('성')
+    data = "test"
+    jsonp_callback = request.GET.get("callback")
+    print(jsonp_callback)
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def uphumid(request):
@@ -97,7 +106,16 @@ def uphumid(request):
     res.EnforceH_Up = True
     res.UpHumid = True
     res.save()
-    return HttpResponse("성공")
+    data = "test"
+    jsonp_callback = request.GET.get("callback")
+    print(jsonp_callback)
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def door(request):
@@ -110,7 +128,16 @@ def dotemp(request):
     res.EnforceT_Do = True
     res.DoTemper = True
     res.save()
-    return HttpResponse("성공")
+    data = "test"
+    jsonp_callback = request.GET.get("callback")
+    print(jsonp_callback)
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def uptemp(request):
@@ -119,7 +146,16 @@ def uptemp(request):
     send_Message('Request_UpTemp')
     res.EnforceT_Up = True
     res.save()
-    return HttpResponse("성공")
+    data = "test"
+    jsonp_callback = request.GET.get("callback")
+    print(jsonp_callback)
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def SetTempHumid(request):
