@@ -80,7 +80,7 @@ def freeze(request):
 
     return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
-
+@csrf_exempt
 def dohumid(request):
     res = Device.objects.get(ConId='B1')
     send_Message('Request_DoHumid')
@@ -89,7 +89,7 @@ def dohumid(request):
     res.save()
     return HttpResponse("성공")
 
-
+@csrf_exempt
 def uphumid(request):
     res = Device.objects.get(ConId='B1')
     send_Message('Request_UpHumid')
@@ -98,11 +98,11 @@ def uphumid(request):
     res.save()
     return HttpResponse("성공")
 
-
+@csrf_exempt
 def door(request):
     return HttpResponse("성공")
 
-
+@csrf_exempt
 def dotemp(request):
     res = Device.objects.get(ConId='B1')
     send_Message('Request_DoTemp')
@@ -111,7 +111,7 @@ def dotemp(request):
     res.save()
     return HttpResponse("성공")
 
-
+@csrf_exempt
 def uptemp(request):
     res = Device.objects.get(ConId='B1')
     send_Message('Request_UpTemp')
@@ -119,11 +119,11 @@ def uptemp(request):
     res.save()
     return HttpResponse("성공")
 
-
+@csrf_exempt
 def SetTempHumid(request):
     return render(request, 'chat/setting.html', {})
 
-
+@csrf_exempt
 def SetTempHumidAct(request):
     Temp = request.POST.get('SetTemp')
     Humid = request.POST.get('SetHumid')
@@ -134,17 +134,22 @@ def SetTempHumidAct(request):
     print('설정 온습도 변경 완료.')
     return HttpResponse("성공")
 
+@csrf_exempt
 def SetHumid(request):
     res = Device.objects.get(ConId='B1')
     data = json.loads(request)
     res.SetHumid = request.POST['humid']
     res.save()
     return HttpResponse("성공")
+
+@csrf_exempt
 def SetTemp(request):
     res = Device.objects.get(ConId='B1')
     res.SetTemper = request.POST['Temper']
     res.save()
     return HttpResponse("성공")
+
+@csrf_exempt
 def HumidOff(request):
     res = Device.objects.get(ConId='B1')
     res.EnforceH_Do = True
@@ -152,13 +157,13 @@ def HumidOff(request):
     send_Message('Request_HumidOff')
     res.save()
 
+@csrf_exempt
 def TempOff(request):
     res = Device.objects.get(ConId='B1')
     res.EnforceT_Do = True
     res.EnforceT_Up = True
     send_Message('Request_TempOff')
     res.save()
-
 
 def send_Message(msg):
     layer = get_channel_layer()
