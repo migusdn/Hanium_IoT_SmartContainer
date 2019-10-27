@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
+from .cron import control
 
 
 class DeviceViewSet(viewsets.ModelViewSet):
@@ -87,7 +88,7 @@ def dohumid(request):
     res.EnforceH_Do = True
     res.DoHumid = True
     res.save()
-    return HttpResponse("성공")
+    return HttpResponse('성')
 
 @csrf_exempt
 def uphumid(request):
@@ -113,6 +114,7 @@ def dotemp(request):
 
 @csrf_exempt
 def uptemp(request):
+    print(uptemp)
     res = Device.objects.get(ConId='B1')
     send_Message('Request_UpTemp')
     res.EnforceT_Up = True
@@ -125,6 +127,11 @@ def SetTempHumid(request):
 
 @csrf_exempt
 def SetTempHumidAct(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
     Temp = request.POST.get('SetTemp')
     Humid = request.POST.get('SetHumid')
     res = Device.objects.get(ConId='B1')
@@ -132,22 +139,59 @@ def SetTempHumidAct(request):
     res.SetHumid = Humid
     res.save()
     print('설정 온습도 변경 완료.')
-    return HttpResponse("성공")
+    data = 'test'
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def SetHumid(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+
+    data = 'test'
+
+    print(request.GET.get('humid'))
+    jsonp_callback = request.GET.get("callback")
     res = Device.objects.get(ConId='B1')
-    data = json.loads(request)
-    res.SetHumid = request.POST['humid']
+    res.SetHumid = request.GET.get('humid')
     res.save()
-    return HttpResponse("성공")
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def SetTemp(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+
+    data = 'test'
+    print(request.GET.get('Temper'))
+    jsonp_callback = request.GET.get("callback")
     res = Device.objects.get(ConId='B1')
-    res.SetTemper = request.POST['Temper']
+    res.SetTemper = request.GET.get('Temper')
     res.save()
-    return HttpResponse("성공")
+    if jsonp_callback:
+        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+        response["Content-type"] = "text/javascript; charset=utf-8"
+    else:
+        response = HttpResponse(json.dumps(data))
+        response["Content-type"] = "application/json; charset=utf-8"
+    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
 
 @csrf_exempt
 def HumidOff(request):
@@ -178,3 +222,21 @@ def send_Message(msg):
         }
     )
     pass
+
+def test(request):
+    res = Device.objects.get(ConId='B1')
+    paramDict = {
+        "ConId": res.ConId,
+        "Temper": res.Temper,
+        "Humid": res.Humid,
+        "Door": "1",
+        "SetTemper": res.SetTemper,
+        "SetHumid": res.SetHumid,
+        "UpTemper": res.UpTemper,
+        "DoTemper": res.DoTemper,
+        "UpHumid": res.UpHumid,
+        "DoHumid": res.DoHumid
+    }
+    print(paramDict)
+    url = 'http://192.168.0.17:8000/main/sensor'
+    requests.get(url, params=paramDict)
