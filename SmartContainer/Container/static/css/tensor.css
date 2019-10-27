@@ -5,7 +5,8 @@ body {font-family: Verdana, sans-serif; margin:0}
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  margin: auto;
+
+  margin-left : 10%;
 }
 
 /*아이콘이미지*/
@@ -28,7 +29,7 @@ h2 {
 
 /*그래프이미지*/
 img {
-  width : 82%;
+  width : 75%;
   height : 80%;
   margin-left : 1.9%;
   margin-top : -0.25%;
