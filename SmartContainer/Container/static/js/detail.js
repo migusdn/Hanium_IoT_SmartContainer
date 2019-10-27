@@ -1,4 +1,4 @@
-target_url = "http://localhost:8080"
+target_url = "http://192.168.0.9:8000"
 setInterval(function detailpull(){
     var value = $('#ConID').val();
 
@@ -16,22 +16,6 @@ setInterval(function detailpull(){
             }else{
                 $('#TemperY').val(filtered_json[0].Temper);
                 $('#HumidY').val(filtered_json[0].Humid);
-
-
-                var SetTemper='';
-                for(var i=(-20); i<=20;i++){
-                    var SetTemper = SetTemper + "<option>"+i+"</option>" ;
-                }
-                $("#SetTemperY").append(SetTemper);		//-20~20 옵션추가
-                $('#SetTemperY').val(filtered_json[0].SetTemper).attr("selected", "selected");//기본값설정
-
-
-                var SetHumid='';
-                for(var i=(-20); i<=20;i++){
-                    var SetHumid = SetHumid + "<option>"+i+"</option>" ;
-                }
-                $("#SetHumidY").append(SetHumid);		//-20~20 옵션추가
-                $('#SetHumidY').val(filtered_json[0].SetHumid).attr("selected", "selected");//기본값설정
 
 
                 if(filtered_json[0].Door==1){
@@ -65,7 +49,7 @@ setInterval(function detailpull(){
                 }
             }//else 문
         }
-    })}, 55000);
+    })}, 5000);
 
 
 
@@ -406,7 +390,8 @@ $(document).ready(function detailpull(){
 
         $.ajax({
             url : target_url+"/status/SetHumid",
-            dataType : 'json',
+            dataType : 'jsonp',
+            jsonp: "callback",
             data : {
                 ConID : value,
                 humid : humid
@@ -452,8 +437,9 @@ $(document).ready(function detailpull(){
         });
 
         $.ajax({
-            url : target_url+"/status/temper",
-            dataType : 'json',
+            url : target_url+"/status/SetTemp",
+            dataType : 'jsonp',
+            jsonp: "callback",
             data : {
                 ConID : value,
                 Temper : Temper
