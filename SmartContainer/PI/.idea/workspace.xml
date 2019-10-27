@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32ed690-73a7-4f25-8e57-a3c100da84ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Container/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Container/newContainer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/newContainer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Container/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Container/static/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-channels/apps/status/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,9 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1P5skCZSdbW4MfTLsOdNmuc7H4m" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -106,6 +100,8 @@
       <workItem from="1570100368192" duration="906000" />
       <workItem from="1572093828135" duration="34000" />
       <workItem from="1572093882079" duration="1359000" />
+      <workItem from="1572165974373" duration="3891000" />
+      <workItem from="1572178310468" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1565588093907</created>

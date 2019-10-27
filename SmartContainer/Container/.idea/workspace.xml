@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9b0ea57-f318-4958-9e54-e9466739906e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newContainer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/newContainer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PI/django-channels/apps/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../PI/django-channels/apps/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PI/django-channels/apps/status/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PI/django-channels/apps/status/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PI/django-channels/apps/status/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PI/django-channels/apps/status/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="e9b0ea57-f318-4958-9e54-e9466739906e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +82,7 @@
       <workItem from="1572089130845" duration="4283000" />
       <workItem from="1572093800906" duration="28000" />
       <workItem from="1572093863878" duration="1562000" />
+      <workItem from="1572165958850" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="detail.js Pi서버로 보내는 ajax 의 url 변동시 수정에 용이하게 target_ulr 변수 생성">
       <created>1569510527731</created>
