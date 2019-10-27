@@ -137,17 +137,28 @@ def SetTempHumidAct(request):
 def SetHumid(request):
     res = Device.objects.get(ConId='B1')
     data = json.loads(request)
-    humid = data[humid]
-    res.SetHumid = humid
+    res.SetHumid = request.POST['humid']
     res.save()
     return HttpResponse("성공")
 def SetTemp(request):
     res = Device.objects.get(ConId='B1')
-    data = json.loads(request)
-    temp = data[Temper]
-    res.SetTemper = temp
+    res.SetTemper = request.POST['Temper']
     res.save()
     return HttpResponse("성공")
+def HumidOff(request):
+    res = Device.objects.get(ConId='B1')
+    res.EnforceH_Do = True
+    res.EnforceH_Up = True
+    send_Message('Request_HumidOff')
+    res.save()
+
+def TempOff(request):
+    res = Device.objects.get(ConId='B1')
+    res.EnforceT_Do = True
+    res.EnforceT_Up = True
+    send_Message('Request_TempOff')
+    res.save()
+
 
 def send_Message(msg):
     layer = get_channel_layer()
