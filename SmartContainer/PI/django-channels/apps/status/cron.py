@@ -2,6 +2,8 @@
 from .models import Device
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
+import requests
+url = 'http://192.168.0.17:8000/main/sensor'
 def test():
     print('Hi')
     pass
@@ -110,4 +112,18 @@ def control():
                 }
             )
             print('info: HumidDo is run')
+
+    paramDict = {
+        "ConId": res.ConId,
+        "Temper": res.Temper,
+        "Humid": res.Humid,
+        "Door": "1",
+        "SetTemper": res.SetTemper,
+        "SetHumid": res.SetHumid,
+        "UpTemper": res.UpTemper,
+        "DoTemper": res.DoTemper,
+        "UpHumid": res.UpHumid,
+        "DoHumid": res.DoHumid
+    }
+    requests.get(url, params=paramDict)
     pass
