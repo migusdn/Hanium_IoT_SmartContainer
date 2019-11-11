@@ -156,11 +156,13 @@ function doorfun0(){
     console.log("A가 위로");
     document.getElementById('doorMacA').style.zIndex = 3;
     document.getElementById('doorMac').style.zIndex = 1;
+    lock();
 }
 function doorfunA(){
     console.log("0이 위로");
     document.getElementById('doorMacA').style.zIndex = 1;
     document.getElementById('doorMac').style.zIndex = 3;
+    unlock();
 }
 
 
@@ -548,15 +550,29 @@ function dehum(){
     });
 }
 
-function door(){
-    console.log("야이씨볼롬, door")
+function lock(){
+    console.log("lock")
     $.ajax({
-        url : target_url+"/status/door",
+        url : target_url+"/status/lock",
         dataType : 'jsonp',
         jsonp: "callback",
         success : function(data){
-            alert("성공");
-            console.log(data);
+            console.log("잠금 성공")
+
+            setTimeout(function(){
+                location.reload();
+            },1000); // 3000밀리초 = 3초
+        }
+    });
+}
+function unlock(){
+    console.log("unlock")
+    $.ajax({
+        url : target_url+"/status/unlock",
+        dataType : 'jsonp',
+        jsonp: "callback",
+        success : function(data){
+            console.log("열기 성공")
 
             setTimeout(function(){
                 location.reload();

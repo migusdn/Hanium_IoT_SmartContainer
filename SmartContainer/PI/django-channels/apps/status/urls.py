@@ -16,5 +16,7 @@ urlpatterns = [
     path('SetHumid', views.SetHumid, name='SetHumid'),
     path('SetTemp', views.SetTemp, name='SetTemp'),
     path('test', views.test),
+    path('lock', views.Lock),
+    path('unlock', views.Unlock),
   #  path('test', consumers.TestConsumer, name='test')
 ]

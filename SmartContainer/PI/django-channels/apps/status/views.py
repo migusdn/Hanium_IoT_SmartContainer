@@ -176,13 +176,8 @@ def SetTempHumidAct(request):
     res.save()
     print('설정 온습도 변경 완료.')
     data = 'test'
-    if jsonp_callback:
-        response = HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
-        response["Content-type"] = "text/javascript; charset=utf-8"
-    else:
-        response = HttpResponse(json.dumps(data))
-        response["Content-type"] = "application/json; charset=utf-8"
-    return HttpResponse("%s(%s);" % (jsonp_callback, json.dumps(data)))
+   
+    return HttpResponse("성공")
 
 @csrf_exempt
 def SetHumid(request):
@@ -244,6 +239,21 @@ def TempOff(request):
     res.EnforceT_Up = True
     send_Message('Request_TempOff')
     res.save()
+
+@csrf_exempt
+def Lock(request):
+    res = Device.objects.get(ConId='B1')
+    res.Door = True
+    send_Message('Request_LOCK')
+    res.save()
+
+@csrf_exempt
+def Unlock(request):
+    res = Device.objects.get(ConId='B1')
+    res.Door = False
+    send_Message('Request_UNLOCK')
+    res.save()
+
 
 def send_Message(msg):
     layer = get_channel_layer()
