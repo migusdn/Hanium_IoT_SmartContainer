@@ -22,7 +22,7 @@
 - nodeMcu, Esp-32
 - C++
 
-###기능 흐름도
+### 기능 흐름도
 ![컨테이너 흐름도](https://user-images.githubusercontent.com/44918187/97858836-165add00-1d43-11eb-9302-060f56f36317.jpg)
 
 1. Module과 Server가 Socket 연결을 수립하여 제어가능한 상태가 되도록 함
